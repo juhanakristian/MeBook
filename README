@@ -1,0 +1,14 @@
+MeBook is a ebook reader for Fremantle and Harmattan. At the moment it only supports the epub file format.
+
+Currently a MeeGo/Harmattan version of MeBook is in active development.
+
+To build for Harmattan you need Qt SDK with Harmattan target. (http://qt.nokia.com/downloads/)
+
+ToDo:
+Epub support
+- resources not loading sometimes
+- better toc
+
+UI
+- page view
+- annotation and bookmark dialogs

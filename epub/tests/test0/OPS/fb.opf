@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<package version="2.0" unique-identifier="PrimaryID" xmlns="http://www.idpf.org/2007/opf">
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+    <dc:title>Free As In Freedom</dc:title>
+    <dc:identifier id="PrimaryID" opf:scheme="URN">urn:uuid:10cb05c4-5a79-11df-9d12-001cc0a62c0b</dc:identifier>
+    
+    <dc:identifier opf:scheme="URI">http://www.feedbooks.com/book/4299</dc:identifier>  
+    
+    
+    <dc:language>en</dc:language>
+    
+    
+    <dc:creator opf:role="aut" opf:file-as="Williams, Sam">Sam Williams</dc:creator>
+    
+    
+    <dc:publisher>Feedbooks (http://www.feedbooks.com)</dc:publisher>
+    <dc:description>&quot;Free as in Freedom: Richard Stallman's Crusade for Free Software&quot; is a free book licensed under the GNU Free Documentation License. It is a biography of Richard Stallman, an American software freedom activist and computer programmer. In 1983 he launched the GNU Project to create a free Unix-like operating system, and in Ocober 1985 he created the Free Software Foundation. (Source: Wikipedia)</dc:description>
+    <dc:coverage></dc:coverage>
+    <dc:source>http://www.faifzilla.org/</dc:source>
+    <dc:date opf:event="original-publication">2002</dc:date>
+    <dc:date opf:event="ops-publication">2009-10-05T14:11:10Z</dc:date>
+    <dc:rights>Please read the legal notice included in this e-book and/or check the copyright status in your country.</dc:rights>
+    
+    
+      
+        
+          <dc:subject>Non-Fiction</dc:subject>
+        
+          <dc:subject>Biography</dc:subject>
+        
+      
+    
+    
+    
+	    <meta name="cover" content="book-cover"/>
+	  
+  </metadata>
+
+  <manifest>
+    <!-- Content Documents -->
+    
+    <item id="cover"
+      href="cover.xml"
+      media-type="application/xhtml+xml"/>
+    
+
+    <item id="titlepage"
+      href="title.xml"
+      media-type="application/xhtml+xml"/>
+
+    
+    <item id="about"
+      href="about.xml"
+      media-type="application/xhtml+xml"/>
+    
+
+      
+    
+    <item id="main0"
+      href="main0.xml"
+      media-type="application/xhtml+xml"/>
+    
+    
+    <item id="main1"
+      href="main1.xml"
+      media-type="application/xhtml+xml"/>
+    
+    
+    <item id="main2"
+      href="main2.xml"
+      media-type="application/xhtml+xml"/>
+    
+    
+    <item id="main3"
+      href="main3.xml"
+      media-type="application/xhtml+xml"/>
+    
+    
+    <item id="main4"
+      href="main4.xml"
+      media-type="application/xhtml+xml"/>
+    
+    
+    <item id="main5"
+      href="main5.xml"
+      media-type="application/xhtml+xml"/>
+    
+    
+    <item id="main6"
+      href="main6.xml"
+      media-type="application/xhtml+xml"/>
+    
+    
+    <item id="main7"
+      href="main7.xml"
+      media-type="application/xhtml+xml"/>
+    
+    
+    <item id="main8"
+      href="main8.xml"
+      media-type="application/xhtml+xml"/>
+    
+    
+    <item id="main9"
+      href="main9.xml"
+      media-type="application/xhtml+xml"/>
+    
+    
+    <item id="main10"
+      href="main10.xml"
+      media-type="application/xhtml+xml"/>
+    
+    
+    <item id="main11"
+      href="main11.xml"
+      media-type="application/xhtml+xml"/>
+    
+    
+    <item id="main12"
+      href="main12.xml"
+      media-type="application/xhtml+xml"/>
+    
+    
+    <item id="main13"
+      href="main13.xml"
+      media-type="application/xhtml+xml"/>
+    
+    
+    <item id="main14"
+      href="main14.xml"
+      media-type="application/xhtml+xml"/>
+    
+    
+    <item id="main15"
+      href="main15.xml"
+      media-type="application/xhtml+xml"/>
+    
+    
+    <item id="main16"
+      href="main16.xml"
+      media-type="application/xhtml+xml"/>
+    
+    
+    <item id="main17"
+      href="main17.xml"
+      media-type="application/xhtml+xml"/>
+    
+    
+
+    
+    <item id="similar"
+      href="similar.xml"
+      media-type="application/xhtml+xml"/>
+    
+
+    <item id="feedbooks"
+      href="feedbooks.xml"
+      media-type="application/xhtml+xml"/>
+    
+    
+ 
+    <!-- CSS Style Sheets -->
+
+    <item id="page-css"
+      href="css/page.css"
+      media-type="text/css"/>
+
+    <item id="feedbooks-css"
+      href="css/feedbooks.css"
+      media-type="text/css"/>
+
+    <item id="titlepage-css"
+      href="css/title.css"
+      media-type="text/css"/>
+
+    <item id="about-css"
+      href="css/about.css"
+      media-type="text/css"/>
+    
+    <item id="main-css"
+      href="css/main.css"
+      media-type="text/css"/>
+
+    <!-- Images -->
+
+    <item id="logo-feedbooks-tiny"
+      href="images/logo-feedbooks-tiny.png"
+      media-type="image/png"/>
+      
+    <item id="logo-feedbooks"
+      href="images/logo-feedbooks.png"
+      media-type="image/png"/>
+
+    
+    <item id="book-cover"
+      href="images/cover.png"
+      media-type="image/png"/>
+    
+
+    <!-- NCX -->
+
+    <item id="ncx"
+      href="fb.ncx"
+      media-type="application/x-dtbncx+xml"/>
+
+  </manifest>
+
+  <spine toc="ncx">
+
+  
+    <itemref idref="cover" linear="yes"/>
+  
+
+  <itemref idref="titlepage" linear="yes"/>
+
+  
+  <itemref idref="about" linear="yes"/>
+  
+
+    
+  
+  <itemref idref="main0" linear="yes"/>
+  
+  
+  <itemref idref="main1" linear="yes"/>
+  
+  
+  <itemref idref="main2" linear="yes"/>
+  
+  
+  <itemref idref="main3" linear="yes"/>
+  
+  
+  <itemref idref="main4" linear="yes"/>
+  
+  
+  <itemref idref="main5" linear="yes"/>
+  
+  
+  <itemref idref="main6" linear="yes"/>
+  
+  
+  <itemref idref="main7" linear="yes"/>
+  
+  
+  <itemref idref="main8" linear="yes"/>
+  
+  
+  <itemref idref="main9" linear="yes"/>
+  
+  
+  <itemref idref="main10" linear="yes"/>
+  
+  
+  <itemref idref="main11" linear="yes"/>
+  
+  
+  <itemref idref="main12" linear="yes"/>
+  
+  
+  <itemref idref="main13" linear="yes"/>
+  
+  
+  <itemref idref="main14" linear="yes"/>
+  
+  
+  <itemref idref="main15" linear="yes"/>
+  
+  
+  <itemref idref="main16" linear="yes"/>
+  
+  
+  <itemref idref="main17" linear="yes"/>
+  
+  
+
+  
+  <itemref idref="similar" linear="yes"/>
+  
+
+  <itemref idref="feedbooks" linear="yes"/>
+
+  
+
+  </spine>
+
+  <guide>
+
+  
+  <reference type="cover" title="Cover" href="cover.xml"/>
+  
+
+  <reference type="title-page" title="Title Page" href="title.xml"/>
+
+  
+  <reference type="bibliography" title="About" href="about.xml"/>
+  
+
+    
+  
+  <reference type="text" title="Main0" href="main0.xml"/>
+  
+  
+  <reference type="text" title="Main1" href="main1.xml"/>
+  
+  
+  <reference type="text" title="Main2" href="main2.xml"/>
+  
+  
+  <reference type="text" title="Main3" href="main3.xml"/>
+  
+  
+  <reference type="text" title="Main4" href="main4.xml"/>
+  
+  
+  <reference type="text" title="Main5" href="main5.xml"/>
+  
+  
+  <reference type="text" title="Main6" href="main6.xml"/>
+  
+  
+  <reference type="text" title="Main7" href="main7.xml"/>
+  
+  
+  <reference type="text" title="Main8" href="main8.xml"/>
+  
+  
+  <reference type="text" title="Main9" href="main9.xml"/>
+  
+  
+  <reference type="text" title="Main10" href="main10.xml"/>
+  
+  
+  <reference type="text" title="Main11" href="main11.xml"/>
+  
+  
+  <reference type="text" title="Main12" href="main12.xml"/>
+  
+  
+  <reference type="text" title="Main13" href="main13.xml"/>
+  
+  
+  <reference type="text" title="Main14" href="main14.xml"/>
+  
+  
+  <reference type="text" title="Main15" href="main15.xml"/>
+  
+  
+  <reference type="text" title="Main16" href="main16.xml"/>
+  
+  
+  <reference type="text" title="Main17" href="main17.xml"/>
+  
+  
+
+  
+  <reference type="text" title="Similar Books" href="similar.xml"/>
+  
+
+  <reference type="copyright-page" title="Feedbooks" href="feedbooks.xml"/>
+
+  </guide>
+</package>

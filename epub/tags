@@ -1,0 +1,1184 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+ALLOC	minizip/unzip.c	112;"	d	file:
+ALLOC	minizip/zip.c	62;"	d	file:
+APPEND_STATUS_ADDINZIP	minizip/zip.h	114;"	d
+APPEND_STATUS_CREATE	minizip/zip.h	112;"	d
+APPEND_STATUS_CREATEAFTER	minizip/zip.h	113;"	d
+AR	tests/epub/Makefile	/^AR            = ar cqs$/;"	m
+AR	tests/zip/Makefile	/^AR            = ar cqs$/;"	m
+Author	epub.h	/^        Author,$/;"	e	enum:Epub::OPFDataType
+BUFREADCOMMENT	minizip/unzip.c	405;"	d	file:
+BUFREADCOMMENT	minizip/zip.c	472;"	d	file:
+CASESENSITIVITY	minizip/miniunz.c	47;"	d	file:
+CASESENSITIVITYDEFAULTVALUE	minizip/unzip.c	372;"	d	file:
+CASESENSITIVITYDEFAULTVALUE	minizip/unzip.c	374;"	d	file:
+CASESENSITIVITYDEFAULT_NO	minizip/unzip.c	98;"	d	file:
+CC	minizip/Makefile	/^CC=cc$/;"	m
+CC	tests/epub/Makefile	/^CC            = gcc$/;"	m
+CC	tests/zip/Makefile	/^CC            = gcc$/;"	m
+CENTRALHEADERMAGIC	minizip/zip.c	104;"	d	file:
+CFLAGS	minizip/Makefile	/^CFLAGS=-O -I..\/..$/;"	m
+CFLAGS	tests/epub/Makefile	/^CFLAGS        = -pipe -O2 -Wall -W -D_REENTRANT $(DEFINES)$/;"	m
+CFLAGS	tests/zip/Makefile	/^CFLAGS        = -pipe -O2 -Wall -W -D_REENTRANT $(DEFINES)$/;"	m
+CHK_DIR_EXISTS	tests/epub/Makefile	/^CHK_DIR_EXISTS= test -d$/;"	m
+CHK_DIR_EXISTS	tests/zip/Makefile	/^CHK_DIR_EXISTS= test -d$/;"	m
+COMPRESS	tests/epub/Makefile	/^COMPRESS      = gzip -9f$/;"	m
+COMPRESS	tests/zip/Makefile	/^COMPRESS      = gzip -9f$/;"	m
+COPY	tests/epub/Makefile	/^COPY          = cp -f$/;"	m
+COPY	tests/zip/Makefile	/^COPY          = cp -f$/;"	m
+COPY_DIR	tests/epub/Makefile	/^COPY_DIR      = $(COPY) -r$/;"	m
+COPY_DIR	tests/zip/Makefile	/^COPY_DIR      = $(COPY) -r$/;"	m
+COPY_FILE	tests/epub/Makefile	/^COPY_FILE     = $(COPY)$/;"	m
+COPY_FILE	tests/zip/Makefile	/^COPY_FILE     = $(COPY)$/;"	m
+CRC32	minizip/crypt.h	30;"	d
+CRC_LOCALHEADER_OFFSET	minizip/zip.c	110;"	d	file:
+CXX	tests/epub/Makefile	/^CXX           = g++$/;"	m
+CXX	tests/zip/Makefile	/^CXX           = g++$/;"	m
+CXXFLAGS	tests/epub/Makefile	/^CXXFLAGS      = -pipe -O2 -Wall -W -D_REENTRANT $(DEFINES)$/;"	m
+CXXFLAGS	tests/zip/Makefile	/^CXXFLAGS      = -pipe -O2 -Wall -W -D_REENTRANT $(DEFINES)$/;"	m
+ContainerHandler	epub.h	/^    ContainerHandler() : QXmlDefaultHandler(){}$/;"	f	class:ContainerHandler	access:public	signature:()
+ContainerHandler	epub.h	/^class ContainerHandler : public QXmlDefaultHandler{$/;"	c	inherits:QXmlDefaultHandler
+ContainerHandler::ContainerHandler	epub.h	/^    ContainerHandler() : QXmlDefaultHandler(){}$/;"	f	class:ContainerHandler	access:public	signature:()
+ContainerHandler::characters	epub.h	/^    bool characters(const QString &ch){$/;"	f	class:ContainerHandler	access:public	signature:(const QString &ch)
+ContainerHandler::endElement	epub.h	/^    bool endElement(const QString &namespaceURI, $/;"	f	class:ContainerHandler	access:public	signature:(const QString &namespaceURI, const QString &localName, const QString &qName)
+ContainerHandler::m_rootfile	epub.h	/^    QString m_rootfile;$/;"	m	class:ContainerHandler	access:private
+ContainerHandler::rootfile	epub.h	/^    QString rootfile() const{$/;"	f	class:ContainerHandler	access:public	signature:() const
+ContainerHandler::startElement	epub.h	/^    bool startElement(const QString &namespaceURI, $/;"	f	class:ContainerHandler	access:public	signature:(const QString &namespaceURI, const QString &localName, const QString &qName, const QXmlAttributes &atts)
+ContainerHandler::tempText	epub.h	/^    QString tempText;$/;"	m	class:ContainerHandler	access:private
+DEFINES	tests/epub/Makefile	/^DEFINES       = -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED$/;"	m
+DEFINES	tests/zip/Makefile	/^DEFINES       = -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED$/;"	m
+DEF_MEM_LEVEL	minizip/zip.c	93;"	d	file:
+DEF_MEM_LEVEL	minizip/zip.c	95;"	d	file:
+DEF_MEM_LEVEL	minizip/zip.h	81;"	d
+DEF_MEM_LEVEL	minizip/zip.h	83;"	d
+DEL_DIR	tests/epub/Makefile	/^DEL_DIR       = rmdir$/;"	m
+DEL_DIR	tests/zip/Makefile	/^DEL_DIR       = rmdir$/;"	m
+DEL_FILE	tests/epub/Makefile	/^DEL_FILE      = rm -f$/;"	m
+DEL_FILE	tests/zip/Makefile	/^DEL_FILE      = rm -f$/;"	m
+DESTDIR	tests/epub/Makefile	/^DESTDIR       = $/;"	m
+DESTDIR	tests/zip/Makefile	/^DESTDIR       = $/;"	m
+DIST	tests/epub/Makefile	/^DIST          = \/opt\/qt4\/share\/mkspecs\/common\/g++.conf \\$/;"	m
+DIST	tests/zip/Makefile	/^DIST          = \/opt\/qt4\/share\/mkspecs\/common\/g++.conf \\$/;"	m
+Description	epub.h	/^        Description,$/;"	e	enum:Epub::OPFDataType
+Display64BitsSize	minizip/miniunz.c	/^void Display64BitsSize(ZPOS64_T n, int size_char)$/;"	f	signature:(ZPOS64_T n, int size_char)
+ENDHEADERMAGIC	minizip/zip.c	105;"	d	file:
+EPUB_H	epub.h	2;"	d
+Epub	epub.cpp	/^Epub::Epub(const QString &filename, QObject *parent) : $/;"	f	class:Epub	signature:(const QString &filename, QObject *parent)
+Epub	epub.h	/^    Epub(const QString &filename, QObject *parent = 0);$/;"	p	class:Epub	access:public	signature:(const QString &filename, QObject *parent = 0)
+Epub	epub.h	/^class Epub : public QObject{$/;"	c	inherits:QObject
+Epub::Author	epub.h	/^        Author,$/;"	e	enum:Epub::OPFDataType
+Epub::Description	epub.h	/^        Description,$/;"	e	enum:Epub::OPFDataType
+Epub::Epub	epub.cpp	/^Epub::Epub(const QString &filename, QObject *parent) : $/;"	f	class:Epub	signature:(const QString &filename, QObject *parent)
+Epub::Epub	epub.h	/^    Epub(const QString &filename, QObject *parent = 0);$/;"	p	class:Epub	access:public	signature:(const QString &filename, QObject *parent = 0)
+Epub::Guide	epub.h	/^        Guide$/;"	e	enum:Epub::OPFDataType
+Epub::GuideItem	epub.h	/^    struct GuideItem{$/;"	s	class:Epub	access:public
+Epub::GuideItem::href	epub.h	/^        QString href;$/;"	m	struct:Epub::GuideItem	access:public
+Epub::GuideItem::title	epub.h	/^        QString title;$/;"	m	struct:Epub::GuideItem	access:public
+Epub::Manifest	epub.h	/^        Manifest,$/;"	e	enum:Epub::OPFDataType
+Epub::ManifestItem	epub.h	/^    struct ManifestItem{$/;"	s	class:Epub	access:public
+Epub::ManifestItem::href	epub.h	/^        QString href;$/;"	m	struct:Epub::ManifestItem	access:public
+Epub::ManifestItem::id	epub.h	/^        QString id;$/;"	m	struct:Epub::ManifestItem	access:public
+Epub::ManifestItem::media_type	epub.h	/^        QString media_type;$/;"	m	struct:Epub::ManifestItem	access:public
+Epub::NCXItem	epub.h	/^    struct NCXItem{$/;"	s	class:Epub	access:public
+Epub::NCXItem::href	epub.h	/^        QString href;$/;"	m	struct:Epub::NCXItem	access:public
+Epub::NCXItem::id	epub.h	/^        QString id;$/;"	m	struct:Epub::NCXItem	access:public
+Epub::NCXItem::title	epub.h	/^        QString title;$/;"	m	struct:Epub::NCXItem	access:public
+Epub::OPFDataType	epub.h	/^    enum OPFDataType{$/;"	g	class:Epub	access:public
+Epub::Published	epub.h	/^        Published,$/;"	e	enum:Epub::OPFDataType
+Epub::Publisher	epub.h	/^        Publisher,$/;"	e	enum:Epub::OPFDataType
+Epub::Spine	epub.h	/^        Spine,$/;"	e	enum:Epub::OPFDataType
+Epub::Subjects	epub.h	/^        Subjects,$/;"	e	enum:Epub::OPFDataType
+Epub::Title	epub.h	/^        Title,$/;"	e	enum:Epub::OPFDataType
+Epub::author	epub.cpp	/^QString Epub::author()$/;"	f	class:Epub	signature:()
+Epub::author	epub.h	/^    QString author();$/;"	p	class:Epub	access:public	signature:()
+Epub::description	epub.cpp	/^QString Epub::description()$/;"	f	class:Epub	signature:()
+Epub::description	epub.h	/^    QString description();$/;"	p	class:Epub	access:public	signature:()
+Epub::file	epub.cpp	/^QByteArray Epub::file(const QString &link)$/;"	f	class:Epub	signature:(const QString &link)
+Epub::file	epub.h	/^    QByteArray file(const QString &link);$/;"	p	class:Epub	access:public	signature:(const QString &link)
+Epub::getStaticMetaObject	tests/epub/moc_epub.cpp	/^const QMetaObject &Epub::getStaticMetaObject() { return staticMetaObject; }$/;"	f	class:Epub	signature:()
+Epub::guide	epub.cpp	/^QList<Epub::GuideItem> Epub::guide()$/;"	f	class:Epub	signature:()
+Epub::guide	epub.h	/^    QList<GuideItem> guide();$/;"	p	class:Epub	access:public	signature:()
+Epub::guideItem	epub.cpp	/^QString Epub::guideItem(const QString &title) const$/;"	f	class:Epub	signature:(const QString &title) const
+Epub::guideItem	epub.h	/^    QString guideItem(const QString &title) const;$/;"	p	class:Epub	access:public	signature:(const QString &title) const
+Epub::hasNCX	epub.cpp	/^bool Epub::hasNCX() const$/;"	f	class:Epub	signature:() const
+Epub::hasNCX	epub.h	/^    bool hasNCX() const;$/;"	p	class:Epub	access:public	signature:() const
+Epub::isValid	epub.cpp	/^bool Epub::isValid() const$/;"	f	class:Epub	signature:() const
+Epub::isValid	epub.h	/^    bool isValid() const;$/;"	p	class:Epub	access:public	signature:() const
+Epub::m_filename	epub.h	/^    QString m_filename;$/;"	m	class:Epub	access:private
+Epub::m_hasNCX	epub.h	/^    bool m_hasNCX;$/;"	m	class:Epub	access:private
+Epub::m_rootfile	epub.h	/^    QString m_rootfile;$/;"	m	class:Epub	access:private
+Epub::m_rootpath	epub.h	/^    QString m_rootpath;$/;"	m	class:Epub	access:private
+Epub::m_valid	epub.h	/^    bool m_valid;$/;"	m	class:Epub	access:private
+Epub::m_zip	epub.h	/^    ZipHandler m_zip;$/;"	m	class:Epub	access:private
+Epub::manifest	epub.cpp	/^QList<Epub::ManifestItem> Epub::manifest()$/;"	f	class:Epub	signature:()
+Epub::manifest	epub.h	/^    QList<ManifestItem> manifest();$/;"	p	class:Epub	access:public	signature:()
+Epub::manifestItem	epub.cpp	/^QByteArray Epub::manifestItem(const QString &id) const$/;"	f	class:Epub	signature:(const QString &id) const
+Epub::manifestItem	epub.h	/^    QByteArray manifestItem(const QString &id) const;$/;"	p	class:Epub	access:public	signature:(const QString &id) const
+Epub::metaObject	tests/epub/moc_epub.cpp	/^const QMetaObject *Epub::metaObject() const$/;"	f	class:Epub	signature:() const
+Epub::ncx	epub.cpp	/^QList<Epub::NCXItem> Epub::ncx() const$/;"	f	class:Epub	signature:() const
+Epub::ncx	epub.h	/^    QList<NCXItem> ncx() const;$/;"	p	class:Epub	access:public	signature:() const
+Epub::ncxItem	epub.cpp	/^QString Epub::ncxItem(const QString &id) const$/;"	f	class:Epub	signature:(const QString &id) const
+Epub::ncxItem	epub.h	/^    QString ncxItem(const QString &id) const;$/;"	p	class:Epub	access:public	signature:(const QString &id) const
+Epub::opfMetadata	epub.cpp	/^QString Epub::opfMetadata(OPFDataType type)$/;"	f	class:Epub	signature:(OPFDataType type)
+Epub::opfMetadata	epub.h	/^    QString opfMetadata(OPFDataType type);$/;"	p	class:Epub	access:private	signature:(OPFDataType type)
+Epub::parseContainer	epub.cpp	/^bool Epub::parseContainer(const QString &container)$/;"	f	class:Epub	signature:(const QString &container)
+Epub::parseContainer	epub.h	/^    bool parseContainer(const QString &container);$/;"	p	class:Epub	access:private	signature:(const QString &container)
+Epub::published	epub.cpp	/^QString Epub::published()$/;"	f	class:Epub	signature:()
+Epub::published	epub.h	/^    QString published();$/;"	p	class:Epub	access:public	signature:()
+Epub::publisher	epub.cpp	/^QString Epub::publisher()$/;"	f	class:Epub	signature:()
+Epub::publisher	epub.h	/^    QString publisher();$/;"	p	class:Epub	access:public	signature:()
+Epub::qt_metacall	tests/epub/moc_epub.cpp	/^int Epub::qt_metacall(QMetaObject::Call _c, int _id, void **_a)$/;"	f	class:Epub	signature:(QMetaObject::Call _c, int _id, void **_a)
+Epub::qt_metacast	tests/epub/moc_epub.cpp	/^void *Epub::qt_metacast(const char *_clname)$/;"	f	class:Epub	signature:(const char *_clname)
+Epub::readOPF	epub.cpp	/^bool Epub::readOPF(OPFDataType type, QList<OPFHandler::OPFData> *result)$/;"	f	class:Epub	signature:(OPFDataType type, QList<OPFHandler::OPFData> *result)
+Epub::readOPF	epub.h	/^    bool readOPF(OPFDataType type, QList<OPFHandler::OPFData> *result);$/;"	p	class:Epub	access:private	signature:(OPFDataType type, QList<OPFHandler::OPFData> *result)
+Epub::spine	epub.cpp	/^QStringList Epub::spine()$/;"	f	class:Epub	signature:()
+Epub::spine	epub.h	/^    QStringList spine();$/;"	p	class:Epub	access:public	signature:()
+Epub::staticMetaObject	tests/epub/moc_epub.cpp	/^const QMetaObject Epub::staticMetaObject = {$/;"	m	class:Epub	file:
+Epub::subjects	epub.cpp	/^QStringList Epub::subjects()$/;"	f	class:Epub	signature:()
+Epub::subjects	epub.h	/^    QStringList subjects();$/;"	p	class:Epub	access:public	signature:()
+Epub::title	epub.cpp	/^QString Epub::title()$/;"	f	class:Epub	signature:()
+Epub::title	epub.h	/^    QString title(); $/;"	p	class:Epub	access:public	signature:()
+Epub::~Epub	epub.cpp	/^Epub::~Epub()$/;"	f	class:Epub	signature:()
+Epub::~Epub	epub.h	/^    ~Epub();$/;"	p	class:Epub	access:public	signature:()
+FLAG_LOCALHEADER_OFFSET	minizip/zip.c	109;"	d	file:
+FileInZip	ziphandler.h	/^struct FileInZip{$/;"	s
+FileInZip::fileinfo	ziphandler.h	/^    unz_file_info fileinfo;$/;"	m	struct:FileInZip	access:public
+FileInZip::filename	ziphandler.h	/^    QString filename;$/;"	m	struct:FileInZip	access:public
+FileInZip::filenameWithoutPath	ziphandler.h	/^    QString filenameWithoutPath;$/;"	m	struct:FileInZip	access:public
+FileInZip::filepos	ziphandler.h	/^    unz_file_pos filepos;$/;"	m	struct:FileInZip	access:public
+Guide	epub.h	/^        Guide$/;"	e	enum:Epub::OPFDataType
+GuideItem	epub.h	/^    struct GuideItem{$/;"	s	class:Epub	access:public
+INCLUDECRYPTINGCODE_IFCRYPTALLOWED	minizip/zip.c	185;"	d	file:
+INCPATH	tests/epub/Makefile	/^INCPATH       = -I\/opt\/qt4\/share\/mkspecs\/linux-g++ -I. -I\/opt\/qt4\/include\/QtCore -I\/opt\/qt4\/include\/QtGui -I\/opt\/qt4\/include\/QtXml -I\/opt\/qt4\/include -I\/opt\/qt4\/include\/QtTest -I. -I..\/.. -I..\/..\/minizip -I.$/;"	m
+INCPATH	tests/zip/Makefile	/^INCPATH       = -I\/opt\/qt4\/share\/mkspecs\/linux-g++ -I. -I\/opt\/qt4\/include\/QtCore -I\/opt\/qt4\/include\/QtGui -I\/opt\/qt4\/include -I\/opt\/qt4\/include\/QtTest -I. -I..\/.. -I..\/..\/minizip -I.$/;"	m
+INSTALL_DIR	tests/epub/Makefile	/^INSTALL_DIR   = $(COPY_DIR)$/;"	m
+INSTALL_DIR	tests/zip/Makefile	/^INSTALL_DIR   = $(COPY_DIR)$/;"	m
+INSTALL_FILE	tests/epub/Makefile	/^INSTALL_FILE  = install -m 644 -p$/;"	m
+INSTALL_FILE	tests/zip/Makefile	/^INSTALL_FILE  = install -m 644 -p$/;"	m
+INSTALL_PROGRAM	tests/epub/Makefile	/^INSTALL_PROGRAM = install -m 755 -p$/;"	m
+INSTALL_PROGRAM	tests/zip/Makefile	/^INSTALL_PROGRAM = install -m 755 -p$/;"	m
+INVALID_HANDLE_VALUE	minizip/iowin32.c	21;"	d	file:
+INVALID_SET_FILE_POINTER	minizip/iowin32.c	25;"	d	file:
+LFLAGS	tests/epub/Makefile	/^LFLAGS        = -Wl,-O1$/;"	m
+LFLAGS	tests/zip/Makefile	/^LFLAGS        = -Wl,-O1$/;"	m
+LIBS	tests/epub/Makefile	/^LIBS          = $(SUBLIBS)  -L\/opt\/qt4\/lib -lQtTest -lQtXml -lQtGui -lQtCore -lpthread $/;"	m
+LIBS	tests/zip/Makefile	/^LIBS          = $(SUBLIBS)  -L\/opt\/qt4\/lib -lQtTest -lQtGui -lQtCore -lpthread $/;"	m
+LINK	tests/epub/Makefile	/^LINK          = g++$/;"	m
+LINK	tests/zip/Makefile	/^LINK          = g++$/;"	m
+LOCALHEADERMAGIC	minizip/zip.c	103;"	d	file:
+LoadCentralDirectoryRecord	minizip/zip.c	/^int LoadCentralDirectoryRecord(zip64_internal* pziinit)$/;"	f	signature:(zip64_internal* pziinit)
+MAKEULONG64	minizip/zip.c	77;"	d	file:
+MAXFILENAME	minizip/miniunz.c	49;"	d	file:
+MAXFILENAME	minizip/minizip.c	58;"	d	file:
+MKDIR	tests/epub/Makefile	/^MKDIR         = mkdir -p$/;"	m
+MKDIR	tests/zip/Makefile	/^MKDIR         = mkdir -p$/;"	m
+MOVE	tests/epub/Makefile	/^MOVE          = mv -f$/;"	m
+MOVE	tests/zip/Makefile	/^MOVE          = mv -f$/;"	m
+Manifest	epub.h	/^        Manifest,$/;"	e	enum:Epub::OPFDataType
+ManifestItem	epub.h	/^    struct ManifestItem{$/;"	s	class:Epub	access:public
+NCXHANDLER_H	ncxhandler.h	2;"	d
+NCXHandler	ncxhandler.h	/^    NCXHandler() : QXmlDefaultHandler(){}$/;"	f	class:NCXHandler	access:public	signature:()
+NCXHandler	ncxhandler.h	/^class NCXHandler : public QXmlDefaultHandler{$/;"	c	inherits:QXmlDefaultHandler
+NCXHandler::NCXHandler	ncxhandler.h	/^    NCXHandler() : QXmlDefaultHandler(){}$/;"	f	class:NCXHandler	access:public	signature:()
+NCXHandler::NavPoint	ncxhandler.h	/^    struct NavPoint{$/;"	s	class:NCXHandler	access:public
+NCXHandler::NavPoint::href	ncxhandler.h	/^        QString href;$/;"	m	struct:NCXHandler::NavPoint	access:public
+NCXHandler::NavPoint::id	ncxhandler.h	/^        QString id;$/;"	m	struct:NCXHandler::NavPoint	access:public
+NCXHandler::NavPoint::title	ncxhandler.h	/^        QString title;$/;"	m	struct:NCXHandler::NavPoint	access:public
+NCXHandler::characters	ncxhandler.cpp	/^bool NCXHandler::characters(const QString &ch)$/;"	f	class:NCXHandler	signature:(const QString &ch)
+NCXHandler::characters	ncxhandler.h	/^    bool characters(const QString &ch);$/;"	p	class:NCXHandler	access:public	signature:(const QString &ch)
+NCXHandler::endElement	ncxhandler.cpp	/^bool NCXHandler::endElement(const QString &namespaceURI, $/;"	f	class:NCXHandler	signature:(const QString &namespaceURI, const QString &localName, const QString &qName)
+NCXHandler::endElement	ncxhandler.h	/^    bool endElement(const QString &namespaceURI, $/;"	p	class:NCXHandler	access:public	signature:(const QString &namespaceURI, const QString &localName, const QString &qName)
+NCXHandler::navPoints	ncxhandler.h	/^    QList<NavPoint> navPoints() const{$/;"	f	class:NCXHandler	access:public	signature:() const
+NCXHandler::navpoints	ncxhandler.h	/^    QList<NavPoint> navpoints;$/;"	m	class:NCXHandler	access:private
+NCXHandler::startElement	ncxhandler.cpp	/^bool NCXHandler::startElement(const QString &namespaceURI, $/;"	f	class:NCXHandler	signature:(const QString &namespaceURI, const QString &localName, const QString &qName, const QXmlAttributes &atts)
+NCXHandler::startElement	ncxhandler.h	/^    bool startElement(const QString &namespaceURI, $/;"	p	class:NCXHandler	access:public	signature:(const QString &namespaceURI, const QString &localName, const QString &qName, const QXmlAttributes &atts)
+NCXHandler::tempText	ncxhandler.h	/^    QString tempText;$/;"	m	class:NCXHandler	access:private
+NCXItem	epub.h	/^    struct NCXItem{$/;"	s	class:Epub	access:public
+NOUNCRYPT	minizip/unzip.c	72;"	d	file:
+NavPoint	ncxhandler.h	/^    struct NavPoint{$/;"	s	class:NCXHandler	access:public
+OBJECTS	tests/epub/Makefile	/^OBJECTS       = testepub.o \\$/;"	m
+OBJECTS	tests/zip/Makefile	/^OBJECTS       = testziphandler.o \\$/;"	m
+OBJECTS_DIR	tests/epub/Makefile	/^OBJECTS_DIR   = .\/$/;"	m
+OBJECTS_DIR	tests/zip/Makefile	/^OBJECTS_DIR   = .\/$/;"	m
+OF	minizip/ioapi.h	/^typedef ZPOS64_T (ZCALLBACK *tell64_file_func)    OF((voidpf opaque, voidpf stream));$/;"	t
+OF	minizip/ioapi.h	/^typedef uLong    (ZCALLBACK *read_file_func)      OF((voidpf opaque, voidpf stream, void* buf, uLong size));$/;"	t
+OF	minizip/ioapi.h	/^typedef uLong    (ZCALLBACK *write_file_func)     OF((voidpf opaque, voidpf stream, const void* buf, uLong size));$/;"	t
+OF	minizip/ioapi.h	/^typedef voidpf   (ZCALLBACK *open64_file_func)    OF((voidpf opaque, const void* filename, int mode));$/;"	t
+OF	minizip/ioapi.h	/^typedef voidpf   (ZCALLBACK *open_file_func)      OF((voidpf opaque, const char* filename, int mode));$/;"	t
+OPFData	opfhandler.h	/^    struct OPFData{$/;"	s	class:OPFHandler	access:public
+OPFDataType	epub.h	/^    enum OPFDataType{$/;"	g	class:Epub	access:public
+OPFHANDLER_H	opfhandler.h	2;"	d
+OPFHandler	opfhandler.cpp	/^OPFHandler::OPFHandler() :$/;"	f	class:OPFHandler	signature:()
+OPFHandler	opfhandler.cpp	/^OPFHandler::OPFHandler(const QString &tag, bool readContent, QStringList atts) : $/;"	f	class:OPFHandler	signature:(const QString &tag, bool readContent, QStringList atts)
+OPFHandler	opfhandler.h	/^    OPFHandler();$/;"	p	class:OPFHandler	access:public	signature:()
+OPFHandler	opfhandler.h	/^    OPFHandler(const QString &tag, bool readContent = true, QStringList atts = QStringList());$/;"	p	class:OPFHandler	access:public	signature:(const QString &tag, bool readContent = true, QStringList atts = QStringList())
+OPFHandler	opfhandler.h	/^class OPFHandler : public QXmlDefaultHandler{$/;"	c	inherits:QXmlDefaultHandler
+OPFHandler::OPFData	opfhandler.h	/^    struct OPFData{$/;"	s	class:OPFHandler	access:public
+OPFHandler::OPFData::atts	opfhandler.h	/^        QMap<QString, QString> atts;$/;"	m	struct:OPFHandler::OPFData	access:public
+OPFHandler::OPFData::content	opfhandler.h	/^        QString content;$/;"	m	struct:OPFHandler::OPFData	access:public
+OPFHandler::OPFHandler	opfhandler.cpp	/^OPFHandler::OPFHandler() :$/;"	f	class:OPFHandler	signature:()
+OPFHandler::OPFHandler	opfhandler.cpp	/^OPFHandler::OPFHandler(const QString &tag, bool readContent, QStringList atts) : $/;"	f	class:OPFHandler	signature:(const QString &tag, bool readContent, QStringList atts)
+OPFHandler::OPFHandler	opfhandler.h	/^    OPFHandler();$/;"	p	class:OPFHandler	access:public	signature:()
+OPFHandler::OPFHandler	opfhandler.h	/^    OPFHandler(const QString &tag, bool readContent = true, QStringList atts = QStringList());$/;"	p	class:OPFHandler	access:public	signature:(const QString &tag, bool readContent = true, QStringList atts = QStringList())
+OPFHandler::characters	opfhandler.cpp	/^bool OPFHandler::characters(const QString &ch)$/;"	f	class:OPFHandler	signature:(const QString &ch)
+OPFHandler::characters	opfhandler.h	/^    bool characters(const QString &ch);$/;"	p	class:OPFHandler	access:public	signature:(const QString &ch)
+OPFHandler::endElement	opfhandler.cpp	/^bool OPFHandler::endElement(const QString &namespaceURI, $/;"	f	class:OPFHandler	signature:(const QString &namespaceURI, const QString &localName, const QString &qName)
+OPFHandler::endElement	opfhandler.h	/^    bool endElement(const QString &namespaceURI, $/;"	p	class:OPFHandler	access:public	signature:(const QString &namespaceURI, const QString &localName, const QString &qName)
+OPFHandler::fatalError	opfhandler.cpp	/^bool OPFHandler::fatalError(const QXmlParseException &exception)$/;"	f	class:OPFHandler	signature:(const QXmlParseException &exception)
+OPFHandler::fatalError	opfhandler.h	/^    bool fatalError(const QXmlParseException &exception);$/;"	p	class:OPFHandler	access:public	signature:(const QXmlParseException &exception)
+OPFHandler::hasNCX	opfhandler.cpp	/^bool OPFHandler::hasNCX() const$/;"	f	class:OPFHandler	signature:() const
+OPFHandler::hasNCX	opfhandler.h	/^    bool hasNCX() const;$/;"	p	class:OPFHandler	access:public	signature:() const
+OPFHandler::m_atts	opfhandler.h	/^    QStringList m_atts;$/;"	m	class:OPFHandler	access:private
+OPFHandler::m_data	opfhandler.h	/^    QList<OPFData> m_data;$/;"	m	class:OPFHandler	access:private
+OPFHandler::m_ncx	opfhandler.h	/^    bool m_ncx;$/;"	m	class:OPFHandler	access:private
+OPFHandler::m_readContent	opfhandler.h	/^    bool m_readContent;$/;"	m	class:OPFHandler	access:private
+OPFHandler::m_tag	opfhandler.h	/^    QString m_tag;$/;"	m	class:OPFHandler	access:private
+OPFHandler::parsedData	opfhandler.cpp	/^QList<OPFHandler::OPFData> OPFHandler::parsedData() const$/;"	f	class:OPFHandler	signature:() const
+OPFHandler::parsedData	opfhandler.h	/^    QList<OPFData> parsedData() const;$/;"	p	class:OPFHandler	access:public	signature:() const
+OPFHandler::setParsingParameters	opfhandler.cpp	/^void OPFHandler::setParsingParameters(const QString &tag, bool readContent, QStringList atts)$/;"	f	class:OPFHandler	signature:(const QString &tag, bool readContent, QStringList atts)
+OPFHandler::setParsingParameters	opfhandler.h	/^    void setParsingParameters(const QString &tag, bool readContent = true, QStringList atts = QStringList());$/;"	p	class:OPFHandler	access:public	signature:(const QString &tag, bool readContent = true, QStringList atts = QStringList())
+OPFHandler::startElement	opfhandler.cpp	/^bool OPFHandler::startElement(const QString &namespaceURI,$/;"	f	class:OPFHandler	signature:(const QString &namespaceURI, const QString &localName, const QString &qName, const QXmlAttributes &atts)
+OPFHandler::startElement	opfhandler.h	/^    bool startElement(const QString &namespaceURI, $/;"	p	class:OPFHandler	access:public	signature:(const QString &namespaceURI, const QString &localName, const QString &qName, const QXmlAttributes &atts)
+OPFHandler::tempText	opfhandler.h	/^    QString tempText;$/;"	m	class:OPFHandler	access:private
+Published	epub.h	/^        Published,$/;"	e	enum:Epub::OPFDataType
+Publisher	epub.h	/^        Publisher,$/;"	e	enum:Epub::OPFDataType
+QMAKE	tests/epub/Makefile	/^QMAKE         = \/usr\/bin\/qmake$/;"	m
+QMAKE	tests/zip/Makefile	/^QMAKE         = \/usr\/bin\/qmake$/;"	m
+QMAKE_TARGET	tests/epub/Makefile	/^QMAKE_TARGET  = test$/;"	m
+QMAKE_TARGET	tests/zip/Makefile	/^QMAKE_TARGET  = testziphandler$/;"	m
+RAND_HEAD_LEN	minizip/crypt.h	84;"	d
+RANLIB	tests/epub/Makefile	/^RANLIB        = $/;"	m
+RANLIB	tests/zip/Makefile	/^RANLIB        = $/;"	m
+READ_16	minizip/mztools.c	15;"	d	file:
+READ_32	minizip/mztools.c	16;"	d	file:
+READ_8	minizip/mztools.c	14;"	d	file:
+SED	tests/epub/Makefile	/^SED           = sed$/;"	m
+SED	tests/zip/Makefile	/^SED           = sed$/;"	m
+SEEK_CUR	minizip/zip.c	80;"	d	file:
+SEEK_END	minizip/zip.c	84;"	d	file:
+SEEK_SET	minizip/zip.c	88;"	d	file:
+SIZECENTRALDIRITEM	minizip/unzip.c	118;"	d	file:
+SIZECENTRALHEADER	minizip/zip.c	112;"	d	file:
+SIZEDATA_INDATABLOCK	minizip/zip.c	101;"	d	file:
+SIZEZIPLOCALHEADER	minizip/unzip.c	119;"	d	file:
+SOURCES	tests/epub/Makefile	/^SOURCES       = testepub.cpp \\$/;"	m
+SOURCES	tests/zip/Makefile	/^SOURCES       = testziphandler.cpp \\$/;"	m
+STRCMPCASENOSENTIVEFUNCTION	minizip/unzip.c	378;"	d	file:
+STRIP	tests/epub/Makefile	/^STRIP         = strip$/;"	m
+STRIP	tests/zip/Makefile	/^STRIP         = strip$/;"	m
+SYMLINK	tests/epub/Makefile	/^SYMLINK       = ln -f -s$/;"	m
+SYMLINK	tests/zip/Makefile	/^SYMLINK       = ln -f -s$/;"	m
+Spine	epub.h	/^        Spine,$/;"	e	enum:Epub::OPFDataType
+Subjects	epub.h	/^        Subjects,$/;"	e	enum:Epub::OPFDataType
+TAR	tests/epub/Makefile	/^TAR           = tar -cf$/;"	m
+TAR	tests/zip/Makefile	/^TAR           = tar -cf$/;"	m
+TARGET	tests/epub/Makefile	/^TARGET        = test$/;"	m
+TARGET	tests/zip/Makefile	/^TARGET        = testziphandler$/;"	m
+TRYFREE	minizip/unzip.c	115;"	d	file:
+TRYFREE	minizip/zip.c	65;"	d	file:
+TagunzFile__	minizip/unzip.h	/^typedef struct TagunzFile__ { int unused; } unzFile__;$/;"	s
+TagunzFile__::unused	minizip/unzip.h	/^typedef struct TagunzFile__ { int unused; } unzFile__;$/;"	m	struct:TagunzFile__	access:public
+TagzipFile__	minizip/zip.h	/^typedef struct TagzipFile__ { int unused; } zipFile__;$/;"	s
+TagzipFile__::unused	minizip/zip.h	/^typedef struct TagzipFile__ { int unused; } zipFile__;$/;"	m	struct:TagzipFile__	access:public
+TestEpub	tests/epub/testepub.cpp	/^class TestEpub : public QObject$/;"	c	file:	inherits:QObject
+TestEpub::author	tests/epub/testepub.cpp	/^    void author();$/;"	p	class:TestEpub	file:	access:private	signature:()
+TestEpub::author	tests/epub/testepub.cpp	/^void TestEpub::author()$/;"	f	class:TestEpub	signature:()
+TestEpub::book	tests/epub/testepub.cpp	/^    Epub *book;$/;"	m	class:TestEpub	file:	access:private
+TestEpub::file	tests/epub/testepub.cpp	/^    void file();$/;"	p	class:TestEpub	file:	access:private	signature:()
+TestEpub::file	tests/epub/testepub.cpp	/^void TestEpub::file()$/;"	f	class:TestEpub	signature:()
+TestEpub::initialize	tests/epub/testepub.cpp	/^    void initialize();$/;"	p	class:TestEpub	file:	access:private	signature:()
+TestEpub::initialize	tests/epub/testepub.cpp	/^void TestEpub::initialize()$/;"	f	class:TestEpub	signature:()
+TestEpub::manifest	tests/epub/testepub.cpp	/^    void manifest();$/;"	p	class:TestEpub	file:	access:private	signature:()
+TestEpub::manifest	tests/epub/testepub.cpp	/^void TestEpub::manifest()$/;"	f	class:TestEpub	signature:()
+TestEpub::published	tests/epub/testepub.cpp	/^    void published();$/;"	p	class:TestEpub	file:	access:private	signature:()
+TestEpub::published	tests/epub/testepub.cpp	/^void TestEpub::published()$/;"	f	class:TestEpub	signature:()
+TestEpub::publisher	tests/epub/testepub.cpp	/^    void publisher();$/;"	p	class:TestEpub	file:	access:private	signature:()
+TestEpub::publisher	tests/epub/testepub.cpp	/^void TestEpub::publisher()$/;"	f	class:TestEpub	signature:()
+TestEpub::spine	tests/epub/testepub.cpp	/^    void spine();$/;"	p	class:TestEpub	file:	access:private	signature:()
+TestEpub::spine	tests/epub/testepub.cpp	/^void TestEpub::spine()$/;"	f	class:TestEpub	signature:()
+TestEpub::title	tests/epub/testepub.cpp	/^    void title();$/;"	p	class:TestEpub	file:	access:private	signature:()
+TestEpub::title	tests/epub/testepub.cpp	/^void TestEpub::title()$/;"	f	class:TestEpub	signature:()
+TestZipHandler	tests/zip/testziphandler.cpp	/^class TestZipHandler: public QObject$/;"	c	file:	inherits:QObject
+TestZipHandler::filenames	tests/zip/testziphandler.cpp	/^    void filenames();$/;"	p	class:TestZipHandler	file:	access:private	signature:()
+TestZipHandler::filenames	tests/zip/testziphandler.cpp	/^void TestZipHandler::filenames(){$/;"	f	class:TestZipHandler	signature:()
+TestZipHandler::getFile	tests/zip/testziphandler.cpp	/^    void getFile();$/;"	p	class:TestZipHandler	file:	access:private	signature:()
+TestZipHandler::getFile	tests/zip/testziphandler.cpp	/^void TestZipHandler::getFile()$/;"	f	class:TestZipHandler	signature:()
+TestZipHandler::handler	tests/zip/testziphandler.cpp	/^    ZipHandler *handler;$/;"	m	class:TestZipHandler	file:	access:private
+TestZipHandler::initialize	tests/zip/testziphandler.cpp	/^    void initialize();$/;"	p	class:TestZipHandler	file:	access:private	signature:()
+TestZipHandler::initialize	tests/zip/testziphandler.cpp	/^void TestZipHandler::initialize()$/;"	f	class:TestZipHandler	signature:()
+Title	epub.h	/^        Title,$/;"	e	enum:Epub::OPFDataType
+UNZ_BADZIPFILE	minizip/unzip.h	79;"	d
+UNZ_BUFSIZE	minizip/unzip.c	104;"	d	file:
+UNZ_CRCERROR	minizip/unzip.h	81;"	d
+UNZ_END_OF_LIST_OF_FILE	minizip/unzip.h	75;"	d
+UNZ_EOF	minizip/unzip.h	77;"	d
+UNZ_ERRNO	minizip/unzip.h	76;"	d
+UNZ_INTERNALERROR	minizip/unzip.h	80;"	d
+UNZ_MAXFILENAMEINZIP	minizip/unzip.c	108;"	d	file:
+UNZ_OBJS	minizip/Makefile	/^UNZ_OBJS = miniunz.o unzip.o ioapi.o ..\/..\/libz.a$/;"	m
+UNZ_OK	minizip/unzip.h	74;"	d
+UNZ_PARAMERROR	minizip/unzip.h	78;"	d
+USEWIN32IOAPI	minizip/miniunz.c	52;"	d	file:
+USEWIN32IOAPI	minizip/minizip.c	51;"	d	file:
+VERSIONMADEBY	minizip/zip.c	50;"	d	file:
+WIN32FILE_IOWIN	minizip/iowin32.c	/^} WIN32FILE_IOWIN;$/;"	t	typeref:struct:__anon2	file:
+WRITEBUFFERSIZE	minizip/miniunz.c	48;"	d	file:
+WRITEBUFFERSIZE	minizip/minizip.c	57;"	d	file:
+WRITE_16	minizip/mztools.c	21;"	d	file:
+WRITE_32	minizip/mztools.c	25;"	d	file:
+WRITE_8	minizip/mztools.c	18;"	d	file:
+Write_EndOfCentralDirectoryRecord	minizip/zip.c	/^int Write_EndOfCentralDirectoryRecord(zip64_internal* zi, uLong size_centraldir, ZPOS64_T centraldir_pos_inzip)$/;"	f	signature:(zip64_internal* zi, uLong size_centraldir, ZPOS64_T centraldir_pos_inzip)
+Write_GlobalComment	minizip/zip.c	/^int Write_GlobalComment(zip64_internal* zi, const char* global_comment)$/;"	f	signature:(zip64_internal* zi, const char* global_comment)
+Write_LocalFileHeader	minizip/zip.c	/^int Write_LocalFileHeader(zip64_internal* zi, const char* filename, uInt size_extrafield_local, const void* extrafield_local)$/;"	f	signature:(zip64_internal* zi, const char* filename, uInt size_extrafield_local, const void* extrafield_local)
+Write_Zip64EndOfCentralDirectoryLocator	minizip/zip.c	/^int Write_Zip64EndOfCentralDirectoryLocator(zip64_internal* zi, ZPOS64_T zip64eocd_pos_inzip)$/;"	f	signature:(zip64_internal* zi, ZPOS64_T zip64eocd_pos_inzip)
+Write_Zip64EndOfCentralDirectoryRecord	minizip/zip.c	/^int Write_Zip64EndOfCentralDirectoryRecord(zip64_internal* zi, uLong size_centraldir, ZPOS64_T centraldir_pos_inzip)$/;"	f	signature:(zip64_internal* zi, uLong size_centraldir, ZPOS64_T centraldir_pos_inzip)
+ZCALLBACK	minizip/ioapi.h	118;"	d
+ZCALLBACK	minizip/ioapi.h	120;"	d
+ZCLOSE64	minizip/ioapi.h	183;"	d
+ZCR_SEED2	minizip/crypt.h	87;"	d
+ZERROR64	minizip/ioapi.h	184;"	d
+ZIP64ENDHEADERMAGIC	minizip/zip.c	106;"	d	file:
+ZIP64ENDLOCHEADERMAGIC	minizip/zip.c	107;"	d	file:
+ZIPHANDLER_H	ziphandler.h	2;"	d
+ZIP_BADZIPFILE	minizip/zip.h	76;"	d
+ZIP_EOF	minizip/zip.h	73;"	d
+ZIP_ERRNO	minizip/zip.h	74;"	d
+ZIP_INTERNALERROR	minizip/zip.h	77;"	d
+ZIP_OBJS	minizip/Makefile	/^ZIP_OBJS = minizip.o zip.o   ioapi.o ..\/..\/libz.a$/;"	m
+ZIP_OK	minizip/zip.h	72;"	d
+ZIP_PARAMERROR	minizip/zip.h	75;"	d
+ZLIB_FILEFUNC_MODE_CREATE	minizip/ioapi.h	113;"	d
+ZLIB_FILEFUNC_MODE_EXISTING	minizip/ioapi.h	112;"	d
+ZLIB_FILEFUNC_MODE_READ	minizip/ioapi.h	108;"	d
+ZLIB_FILEFUNC_MODE_READWRITEFILTER	minizip/ioapi.h	110;"	d
+ZLIB_FILEFUNC_MODE_WRITE	minizip/ioapi.h	109;"	d
+ZLIB_FILEFUNC_SEEK_CUR	minizip/ioapi.h	104;"	d
+ZLIB_FILEFUNC_SEEK_END	minizip/ioapi.h	105;"	d
+ZLIB_FILEFUNC_SEEK_SET	minizip/ioapi.h	106;"	d
+ZOPEN64	minizip/ioapi.h	192;"	d
+ZPOS64_T	minizip/ioapi.h	/^typedef  64BIT_INT_CUSTOM_TYPE ZPOS64_T;$/;"	t
+ZPOS64_T	minizip/ioapi.h	/^typedef uint64_t ZPOS64_T;$/;"	t
+ZPOS64_T	minizip/ioapi.h	/^typedef unsigned __int64 ZPOS64_T;$/;"	t
+ZPOS64_T	minizip/ioapi.h	/^typedef unsigned long long int ZPOS64_T;$/;"	t
+ZREAD64	minizip/ioapi.h	179;"	d
+ZSEEK64	minizip/ioapi.h	194;"	d
+ZTELL64	minizip/ioapi.h	193;"	d
+ZWRITE64	minizip/ioapi.h	180;"	d
+Z_BUFSIZE	minizip/zip.c	54;"	d	file:
+Z_BZIP2ED	minizip/unzip.h	62;"	d
+Z_BZIP2ED	minizip/zip.h	61;"	d
+Z_MAXFILENAMEINZIP	minizip/zip.c	58;"	d	file:
+ZipHandler	ziphandler.cpp	/^ZipHandler::ZipHandler(const QString &filename, QObject *parent) : $/;"	f	class:ZipHandler	signature:(const QString &filename, QObject *parent)
+ZipHandler	ziphandler.h	/^    explicit ZipHandler(const QString &filename, QObject *parent = 0);$/;"	p	class:ZipHandler	access:public	signature:(const QString &filename, QObject *parent = 0)
+ZipHandler	ziphandler.h	/^class ZipHandler : public QObject{$/;"	c	inherits:QObject
+ZipHandler::ZipHandler	ziphandler.cpp	/^ZipHandler::ZipHandler(const QString &filename, QObject *parent) : $/;"	f	class:ZipHandler	signature:(const QString &filename, QObject *parent)
+ZipHandler::ZipHandler	ziphandler.h	/^    explicit ZipHandler(const QString &filename, QObject *parent = 0);$/;"	p	class:ZipHandler	access:public	signature:(const QString &filename, QObject *parent = 0)
+ZipHandler::fileAsData	ziphandler.cpp	/^QByteArray ZipHandler::fileAsData(const QString &name)$/;"	f	class:ZipHandler	signature:(const QString &name)
+ZipHandler::fileAsData	ziphandler.h	/^    QByteArray fileAsData(const QString &name);$/;"	p	class:ZipHandler	access:public	signature:(const QString &name)
+ZipHandler::fileAsString	ziphandler.cpp	/^QString ZipHandler::fileAsString(const QString &name)$/;"	f	class:ZipHandler	signature:(const QString &name)
+ZipHandler::fileAsString	ziphandler.h	/^    QString fileAsString(const QString &name);$/;"	p	class:ZipHandler	access:public	signature:(const QString &name)
+ZipHandler::fileByName	ziphandler.cpp	/^bool ZipHandler::fileByName(const QString &name, FileInZip &f)$/;"	f	class:ZipHandler	signature:(const QString &name, FileInZip &f)
+ZipHandler::fileByName	ziphandler.h	/^    bool fileByName(const QString &name, FileInZip &f);$/;"	p	class:ZipHandler	access:private	signature:(const QString &name, FileInZip &f)
+ZipHandler::files	ziphandler.cpp	/^QStringList ZipHandler::files() const$/;"	f	class:ZipHandler	signature:() const
+ZipHandler::files	ziphandler.h	/^    QStringList files() const;$/;"	p	class:ZipHandler	access:public	signature:() const
+ZipHandler::getStaticMetaObject	tests/epub/moc_ziphandler.cpp	/^const QMetaObject &ZipHandler::getStaticMetaObject() { return staticMetaObject; }$/;"	f	class:ZipHandler	signature:()
+ZipHandler::getStaticMetaObject	tests/zip/moc_ziphandler.cpp	/^const QMetaObject &ZipHandler::getStaticMetaObject() { return staticMetaObject; }$/;"	f	class:ZipHandler	signature:()
+ZipHandler::isValid	ziphandler.cpp	/^bool ZipHandler::isValid() const$/;"	f	class:ZipHandler	signature:() const
+ZipHandler::isValid	ziphandler.h	/^    bool isValid() const;$/;"	p	class:ZipHandler	access:public	signature:() const
+ZipHandler::m_file	ziphandler.h	/^    QFile m_file;$/;"	m	class:ZipHandler	access:private
+ZipHandler::m_fileinfo	ziphandler.h	/^    unz_global_info m_fileinfo;$/;"	m	class:ZipHandler	access:private
+ZipHandler::m_filename	ziphandler.h	/^    QString m_filename;$/;"	m	class:ZipHandler	access:private
+ZipHandler::m_files	ziphandler.h	/^    QList<FileInZip> m_files;$/;"	m	class:ZipHandler	access:private
+ZipHandler::m_unzfile	ziphandler.h	/^    unzFile m_unzfile;$/;"	m	class:ZipHandler	access:private
+ZipHandler::m_valid	ziphandler.h	/^    bool m_valid;$/;"	m	class:ZipHandler	access:private
+ZipHandler::metaObject	tests/epub/moc_ziphandler.cpp	/^const QMetaObject *ZipHandler::metaObject() const$/;"	f	class:ZipHandler	signature:() const
+ZipHandler::metaObject	tests/zip/moc_ziphandler.cpp	/^const QMetaObject *ZipHandler::metaObject() const$/;"	f	class:ZipHandler	signature:() const
+ZipHandler::qt_metacall	tests/epub/moc_ziphandler.cpp	/^int ZipHandler::qt_metacall(QMetaObject::Call _c, int _id, void **_a)$/;"	f	class:ZipHandler	signature:(QMetaObject::Call _c, int _id, void **_a)
+ZipHandler::qt_metacall	tests/zip/moc_ziphandler.cpp	/^int ZipHandler::qt_metacall(QMetaObject::Call _c, int _id, void **_a)$/;"	f	class:ZipHandler	signature:(QMetaObject::Call _c, int _id, void **_a)
+ZipHandler::qt_metacast	tests/epub/moc_ziphandler.cpp	/^void *ZipHandler::qt_metacast(const char *_clname)$/;"	f	class:ZipHandler	signature:(const char *_clname)
+ZipHandler::qt_metacast	tests/zip/moc_ziphandler.cpp	/^void *ZipHandler::qt_metacast(const char *_clname)$/;"	f	class:ZipHandler	signature:(const char *_clname)
+ZipHandler::readCurrentFileInfo	ziphandler.cpp	/^bool ZipHandler::readCurrentFileInfo()$/;"	f	class:ZipHandler	signature:()
+ZipHandler::readCurrentFileInfo	ziphandler.h	/^    bool readCurrentFileInfo();$/;"	p	class:ZipHandler	access:private	signature:()
+ZipHandler::read_zipinfo	ziphandler.cpp	/^bool ZipHandler::read_zipinfo()$/;"	f	class:ZipHandler	signature:()
+ZipHandler::read_zipinfo	ziphandler.h	/^    bool read_zipinfo();$/;"	p	class:ZipHandler	access:private	signature:()
+ZipHandler::staticMetaObject	tests/epub/moc_ziphandler.cpp	/^const QMetaObject ZipHandler::staticMetaObject = {$/;"	m	class:ZipHandler	file:
+ZipHandler::staticMetaObject	tests/zip/moc_ziphandler.cpp	/^const QMetaObject ZipHandler::staticMetaObject = {$/;"	m	class:ZipHandler	file:
+ZipHandler::~ZipHandler	ziphandler.cpp	/^ZipHandler::~ZipHandler()$/;"	f	class:ZipHandler	signature:()
+ZipHandler::~ZipHandler	ziphandler.h	/^    ~ZipHandler();$/;"	p	class:ZipHandler	access:public	signature:()
+_CRT_SECURE_NO_WARNINGS	minizip/ioapi.c	14;"	d	file:
+_FILE_OFFSET_BIT	minizip/ioapi.h	39;"	d
+_FILE_OFFSET_BIT	minizip/miniunz.c	26;"	d	file:
+_FILE_OFFSET_BIT	minizip/minizip.c	27;"	d	file:
+_LARGEFILE64_SOURCE	minizip/ioapi.h	36;"	d
+_LARGEFILE64_SOURCE	minizip/miniunz.c	23;"	d	file:
+_LARGEFILE64_SOURCE	minizip/minizip.c	24;"	d	file:
+_ZLIBIOAPI64_H	minizip/ioapi.h	22;"	d
+__USE_FILE_OFFSET64	minizip/ioapi.h	30;"	d
+__USE_FILE_OFFSET64	minizip/miniunz.c	17;"	d	file:
+__USE_FILE_OFFSET64	minizip/minizip.c	18;"	d	file:
+__USE_LARGEFILE64	minizip/ioapi.h	33;"	d
+__USE_LARGEFILE64	minizip/miniunz.c	20;"	d	file:
+__USE_LARGEFILE64	minizip/minizip.c	21;"	d	file:
+__anon1::dosDate	minizip/zip.h	/^    uLong       dosDate;       \/* if dos_date == 0, tmu_date is used      *\/$/;"	m	struct:__anon1	access:public
+__anon1::external_fa	minizip/zip.h	/^    uLong       external_fa;    \/* external file attributes        4 bytes *\/$/;"	m	struct:__anon1	access:public
+__anon1::internal_fa	minizip/zip.h	/^    uLong       internal_fa;    \/* internal file attributes        2 bytes *\/$/;"	m	struct:__anon1	access:public
+__anon1::tmz_date	minizip/zip.h	/^    tm_zip      tmz_date;       \/* date in understandable format           *\/$/;"	m	struct:__anon1	access:public
+__anon2::error	minizip/iowin32.c	/^    int error;$/;"	m	struct:__anon2	file:	access:public
+__anon2::hf	minizip/iowin32.c	/^    HANDLE hf;$/;"	m	struct:__anon2	file:	access:public
+__anon3::bstream	minizip/unzip.c	/^    bz_stream bstream;          \/* bzLib stream structure for bziped *\/$/;"	m	struct:__anon3	file:	access:public
+__anon3::byte_before_the_zipfile	minizip/unzip.c	/^    ZPOS64_T byte_before_the_zipfile;\/* byte before the zipfile, (>0 for sfx)*\/$/;"	m	struct:__anon3	file:	access:public
+__anon3::compression_method	minizip/unzip.c	/^    uLong compression_method;   \/* compression method (0==store) *\/$/;"	m	struct:__anon3	file:	access:public
+__anon3::crc32	minizip/unzip.c	/^    uLong crc32;                \/* crc32 of all data uncompressed *\/$/;"	m	struct:__anon3	file:	access:public
+__anon3::crc32_wait	minizip/unzip.c	/^    uLong crc32_wait;           \/* crc32 we must obtain after decompress all *\/$/;"	m	struct:__anon3	file:	access:public
+__anon3::filestream	minizip/unzip.c	/^    voidpf filestream;        \/* io structore of the zipfile *\/$/;"	m	struct:__anon3	file:	access:public
+__anon3::offset_local_extrafield	minizip/unzip.c	/^    ZPOS64_T offset_local_extrafield;\/* offset of the local extra field *\/$/;"	m	struct:__anon3	file:	access:public
+__anon3::pos_in_zipfile	minizip/unzip.c	/^    ZPOS64_T pos_in_zipfile;       \/* position in byte on the zipfile, for fseek*\/$/;"	m	struct:__anon3	file:	access:public
+__anon3::pos_local_extrafield	minizip/unzip.c	/^    ZPOS64_T pos_local_extrafield;   \/* position in the local extra field in read*\/$/;"	m	struct:__anon3	file:	access:public
+__anon3::raw	minizip/unzip.c	/^    int   raw;$/;"	m	struct:__anon3	file:	access:public
+__anon3::read_buffer	minizip/unzip.c	/^    char  *read_buffer;         \/* internal buffer for compressed data *\/$/;"	m	struct:__anon3	file:	access:public
+__anon3::rest_read_compressed	minizip/unzip.c	/^    ZPOS64_T rest_read_compressed; \/* number of byte to be decompressed *\/$/;"	m	struct:__anon3	file:	access:public
+__anon3::rest_read_uncompressed	minizip/unzip.c	/^    ZPOS64_T rest_read_uncompressed;\/*number of byte to be obtained after decomp*\/$/;"	m	struct:__anon3	file:	access:public
+__anon3::size_local_extrafield	minizip/unzip.c	/^    uInt  size_local_extrafield;\/* size of the local extra field *\/$/;"	m	struct:__anon3	file:	access:public
+__anon3::stream	minizip/unzip.c	/^    z_stream stream;            \/* zLib stream structure for inflate *\/$/;"	m	struct:__anon3	file:	access:public
+__anon3::stream_initialised	minizip/unzip.c	/^    uLong stream_initialised;   \/* flag set if stream structure is initialised*\/$/;"	m	struct:__anon3	file:	access:public
+__anon3::total_out_64	minizip/unzip.c	/^    ZPOS64_T total_out_64;$/;"	m	struct:__anon3	file:	access:public
+__anon3::z_filefunc	minizip/unzip.c	/^    zlib_filefunc64_32_def z_filefunc;$/;"	m	struct:__anon3	file:	access:public
+__anon4::byte_before_the_zipfile	minizip/unzip.c	/^    ZPOS64_T byte_before_the_zipfile;\/* byte before the zipfile, (>0 for sfx)*\/$/;"	m	struct:__anon4	file:	access:public
+__anon4::central_pos	minizip/unzip.c	/^    ZPOS64_T central_pos;          \/* position of the beginning of the central dir*\/$/;"	m	struct:__anon4	file:	access:public
+__anon4::cur_file_info	minizip/unzip.c	/^    unz_file_info64 cur_file_info; \/* public info about the current file in zip*\/$/;"	m	struct:__anon4	file:	access:public
+__anon4::cur_file_info_internal	minizip/unzip.c	/^    unz_file_info64_internal cur_file_info_internal; \/* private info about it*\/$/;"	m	struct:__anon4	file:	access:public
+__anon4::current_file_ok	minizip/unzip.c	/^    ZPOS64_T current_file_ok;      \/* flag about the usability of the current file*\/$/;"	m	struct:__anon4	file:	access:public
+__anon4::encrypted	minizip/unzip.c	/^    int encrypted;$/;"	m	struct:__anon4	file:	access:public
+__anon4::filestream	minizip/unzip.c	/^    voidpf filestream;        \/* io structore of the zipfile *\/$/;"	m	struct:__anon4	file:	access:public
+__anon4::gi	minizip/unzip.c	/^    unz_global_info64 gi;       \/* public global information *\/$/;"	m	struct:__anon4	file:	access:public
+__anon4::is64bitOpenFunction	minizip/unzip.c	/^    int is64bitOpenFunction;$/;"	m	struct:__anon4	file:	access:public
+__anon4::isZip64	minizip/unzip.c	/^    int isZip64;$/;"	m	struct:__anon4	file:	access:public
+__anon4::keys	minizip/unzip.c	/^    unsigned long keys[3];     \/* keys defining the pseudo-random sequence *\/$/;"	m	struct:__anon4	file:	access:public
+__anon4::num_file	minizip/unzip.c	/^    ZPOS64_T num_file;             \/* number of the current file in the zipfile*\/$/;"	m	struct:__anon4	file:	access:public
+__anon4::offset_central_dir	minizip/unzip.c	/^    ZPOS64_T offset_central_dir;   \/* offset of start of central directory with$/;"	m	struct:__anon4	file:	access:public
+__anon4::pcrc_32_tab	minizip/unzip.c	/^    const unsigned long* pcrc_32_tab;$/;"	m	struct:__anon4	file:	access:public
+__anon4::pfile_in_zip_read	minizip/unzip.c	/^    file_in_zip64_read_info_s* pfile_in_zip_read; \/* structure about the current$/;"	m	struct:__anon4	file:	access:public
+__anon4::pos_in_central_dir	minizip/unzip.c	/^    ZPOS64_T pos_in_central_dir;   \/* pos of the current file in the central dir*\/$/;"	m	struct:__anon4	file:	access:public
+__anon4::size_central_dir	minizip/unzip.c	/^    ZPOS64_T size_central_dir;     \/* size of the central directory  *\/$/;"	m	struct:__anon4	file:	access:public
+__anon4::z_filefunc	minizip/unzip.c	/^    zlib_filefunc64_32_def z_filefunc;$/;"	m	struct:__anon4	file:	access:public
+__anon5::bstream	minizip/zip.c	/^    bz_stream bstream;          \/* bzLib stream structure for bziped *\/$/;"	m	struct:__anon5	file:	access:public
+__anon5::buffered_data	minizip/zip.c	/^    Byte buffered_data[Z_BUFSIZE];\/* buffer contain compressed data to be writ*\/$/;"	m	struct:__anon5	file:	access:public
+__anon5::central_header	minizip/zip.c	/^    char* central_header;       \/* central header data for the current file *\/$/;"	m	struct:__anon5	file:	access:public
+__anon5::crc32	minizip/zip.c	/^    uLong crc32;$/;"	m	struct:__anon5	file:	access:public
+__anon5::crypt_header_size	minizip/zip.c	/^    int crypt_header_size;$/;"	m	struct:__anon5	file:	access:public
+__anon5::dosDate	minizip/zip.c	/^    uLong dosDate;$/;"	m	struct:__anon5	file:	access:public
+__anon5::encrypt	minizip/zip.c	/^    int  encrypt;$/;"	m	struct:__anon5	file:	access:public
+__anon5::flag	minizip/zip.c	/^    uLong flag;                 \/* flag of the file currently writing *\/$/;"	m	struct:__anon5	file:	access:public
+__anon5::keys	minizip/zip.c	/^    unsigned long keys[3];     \/* keys defining the pseudo-random sequence *\/$/;"	m	struct:__anon5	file:	access:public
+__anon5::method	minizip/zip.c	/^    int  method;                \/* compression method of file currenty wr.*\/$/;"	m	struct:__anon5	file:	access:public
+__anon5::pcrc_32_tab	minizip/zip.c	/^    const unsigned long* pcrc_32_tab;$/;"	m	struct:__anon5	file:	access:public
+__anon5::pos_in_buffered_data	minizip/zip.c	/^    uInt pos_in_buffered_data;  \/* last written byte in buffered_data *\/$/;"	m	struct:__anon5	file:	access:public
+__anon5::pos_local_header	minizip/zip.c	/^    ZPOS64_T pos_local_header;     \/* offset of the local header of the file$/;"	m	struct:__anon5	file:	access:public
+__anon5::pos_zip64extrainfo	minizip/zip.c	/^    ZPOS64_T pos_zip64extrainfo;$/;"	m	struct:__anon5	file:	access:public
+__anon5::raw	minizip/zip.c	/^    int  raw;                   \/* 1 for directly writing raw data *\/$/;"	m	struct:__anon5	file:	access:public
+__anon5::size_centralExtra	minizip/zip.c	/^    uLong size_centralExtra;$/;"	m	struct:__anon5	file:	access:public
+__anon5::size_centralExtraFree	minizip/zip.c	/^    uLong size_centralExtraFree; \/* Extra bytes allocated to the centralheader but that are not used *\/$/;"	m	struct:__anon5	file:	access:public
+__anon5::size_centralheader	minizip/zip.c	/^    uLong size_centralheader;   \/* size of the central header for cur file *\/$/;"	m	struct:__anon5	file:	access:public
+__anon5::stream	minizip/zip.c	/^    z_stream stream;            \/* zLib stream structure for inflate *\/$/;"	m	struct:__anon5	file:	access:public
+__anon5::stream_initialised	minizip/zip.c	/^    int  stream_initialised;    \/* 1 is stream is initialised *\/$/;"	m	struct:__anon5	file:	access:public
+__anon5::totalCompressedData	minizip/zip.c	/^    ZPOS64_T totalCompressedData;$/;"	m	struct:__anon5	file:	access:public
+__anon5::totalUncompressedData	minizip/zip.c	/^    ZPOS64_T totalUncompressedData;$/;"	m	struct:__anon5	file:	access:public
+__anon5::zip64	minizip/zip.c	/^    int  zip64;               \/* Add ZIP64 extened information in the extra field *\/$/;"	m	struct:__anon5	file:	access:public
+__anon6::add_position_when_writting_offset	minizip/zip.c	/^    ZPOS64_T add_position_when_writting_offset;$/;"	m	struct:__anon6	file:	access:public
+__anon6::begin_pos	minizip/zip.c	/^    ZPOS64_T begin_pos;            \/* position of the beginning of the zipfile *\/$/;"	m	struct:__anon6	file:	access:public
+__anon6::central_dir	minizip/zip.c	/^    linkedlist_data central_dir;\/* datablock with central dir in construction*\/$/;"	m	struct:__anon6	file:	access:public
+__anon6::ci	minizip/zip.c	/^    curfile64_info ci;            \/* info on the file curretly writing *\/$/;"	m	struct:__anon6	file:	access:public
+__anon6::filestream	minizip/zip.c	/^    voidpf filestream;        \/* io structore of the zipfile *\/$/;"	m	struct:__anon6	file:	access:public
+__anon6::globalcomment	minizip/zip.c	/^    char *globalcomment;$/;"	m	struct:__anon6	file:	access:public
+__anon6::in_opened_file_inzip	minizip/zip.c	/^    int  in_opened_file_inzip;  \/* 1 if a file in the zip is currently writ.*\/$/;"	m	struct:__anon6	file:	access:public
+__anon6::number_entry	minizip/zip.c	/^    ZPOS64_T number_entry;$/;"	m	struct:__anon6	file:	access:public
+__anon6::z_filefunc	minizip/zip.c	/^    zlib_filefunc64_32_def z_filefunc;$/;"	m	struct:__anon6	file:	access:public
+_unz64_H	minizip/unzip.h	44;"	d
+_zip12_H	minizip/zip.h	41;"	d
+_zip_tools_H	minizip/mztools.h	8;"	d
+add_data_in_datablock	minizip/zip.c	/^local int add_data_in_datablock(linkedlist_data* ll, const void* buf, uLong len)$/;"	f	signature:(linkedlist_data* ll, const void* buf, uLong len)
+add_position_when_writting_offset	minizip/zip.c	/^    ZPOS64_T add_position_when_writting_offset;$/;"	m	struct:__anon6	file:	access:public
+allocate_new_datablock	minizip/zip.c	/^local linkedlist_datablock_internal* allocate_new_datablock()$/;"	f
+atts	opfhandler.h	/^        QMap<QString, QString> atts;$/;"	m	struct:OPFHandler::OPFData	access:public
+author	epub.cpp	/^QString Epub::author()$/;"	f	class:Epub	signature:()
+author	epub.h	/^    QString author();$/;"	p	class:Epub	access:public	signature:()
+author	tests/epub/testepub.cpp	/^    void author();$/;"	p	class:TestEpub	file:	access:private	signature:()
+author	tests/epub/testepub.cpp	/^void TestEpub::author()$/;"	f	class:TestEpub	signature:()
+avail_in_this_block	minizip/zip.c	/^  uLong  avail_in_this_block;$/;"	m	struct:linkedlist_datablock_internal_s	file:	access:public
+begin_pos	minizip/zip.c	/^    ZPOS64_T begin_pos;            \/* position of the beginning of the zipfile *\/$/;"	m	struct:__anon6	file:	access:public
+book	tests/epub/testepub.cpp	/^    Epub *book;$/;"	m	class:TestEpub	file:	access:private
+bstream	minizip/unzip.c	/^    bz_stream bstream;          \/* bzLib stream structure for bziped *\/$/;"	m	struct:__anon3	file:	access:public
+bstream	minizip/zip.c	/^    bz_stream bstream;          \/* bzLib stream structure for bziped *\/$/;"	m	struct:__anon5	file:	access:public
+buffered_data	minizip/zip.c	/^    Byte buffered_data[Z_BUFSIZE];\/* buffer contain compressed data to be writ*\/$/;"	m	struct:__anon5	file:	access:public
+byte_before_the_zipfile	minizip/unzip.c	/^    ZPOS64_T byte_before_the_zipfile;\/* byte before the zipfile, (>0 for sfx)*\/$/;"	m	struct:__anon3	file:	access:public
+byte_before_the_zipfile	minizip/unzip.c	/^    ZPOS64_T byte_before_the_zipfile;\/* byte before the zipfile, (>0 for sfx)*\/$/;"	m	struct:__anon4	file:	access:public
+call_zopen64	minizip/ioapi.c	/^voidpf call_zopen64 (const zlib_filefunc64_32_def* pfilefunc,const void*filename,int mode)$/;"	f	signature:(const zlib_filefunc64_32_def* pfilefunc,const void*filename,int mode)
+call_zopen64	minizip/ioapi.h	/^voidpf call_zopen64 OF((const zlib_filefunc64_32_def* pfilefunc,const void*filename,int mode));$/;"	p	signature:(const zlib_filefunc64_32_def* pfilefunc,const void*filename,int mode)
+call_zseek64	minizip/ioapi.c	/^long call_zseek64 (const zlib_filefunc64_32_def* pfilefunc,voidpf filestream, ZPOS64_T offset, int origin)$/;"	f	signature:(const zlib_filefunc64_32_def* pfilefunc,voidpf filestream, ZPOS64_T offset, int origin)
+call_zseek64	minizip/ioapi.h	/^long    call_zseek64 OF((const zlib_filefunc64_32_def* pfilefunc,voidpf filestream, ZPOS64_T offset, int origin));$/;"	p	signature:(const zlib_filefunc64_32_def* pfilefunc,voidpf filestream, ZPOS64_T offset, int origin)
+call_ztell64	minizip/ioapi.c	/^ZPOS64_T call_ztell64 (const zlib_filefunc64_32_def* pfilefunc,voidpf filestream)$/;"	f	signature:(const zlib_filefunc64_32_def* pfilefunc,voidpf filestream)
+call_ztell64	minizip/ioapi.h	/^ZPOS64_T call_ztell64 OF((const zlib_filefunc64_32_def* pfilefunc,voidpf filestream));$/;"	p	signature:(const zlib_filefunc64_32_def* pfilefunc,voidpf filestream)
+central_dir	minizip/zip.c	/^    linkedlist_data central_dir;\/* datablock with central dir in construction*\/$/;"	m	struct:__anon6	file:	access:public
+central_header	minizip/zip.c	/^    char* central_header;       \/* central header data for the current file *\/$/;"	m	struct:__anon5	file:	access:public
+central_pos	minizip/unzip.c	/^    ZPOS64_T central_pos;          \/* position of the beginning of the central dir*\/$/;"	m	struct:__anon4	file:	access:public
+change_file_date	minizip/miniunz.c	/^void change_file_date(filename,dosdate,tmu_date)$/;"	f
+characters	epub.h	/^    bool characters(const QString &ch){$/;"	f	class:ContainerHandler	access:public	signature:(const QString &ch)
+characters	ncxhandler.cpp	/^bool NCXHandler::characters(const QString &ch)$/;"	f	class:NCXHandler	signature:(const QString &ch)
+characters	ncxhandler.h	/^    bool characters(const QString &ch);$/;"	p	class:NCXHandler	access:public	signature:(const QString &ch)
+characters	opfhandler.cpp	/^bool OPFHandler::characters(const QString &ch)$/;"	f	class:OPFHandler	signature:(const QString &ch)
+characters	opfhandler.h	/^    bool characters(const QString &ch);$/;"	p	class:OPFHandler	access:public	signature:(const QString &ch)
+check_exist_file	minizip/minizip.c	/^int check_exist_file(filename)$/;"	f
+ci	minizip/zip.c	/^    curfile64_info ci;            \/* info on the file curretly writing *\/$/;"	m	struct:__anon6	file:	access:public
+close_file_func	minizip/ioapi.h	/^typedef int      (ZCALLBACK *close_file_func)     OF((voidpf opaque, voidpf stream));$/;"	t
+compressed_size	minizip/unzip.h	/^    ZPOS64_T compressed_size;   \/* compressed size                 8 bytes *\/$/;"	m	struct:unz_file_info64_s	access:public
+compressed_size	minizip/unzip.h	/^    uLong compressed_size;      \/* compressed size                 4 bytes *\/$/;"	m	struct:unz_file_info_s	access:public
+compression_method	minizip/unzip.c	/^    uLong compression_method;   \/* compression method (0==store) *\/$/;"	m	struct:__anon3	file:	access:public
+compression_method	minizip/unzip.h	/^    uLong compression_method;   \/* compression method              2 bytes *\/$/;"	m	struct:unz_file_info64_s	access:public
+compression_method	minizip/unzip.h	/^    uLong compression_method;   \/* compression method              2 bytes *\/$/;"	m	struct:unz_file_info_s	access:public
+content	opfhandler.h	/^        QString content;$/;"	m	struct:OPFHandler::OPFData	access:public
+crc	minizip/unzip.h	/^    uLong crc;                  \/* crc-32                          4 bytes *\/$/;"	m	struct:unz_file_info64_s	access:public
+crc	minizip/unzip.h	/^    uLong crc;                  \/* crc-32                          4 bytes *\/$/;"	m	struct:unz_file_info_s	access:public
+crc32	minizip/unzip.c	/^    uLong crc32;                \/* crc32 of all data uncompressed *\/$/;"	m	struct:__anon3	file:	access:public
+crc32	minizip/zip.c	/^    uLong crc32;$/;"	m	struct:__anon5	file:	access:public
+crc32_wait	minizip/unzip.c	/^    uLong crc32_wait;           \/* crc32 we must obtain after decompress all *\/$/;"	m	struct:__anon3	file:	access:public
+crypt_header_size	minizip/zip.c	/^    int crypt_header_size;$/;"	m	struct:__anon5	file:	access:public
+crypthead	minizip/crypt.h	/^static int crypthead(const char* passwd,      \/* password string *\/$/;"	f	signature:(const char* passwd, unsigned char* buf, int bufSize, unsigned long* pkeys, const unsigned long* pcrc_32_tab, unsigned long crcForCrypting)
+cur_file_info	minizip/unzip.c	/^    unz_file_info64 cur_file_info; \/* public info about the current file in zip*\/$/;"	m	struct:__anon4	file:	access:public
+cur_file_info_internal	minizip/unzip.c	/^    unz_file_info64_internal cur_file_info_internal; \/* private info about it*\/$/;"	m	struct:__anon4	file:	access:public
+curfile64_info	minizip/zip.c	/^} curfile64_info;$/;"	t	typeref:struct:__anon5	file:
+current_file_ok	minizip/unzip.c	/^    ZPOS64_T current_file_ok;      \/* flag about the usability of the current file*\/$/;"	m	struct:__anon4	file:	access:public
+data	minizip/zip.c	/^  unsigned char data[SIZEDATA_INDATABLOCK];$/;"	m	struct:linkedlist_datablock_internal_s	file:	access:public
+decrypt_byte	minizip/crypt.h	/^static int decrypt_byte(unsigned long* pkeys, const unsigned long* pcrc_32_tab)$/;"	f	signature:(unsigned long* pkeys, const unsigned long* pcrc_32_tab)
+description	epub.cpp	/^QString Epub::description()$/;"	f	class:Epub	signature:()
+description	epub.h	/^    QString description();$/;"	p	class:Epub	access:public	signature:()
+disk_num_start	minizip/unzip.h	/^    uLong disk_num_start;       \/* disk number start               2 bytes *\/$/;"	m	struct:unz_file_info64_s	access:public
+disk_num_start	minizip/unzip.h	/^    uLong disk_num_start;       \/* disk number start               2 bytes *\/$/;"	m	struct:unz_file_info_s	access:public
+do_banner	minizip/miniunz.c	/^void do_banner()$/;"	f
+do_banner	minizip/minizip.c	/^void do_banner()$/;"	f
+do_extract	minizip/miniunz.c	/^int do_extract(uf,opt_extract_without_path,opt_overwrite,password)$/;"	f
+do_extract_currentfile	minizip/miniunz.c	/^int do_extract_currentfile(uf,popt_extract_without_path,popt_overwrite,password)$/;"	f
+do_extract_onefile	minizip/miniunz.c	/^int do_extract_onefile(uf,filename,opt_extract_without_path,opt_overwrite,password)$/;"	f
+do_help	minizip/miniunz.c	/^void do_help()$/;"	f
+do_help	minizip/minizip.c	/^void do_help()$/;"	f
+do_list	minizip/miniunz.c	/^int do_list(uf)$/;"	f
+dosDate	minizip/unzip.h	/^    uLong dosDate;              \/* last mod file date in Dos fmt   4 bytes *\/$/;"	m	struct:unz_file_info64_s	access:public
+dosDate	minizip/unzip.h	/^    uLong dosDate;              \/* last mod file date in Dos fmt   4 bytes *\/$/;"	m	struct:unz_file_info_s	access:public
+dosDate	minizip/zip.c	/^    uLong dosDate;$/;"	m	struct:__anon5	file:	access:public
+dosDate	minizip/zip.h	/^    uLong       dosDate;       \/* if dos_date == 0, tmu_date is used      *\/$/;"	m	struct:__anon1	access:public
+encrypt	minizip/zip.c	/^    int  encrypt;$/;"	m	struct:__anon5	file:	access:public
+encrypted	minizip/unzip.c	/^    int encrypted;$/;"	m	struct:__anon4	file:	access:public
+endElement	epub.h	/^    bool endElement(const QString &namespaceURI, $/;"	f	class:ContainerHandler	access:public	signature:(const QString &namespaceURI, const QString &localName, const QString &qName)
+endElement	ncxhandler.cpp	/^bool NCXHandler::endElement(const QString &namespaceURI, $/;"	f	class:NCXHandler	signature:(const QString &namespaceURI, const QString &localName, const QString &qName)
+endElement	ncxhandler.h	/^    bool endElement(const QString &namespaceURI, $/;"	p	class:NCXHandler	access:public	signature:(const QString &namespaceURI, const QString &localName, const QString &qName)
+endElement	opfhandler.cpp	/^bool OPFHandler::endElement(const QString &namespaceURI, $/;"	f	class:OPFHandler	signature:(const QString &namespaceURI, const QString &localName, const QString &qName)
+endElement	opfhandler.h	/^    bool endElement(const QString &namespaceURI, $/;"	p	class:OPFHandler	access:public	signature:(const QString &namespaceURI, const QString &localName, const QString &qName)
+error	minizip/iowin32.c	/^    int error;$/;"	m	struct:__anon2	file:	access:public
+external_fa	minizip/unzip.h	/^    uLong external_fa;          \/* external file attributes        4 bytes *\/$/;"	m	struct:unz_file_info64_s	access:public
+external_fa	minizip/unzip.h	/^    uLong external_fa;          \/* external file attributes        4 bytes *\/$/;"	m	struct:unz_file_info_s	access:public
+external_fa	minizip/zip.h	/^    uLong       external_fa;    \/* external file attributes        4 bytes *\/$/;"	m	struct:__anon1	access:public
+fatalError	opfhandler.cpp	/^bool OPFHandler::fatalError(const QXmlParseException &exception)$/;"	f	class:OPFHandler	signature:(const QXmlParseException &exception)
+fatalError	opfhandler.h	/^    bool fatalError(const QXmlParseException &exception);$/;"	p	class:OPFHandler	access:public	signature:(const QXmlParseException &exception)
+fclose_file_func	minizip/ioapi.c	/^static int     ZCALLBACK fclose_file_func OF((voidpf opaque, voidpf stream));$/;"	p	file:	signature:(voidpf opaque, voidpf stream)
+fclose_file_func	minizip/ioapi.c	/^static int ZCALLBACK fclose_file_func (voidpf opaque, voidpf stream)$/;"	f	file:	signature:(voidpf opaque, voidpf stream)
+ferror_file_func	minizip/ioapi.c	/^static int     ZCALLBACK ferror_file_func OF((voidpf opaque, voidpf stream));$/;"	p	file:	signature:(voidpf opaque, voidpf stream)
+ferror_file_func	minizip/ioapi.c	/^static int ZCALLBACK ferror_file_func (voidpf opaque, voidpf stream)$/;"	f	file:	signature:(voidpf opaque, voidpf stream)
+file	epub.cpp	/^QByteArray Epub::file(const QString &link)$/;"	f	class:Epub	signature:(const QString &link)
+file	epub.h	/^    QByteArray file(const QString &link);$/;"	p	class:Epub	access:public	signature:(const QString &link)
+file	tests/epub/testepub.cpp	/^    void file();$/;"	p	class:TestEpub	file:	access:private	signature:()
+file	tests/epub/testepub.cpp	/^void TestEpub::file()$/;"	f	class:TestEpub	signature:()
+fileAsData	ziphandler.cpp	/^QByteArray ZipHandler::fileAsData(const QString &name)$/;"	f	class:ZipHandler	signature:(const QString &name)
+fileAsData	ziphandler.h	/^    QByteArray fileAsData(const QString &name);$/;"	p	class:ZipHandler	access:public	signature:(const QString &name)
+fileAsString	ziphandler.cpp	/^QString ZipHandler::fileAsString(const QString &name)$/;"	f	class:ZipHandler	signature:(const QString &name)
+fileAsString	ziphandler.h	/^    QString fileAsString(const QString &name);$/;"	p	class:ZipHandler	access:public	signature:(const QString &name)
+fileByName	ziphandler.cpp	/^bool ZipHandler::fileByName(const QString &name, FileInZip &f)$/;"	f	class:ZipHandler	signature:(const QString &name, FileInZip &f)
+fileByName	ziphandler.h	/^    bool fileByName(const QString &name, FileInZip &f);$/;"	p	class:ZipHandler	access:private	signature:(const QString &name, FileInZip &f)
+file_in_zip64_read_info_s	minizip/unzip.c	/^} file_in_zip64_read_info_s;$/;"	t	typeref:struct:__anon3	file:
+fileinfo	ziphandler.h	/^    unz_file_info fileinfo;$/;"	m	struct:FileInZip	access:public
+filename	ziphandler.h	/^    QString filename;$/;"	m	struct:FileInZip	access:public
+filenameWithoutPath	ziphandler.h	/^    QString filenameWithoutPath;$/;"	m	struct:FileInZip	access:public
+filenames	tests/zip/testziphandler.cpp	/^    void filenames();$/;"	p	class:TestZipHandler	file:	access:private	signature:()
+filenames	tests/zip/testziphandler.cpp	/^void TestZipHandler::filenames(){$/;"	f	class:TestZipHandler	signature:()
+filepos	ziphandler.h	/^    unz_file_pos filepos;$/;"	m	struct:FileInZip	access:public
+files	ziphandler.cpp	/^QStringList ZipHandler::files() const$/;"	f	class:ZipHandler	signature:() const
+files	ziphandler.h	/^    QStringList files() const;$/;"	p	class:ZipHandler	access:public	signature:() const
+filestream	minizip/unzip.c	/^    voidpf filestream;        \/* io structore of the zipfile *\/$/;"	m	struct:__anon3	file:	access:public
+filestream	minizip/unzip.c	/^    voidpf filestream;        \/* io structore of the zipfile *\/$/;"	m	struct:__anon4	file:	access:public
+filestream	minizip/zip.c	/^    voidpf filestream;        \/* io structore of the zipfile *\/$/;"	m	struct:__anon6	file:	access:public
+filetime	minizip/minizip.c	/^uLong filetime(f, tmzip, dt)$/;"	f
+fill_fopen64_filefunc	minizip/ioapi.c	/^void fill_fopen64_filefunc (zlib_filefunc64_def*  pzlib_filefunc_def)$/;"	f	signature:(zlib_filefunc64_def* pzlib_filefunc_def)
+fill_fopen64_filefunc	minizip/ioapi.h	/^void fill_fopen64_filefunc OF((zlib_filefunc64_def* pzlib_filefunc_def));$/;"	p	signature:(zlib_filefunc64_def* pzlib_filefunc_def)
+fill_fopen_filefunc	minizip/ioapi.c	/^void fill_fopen_filefunc (pzlib_filefunc_def)$/;"	f
+fill_fopen_filefunc	minizip/ioapi.h	/^void fill_fopen_filefunc OF((zlib_filefunc_def* pzlib_filefunc_def));$/;"	p	signature:(zlib_filefunc_def* pzlib_filefunc_def)
+fill_win32_filefunc	minizip/iowin32.c	/^void fill_win32_filefunc (zlib_filefunc_def* pzlib_filefunc_def)$/;"	f	signature:(zlib_filefunc_def* pzlib_filefunc_def)
+fill_win32_filefunc	minizip/iowin32.h	/^void fill_win32_filefunc OF((zlib_filefunc_def* pzlib_filefunc_def));$/;"	p	signature:(zlib_filefunc_def* pzlib_filefunc_def)
+fill_win32_filefunc64	minizip/iowin32.c	/^void fill_win32_filefunc64(zlib_filefunc64_def* pzlib_filefunc_def)$/;"	f	signature:(zlib_filefunc64_def* pzlib_filefunc_def)
+fill_win32_filefunc64	minizip/iowin32.h	/^void fill_win32_filefunc64 OF((zlib_filefunc64_def* pzlib_filefunc_def));$/;"	p	signature:(zlib_filefunc64_def* pzlib_filefunc_def)
+fill_win32_filefunc64A	minizip/iowin32.c	/^void fill_win32_filefunc64A(zlib_filefunc64_def* pzlib_filefunc_def)$/;"	f	signature:(zlib_filefunc64_def* pzlib_filefunc_def)
+fill_win32_filefunc64A	minizip/iowin32.h	/^void fill_win32_filefunc64A OF((zlib_filefunc64_def* pzlib_filefunc_def));$/;"	p	signature:(zlib_filefunc64_def* pzlib_filefunc_def)
+fill_win32_filefunc64W	minizip/iowin32.c	/^void fill_win32_filefunc64W(zlib_filefunc64_def* pzlib_filefunc_def)$/;"	f	signature:(zlib_filefunc64_def* pzlib_filefunc_def)
+fill_win32_filefunc64W	minizip/iowin32.h	/^void fill_win32_filefunc64W OF((zlib_filefunc64_def* pzlib_filefunc_def));$/;"	p	signature:(zlib_filefunc64_def* pzlib_filefunc_def)
+fill_zlib_filefunc64_32_def_from_filefunc32	minizip/ioapi.c	/^void fill_zlib_filefunc64_32_def_from_filefunc32(zlib_filefunc64_32_def* p_filefunc64_32,const zlib_filefunc_def* p_filefunc32)$/;"	f	signature:(zlib_filefunc64_32_def* p_filefunc64_32,const zlib_filefunc_def* p_filefunc32)
+fill_zlib_filefunc64_32_def_from_filefunc32	minizip/ioapi.h	/^void    fill_zlib_filefunc64_32_def_from_filefunc32(zlib_filefunc64_32_def* p_filefunc64_32,const zlib_filefunc_def* p_filefunc32);$/;"	p	signature:(zlib_filefunc64_32_def* p_filefunc64_32,const zlib_filefunc_def* p_filefunc32)
+filled_in_this_block	minizip/zip.c	/^  uLong  filled_in_this_block;$/;"	m	struct:linkedlist_datablock_internal_s	file:	access:public
+first_block	minizip/zip.c	/^    linkedlist_datablock_internal* first_block;$/;"	m	struct:linkedlist_data_s	file:	access:public
+flag	minizip/unzip.h	/^    uLong flag;                 \/* general purpose bit flag        2 bytes *\/$/;"	m	struct:unz_file_info64_s	access:public
+flag	minizip/unzip.h	/^    uLong flag;                 \/* general purpose bit flag        2 bytes *\/$/;"	m	struct:unz_file_info_s	access:public
+flag	minizip/zip.c	/^    uLong flag;                 \/* flag of the file currently writing *\/$/;"	m	struct:__anon5	file:	access:public
+fopen64	minizip/ioapi.h	48;"	d
+fopen64	minizip/ioapi.h	53;"	d
+fopen64_file_func	minizip/ioapi.c	/^static voidpf ZCALLBACK fopen64_file_func (voidpf opaque, const void* filename, int mode)$/;"	f	file:	signature:(voidpf opaque, const void* filename, int mode)
+fopen_file_func	minizip/ioapi.c	/^static voidpf  ZCALLBACK fopen_file_func OF((voidpf opaque, const char* filename, int mode));$/;"	p	file:	signature:(voidpf opaque, const char* filename, int mode)
+fopen_file_func	minizip/ioapi.c	/^static voidpf ZCALLBACK fopen_file_func (voidpf opaque, const char* filename, int mode)$/;"	f	file:	signature:(voidpf opaque, const char* filename, int mode)
+fread_file_func	minizip/ioapi.c	/^static uLong   ZCALLBACK fread_file_func OF((voidpf opaque, voidpf stream, void* buf, uLong size));$/;"	p	file:	signature:(voidpf opaque, voidpf stream, void* buf, uLong size)
+fread_file_func	minizip/ioapi.c	/^static uLong ZCALLBACK fread_file_func (voidpf opaque, voidpf stream, void* buf, uLong size)$/;"	f	file:	signature:(voidpf opaque, voidpf stream, void* buf, uLong size)
+free_datablock	minizip/zip.c	/^local void free_datablock(linkedlist_datablock_internal* ldi)$/;"	f	signature:(linkedlist_datablock_internal* ldi)
+free_linkedlist	minizip/zip.c	/^local void free_linkedlist(linkedlist_data* ll)$/;"	f	signature:(linkedlist_data* ll)
+fseek64_file_func	minizip/ioapi.c	/^static long    ZCALLBACK fseek64_file_func OF((voidpf opaque, voidpf stream, ZPOS64_T offset, int origin));$/;"	p	file:	signature:(voidpf opaque, voidpf stream, ZPOS64_T offset, int origin)
+fseek64_file_func	minizip/ioapi.c	/^static long ZCALLBACK fseek64_file_func (voidpf  opaque, voidpf stream, ZPOS64_T offset, int origin)$/;"	f	file:	signature:(voidpf opaque, voidpf stream, ZPOS64_T offset, int origin)
+fseek_file_func	minizip/ioapi.c	/^static long ZCALLBACK fseek_file_func (voidpf  opaque, voidpf stream, uLong offset, int origin)$/;"	f	file:	signature:(voidpf opaque, voidpf stream, uLong offset, int origin)
+fseeko64	minizip/ioapi.h	50;"	d
+fseeko64	minizip/ioapi.h	56;"	d
+fseeko64	minizip/ioapi.h	59;"	d
+ftell64_file_func	minizip/ioapi.c	/^static ZPOS64_T ZCALLBACK ftell64_file_func (voidpf opaque, voidpf stream)$/;"	f	file:	signature:(voidpf opaque, voidpf stream)
+ftell64_file_func	minizip/ioapi.c	/^static ZPOS64_T ZCALLBACK ftell64_file_func OF((voidpf opaque, voidpf stream));$/;"	p	file:	signature:(voidpf opaque, voidpf stream)
+ftell_file_func	minizip/ioapi.c	/^static long ZCALLBACK ftell_file_func (voidpf opaque, voidpf stream)$/;"	f	file:	signature:(voidpf opaque, voidpf stream)
+ftello64	minizip/ioapi.h	49;"	d
+ftello64	minizip/ioapi.h	55;"	d
+ftello64	minizip/ioapi.h	58;"	d
+fwrite_file_func	minizip/ioapi.c	/^static uLong   ZCALLBACK fwrite_file_func OF((voidpf opaque, voidpf stream, const void* buf,uLong size));$/;"	p	file:	signature:(voidpf opaque, voidpf stream, const void* buf,uLong size)
+fwrite_file_func	minizip/ioapi.c	/^static uLong ZCALLBACK fwrite_file_func (voidpf opaque, voidpf stream, const void* buf, uLong size)$/;"	f	file:	signature:(voidpf opaque, voidpf stream, const void* buf, uLong size)
+getFile	tests/zip/testziphandler.cpp	/^    void getFile();$/;"	p	class:TestZipHandler	file:	access:private	signature:()
+getFile	tests/zip/testziphandler.cpp	/^void TestZipHandler::getFile()$/;"	f	class:TestZipHandler	signature:()
+getFileCrc	minizip/minizip.c	/^int getFileCrc(const char* filenameinzip,void*buf,unsigned long size_buf,unsigned long* result_crc)$/;"	f	signature:(const char* filenameinzip,void*buf,unsigned long size_buf,unsigned long* result_crc)
+getStaticMetaObject	tests/epub/moc_epub.cpp	/^const QMetaObject &Epub::getStaticMetaObject() { return staticMetaObject; }$/;"	f	class:Epub	signature:()
+getStaticMetaObject	tests/epub/moc_ziphandler.cpp	/^const QMetaObject &ZipHandler::getStaticMetaObject() { return staticMetaObject; }$/;"	f	class:ZipHandler	signature:()
+getStaticMetaObject	tests/zip/moc_ziphandler.cpp	/^const QMetaObject &ZipHandler::getStaticMetaObject() { return staticMetaObject; }$/;"	f	class:ZipHandler	signature:()
+gi	minizip/unzip.c	/^    unz_global_info64 gi;       \/* public global information *\/$/;"	m	struct:__anon4	file:	access:public
+globalcomment	minizip/zip.c	/^    char *globalcomment;$/;"	m	struct:__anon6	file:	access:public
+guide	epub.cpp	/^QList<Epub::GuideItem> Epub::guide()$/;"	f	class:Epub	signature:()
+guide	epub.h	/^    QList<GuideItem> guide();$/;"	p	class:Epub	access:public	signature:()
+guideItem	epub.cpp	/^QString Epub::guideItem(const QString &title) const$/;"	f	class:Epub	signature:(const QString &title) const
+guideItem	epub.h	/^    QString guideItem(const QString &title) const;$/;"	p	class:Epub	access:public	signature:(const QString &title) const
+handler	tests/zip/testziphandler.cpp	/^    ZipHandler *handler;$/;"	m	class:TestZipHandler	file:	access:private
+hasNCX	epub.cpp	/^bool Epub::hasNCX() const$/;"	f	class:Epub	signature:() const
+hasNCX	epub.h	/^    bool hasNCX() const;$/;"	p	class:Epub	access:public	signature:() const
+hasNCX	opfhandler.cpp	/^bool OPFHandler::hasNCX() const$/;"	f	class:OPFHandler	signature:() const
+hasNCX	opfhandler.h	/^    bool hasNCX() const;$/;"	p	class:OPFHandler	access:public	signature:() const
+hf	minizip/iowin32.c	/^    HANDLE hf;$/;"	m	struct:__anon2	file:	access:public
+href	epub.h	/^        QString href;$/;"	m	struct:Epub::GuideItem	access:public
+href	epub.h	/^        QString href;$/;"	m	struct:Epub::ManifestItem	access:public
+href	epub.h	/^        QString href;$/;"	m	struct:Epub::NCXItem	access:public
+href	ncxhandler.h	/^        QString href;$/;"	m	struct:NCXHandler::NavPoint	access:public
+id	epub.h	/^        QString id;$/;"	m	struct:Epub::ManifestItem	access:public
+id	epub.h	/^        QString id;$/;"	m	struct:Epub::NCXItem	access:public
+id	ncxhandler.h	/^        QString id;$/;"	m	struct:NCXHandler::NavPoint	access:public
+in_opened_file_inzip	minizip/zip.c	/^    int  in_opened_file_inzip;  \/* 1 if a file in the zip is currently writ.*\/$/;"	m	struct:__anon6	file:	access:public
+init_keys	minizip/crypt.h	/^static void init_keys(const char* passwd,unsigned long* pkeys,const unsigned long* pcrc_32_tab)$/;"	f	signature:(const char* passwd,unsigned long* pkeys,const unsigned long* pcrc_32_tab)
+init_linkedlist	minizip/zip.c	/^local void init_linkedlist(linkedlist_data* ll)$/;"	f	signature:(linkedlist_data* ll)
+initialize	tests/epub/testepub.cpp	/^    void initialize();$/;"	p	class:TestEpub	file:	access:private	signature:()
+initialize	tests/epub/testepub.cpp	/^void TestEpub::initialize()$/;"	f	class:TestEpub	signature:()
+initialize	tests/zip/testziphandler.cpp	/^    void initialize();$/;"	p	class:TestZipHandler	file:	access:private	signature:()
+initialize	tests/zip/testziphandler.cpp	/^void TestZipHandler::initialize()$/;"	f	class:TestZipHandler	signature:()
+internal_fa	minizip/unzip.h	/^    uLong internal_fa;          \/* internal file attributes        2 bytes *\/$/;"	m	struct:unz_file_info64_s	access:public
+internal_fa	minizip/unzip.h	/^    uLong internal_fa;          \/* internal file attributes        2 bytes *\/$/;"	m	struct:unz_file_info_s	access:public
+internal_fa	minizip/zip.h	/^    uLong       internal_fa;    \/* internal file attributes        2 bytes *\/$/;"	m	struct:__anon1	access:public
+is64bitOpenFunction	minizip/unzip.c	/^    int is64bitOpenFunction;$/;"	m	struct:__anon4	file:	access:public
+isLargeFile	minizip/minizip.c	/^int isLargeFile(const char* filename)$/;"	f	signature:(const char* filename)
+isValid	epub.cpp	/^bool Epub::isValid() const$/;"	f	class:Epub	signature:() const
+isValid	epub.h	/^    bool isValid() const;$/;"	p	class:Epub	access:public	signature:() const
+isValid	ziphandler.cpp	/^bool ZipHandler::isValid() const$/;"	f	class:ZipHandler	signature:() const
+isValid	ziphandler.h	/^    bool isValid() const;$/;"	p	class:ZipHandler	access:public	signature:() const
+isZip64	minizip/unzip.c	/^    int isZip64;$/;"	m	struct:__anon4	file:	access:public
+keys	minizip/unzip.c	/^    unsigned long keys[3];     \/* keys defining the pseudo-random sequence *\/$/;"	m	struct:__anon4	file:	access:public
+keys	minizip/zip.c	/^    unsigned long keys[3];     \/* keys defining the pseudo-random sequence *\/$/;"	m	struct:__anon5	file:	access:public
+last_block	minizip/zip.c	/^    linkedlist_datablock_internal* last_block;$/;"	m	struct:linkedlist_data_s	file:	access:public
+linkedlist_data	minizip/zip.c	/^} linkedlist_data;$/;"	t	typeref:struct:linkedlist_data_s	file:
+linkedlist_data_s	minizip/zip.c	/^typedef struct linkedlist_data_s$/;"	s	file:
+linkedlist_data_s::first_block	minizip/zip.c	/^    linkedlist_datablock_internal* first_block;$/;"	m	struct:linkedlist_data_s	file:	access:public
+linkedlist_data_s::last_block	minizip/zip.c	/^    linkedlist_datablock_internal* last_block;$/;"	m	struct:linkedlist_data_s	file:	access:public
+linkedlist_datablock_internal	minizip/zip.c	/^} linkedlist_datablock_internal;$/;"	t	typeref:struct:linkedlist_datablock_internal_s	file:
+linkedlist_datablock_internal_s	minizip/zip.c	/^typedef struct linkedlist_datablock_internal_s$/;"	s	file:
+linkedlist_datablock_internal_s::avail_in_this_block	minizip/zip.c	/^  uLong  avail_in_this_block;$/;"	m	struct:linkedlist_datablock_internal_s	file:	access:public
+linkedlist_datablock_internal_s::data	minizip/zip.c	/^  unsigned char data[SIZEDATA_INDATABLOCK];$/;"	m	struct:linkedlist_datablock_internal_s	file:	access:public
+linkedlist_datablock_internal_s::filled_in_this_block	minizip/zip.c	/^  uLong  filled_in_this_block;$/;"	m	struct:linkedlist_datablock_internal_s	file:	access:public
+linkedlist_datablock_internal_s::next_datablock	minizip/zip.c	/^  struct linkedlist_datablock_internal_s* next_datablock;$/;"	m	struct:linkedlist_datablock_internal_s	typeref:struct:linkedlist_datablock_internal_s::linkedlist_datablock_internal_s	file:	access:public
+linkedlist_datablock_internal_s::unused	minizip/zip.c	/^  uLong  unused; \/* for future use and alignement *\/$/;"	m	struct:linkedlist_datablock_internal_s	file:	access:public
+local	minizip/unzip.c	91;"	d	file:
+local	minizip/zip.c	45;"	d	file:
+m_atts	opfhandler.h	/^    QStringList m_atts;$/;"	m	class:OPFHandler	access:private
+m_data	opfhandler.h	/^    QList<OPFData> m_data;$/;"	m	class:OPFHandler	access:private
+m_file	ziphandler.h	/^    QFile m_file;$/;"	m	class:ZipHandler	access:private
+m_fileinfo	ziphandler.h	/^    unz_global_info m_fileinfo;$/;"	m	class:ZipHandler	access:private
+m_filename	epub.h	/^    QString m_filename;$/;"	m	class:Epub	access:private
+m_filename	ziphandler.h	/^    QString m_filename;$/;"	m	class:ZipHandler	access:private
+m_files	ziphandler.h	/^    QList<FileInZip> m_files;$/;"	m	class:ZipHandler	access:private
+m_hasNCX	epub.h	/^    bool m_hasNCX;$/;"	m	class:Epub	access:private
+m_ncx	opfhandler.h	/^    bool m_ncx;$/;"	m	class:OPFHandler	access:private
+m_readContent	opfhandler.h	/^    bool m_readContent;$/;"	m	class:OPFHandler	access:private
+m_rootfile	epub.h	/^    QString m_rootfile;$/;"	m	class:ContainerHandler	access:private
+m_rootfile	epub.h	/^    QString m_rootfile;$/;"	m	class:Epub	access:private
+m_rootpath	epub.h	/^    QString m_rootpath;$/;"	m	class:Epub	access:private
+m_tag	opfhandler.h	/^    QString m_tag;$/;"	m	class:OPFHandler	access:private
+m_unzfile	ziphandler.h	/^    unzFile m_unzfile;$/;"	m	class:ZipHandler	access:private
+m_valid	epub.h	/^    bool m_valid;$/;"	m	class:Epub	access:private
+m_valid	ziphandler.h	/^    bool m_valid;$/;"	m	class:ZipHandler	access:private
+m_zip	epub.h	/^    ZipHandler m_zip;$/;"	m	class:Epub	access:private
+main	minizip/miniunz.c	/^int main(argc,argv)$/;"	f
+main	minizip/minizip.c	/^int main(argc,argv)$/;"	f
+makedir	minizip/miniunz.c	/^int makedir (newdir)$/;"	f
+manifest	epub.cpp	/^QList<Epub::ManifestItem> Epub::manifest()$/;"	f	class:Epub	signature:()
+manifest	epub.h	/^    QList<ManifestItem> manifest();$/;"	p	class:Epub	access:public	signature:()
+manifest	tests/epub/testepub.cpp	/^    void manifest();$/;"	p	class:TestEpub	file:	access:private	signature:()
+manifest	tests/epub/testepub.cpp	/^void TestEpub::manifest()$/;"	f	class:TestEpub	signature:()
+manifestItem	epub.cpp	/^QByteArray Epub::manifestItem(const QString &id) const$/;"	f	class:Epub	signature:(const QString &id) const
+manifestItem	epub.h	/^    QByteArray manifestItem(const QString &id) const;$/;"	p	class:Epub	access:public	signature:(const QString &id) const
+media_type	epub.h	/^        QString media_type;$/;"	m	struct:Epub::ManifestItem	access:public
+metaObject	tests/epub/moc_epub.cpp	/^const QMetaObject *Epub::metaObject() const$/;"	f	class:Epub	signature:() const
+metaObject	tests/epub/moc_ziphandler.cpp	/^const QMetaObject *ZipHandler::metaObject() const$/;"	f	class:ZipHandler	signature:() const
+metaObject	tests/zip/moc_ziphandler.cpp	/^const QMetaObject *ZipHandler::metaObject() const$/;"	f	class:ZipHandler	signature:() const
+method	minizip/zip.c	/^    int  method;                \/* compression method of file currenty wr.*\/$/;"	m	struct:__anon5	file:	access:public
+mymkdir	minizip/miniunz.c	/^int mymkdir(dirname)$/;"	f
+navPoints	ncxhandler.h	/^    QList<NavPoint> navPoints() const{$/;"	f	class:NCXHandler	access:public	signature:() const
+navpoints	ncxhandler.h	/^    QList<NavPoint> navpoints;$/;"	m	class:NCXHandler	access:private
+ncx	epub.cpp	/^QList<Epub::NCXItem> Epub::ncx() const$/;"	f	class:Epub	signature:() const
+ncx	epub.h	/^    QList<NCXItem> ncx() const;$/;"	p	class:Epub	access:public	signature:() const
+ncxItem	epub.cpp	/^QString Epub::ncxItem(const QString &id) const$/;"	f	class:Epub	signature:(const QString &id) const
+ncxItem	epub.h	/^    QString ncxItem(const QString &id) const;$/;"	p	class:Epub	access:public	signature:(const QString &id) const
+next_datablock	minizip/zip.c	/^  struct linkedlist_datablock_internal_s* next_datablock;$/;"	m	struct:linkedlist_datablock_internal_s	typeref:struct:linkedlist_datablock_internal_s::linkedlist_datablock_internal_s	file:	access:public
+num_file	minizip/unzip.c	/^    ZPOS64_T num_file;             \/* number of the current file in the zipfile*\/$/;"	m	struct:__anon4	file:	access:public
+num_of_file	minizip/unzip.h	/^    ZPOS64_T num_of_file;            \/* # of file *\/$/;"	m	struct:unz64_file_pos_s	access:public
+num_of_file	minizip/unzip.h	/^    uLong num_of_file;            \/* # of file *\/$/;"	m	struct:unz_file_pos_s	access:public
+number_entry	minizip/unzip.h	/^    ZPOS64_T number_entry;         \/* total number of entries in$/;"	m	struct:unz_global_info64_s	access:public
+number_entry	minizip/unzip.h	/^    uLong number_entry;         \/* total number of entries in$/;"	m	struct:unz_global_info_s	access:public
+number_entry	minizip/zip.c	/^    ZPOS64_T number_entry;$/;"	m	struct:__anon6	file:	access:public
+offset_central_dir	minizip/unzip.c	/^    ZPOS64_T offset_central_dir;   \/* offset of start of central directory with$/;"	m	struct:__anon4	file:	access:public
+offset_curfile	minizip/unzip.c	/^    ZPOS64_T offset_curfile;\/* relative offset of local header 8 bytes *\/$/;"	m	struct:unz_file_info64_internal_s	file:	access:public
+offset_local_extrafield	minizip/unzip.c	/^    ZPOS64_T offset_local_extrafield;\/* offset of the local extra field *\/$/;"	m	struct:__anon3	file:	access:public
+opaque	minizip/ioapi.h	/^    voidpf              opaque;$/;"	m	struct:zlib_filefunc64_def_s	access:public
+opaque	minizip/ioapi.h	/^    voidpf              opaque;$/;"	m	struct:zlib_filefunc_def_s	access:public
+opfMetadata	epub.cpp	/^QString Epub::opfMetadata(OPFDataType type)$/;"	f	class:Epub	signature:(OPFDataType type)
+opfMetadata	epub.h	/^    QString opfMetadata(OPFDataType type);$/;"	p	class:Epub	access:private	signature:(OPFDataType type)
+parseContainer	epub.cpp	/^bool Epub::parseContainer(const QString &container)$/;"	f	class:Epub	signature:(const QString &container)
+parseContainer	epub.h	/^    bool parseContainer(const QString &container);$/;"	p	class:Epub	access:private	signature:(const QString &container)
+parsedData	opfhandler.cpp	/^QList<OPFHandler::OPFData> OPFHandler::parsedData() const$/;"	f	class:OPFHandler	signature:() const
+parsedData	opfhandler.h	/^    QList<OPFData> parsedData() const;$/;"	p	class:OPFHandler	access:public	signature:() const
+pcrc_32_tab	minizip/unzip.c	/^    const unsigned long* pcrc_32_tab;$/;"	m	struct:__anon4	file:	access:public
+pcrc_32_tab	minizip/zip.c	/^    const unsigned long* pcrc_32_tab;$/;"	m	struct:__anon5	file:	access:public
+pfile_in_zip_read	minizip/unzip.c	/^    file_in_zip64_read_info_s* pfile_in_zip_read; \/* structure about the current$/;"	m	struct:__anon4	file:	access:public
+pos_in_buffered_data	minizip/zip.c	/^    uInt pos_in_buffered_data;  \/* last written byte in buffered_data *\/$/;"	m	struct:__anon5	file:	access:public
+pos_in_central_dir	minizip/unzip.c	/^    ZPOS64_T pos_in_central_dir;   \/* pos of the current file in the central dir*\/$/;"	m	struct:__anon4	file:	access:public
+pos_in_zip_directory	minizip/unzip.h	/^    ZPOS64_T pos_in_zip_directory;   \/* offset in zip file directory *\/$/;"	m	struct:unz64_file_pos_s	access:public
+pos_in_zip_directory	minizip/unzip.h	/^    uLong pos_in_zip_directory;   \/* offset in zip file directory *\/$/;"	m	struct:unz_file_pos_s	access:public
+pos_in_zipfile	minizip/unzip.c	/^    ZPOS64_T pos_in_zipfile;       \/* position in byte on the zipfile, for fseek*\/$/;"	m	struct:__anon3	file:	access:public
+pos_local_extrafield	minizip/unzip.c	/^    ZPOS64_T pos_local_extrafield;   \/* position in the local extra field in read*\/$/;"	m	struct:__anon3	file:	access:public
+pos_local_header	minizip/zip.c	/^    ZPOS64_T pos_local_header;     \/* offset of the local header of the file$/;"	m	struct:__anon5	file:	access:public
+pos_zip64extrainfo	minizip/zip.c	/^    ZPOS64_T pos_zip64extrainfo;$/;"	m	struct:__anon5	file:	access:public
+published	epub.cpp	/^QString Epub::published()$/;"	f	class:Epub	signature:()
+published	epub.h	/^    QString published();$/;"	p	class:Epub	access:public	signature:()
+published	tests/epub/testepub.cpp	/^    void published();$/;"	p	class:TestEpub	file:	access:private	signature:()
+published	tests/epub/testepub.cpp	/^void TestEpub::published()$/;"	f	class:TestEpub	signature:()
+publisher	epub.cpp	/^QString Epub::publisher()$/;"	f	class:Epub	signature:()
+publisher	epub.h	/^    QString publisher();$/;"	p	class:Epub	access:public	signature:()
+publisher	tests/epub/testepub.cpp	/^    void publisher();$/;"	p	class:TestEpub	file:	access:private	signature:()
+publisher	tests/epub/testepub.cpp	/^void TestEpub::publisher()$/;"	f	class:TestEpub	signature:()
+qt_meta_data_Epub	tests/epub/moc_epub.cpp	/^static const uint qt_meta_data_Epub[] = {$/;"	v	file:
+qt_meta_data_ZipHandler	tests/epub/moc_ziphandler.cpp	/^static const uint qt_meta_data_ZipHandler[] = {$/;"	v	file:
+qt_meta_data_ZipHandler	tests/zip/moc_ziphandler.cpp	/^static const uint qt_meta_data_ZipHandler[] = {$/;"	v	file:
+qt_meta_stringdata_Epub	tests/epub/moc_epub.cpp	/^static const char qt_meta_stringdata_Epub[] = {$/;"	v	file:
+qt_meta_stringdata_ZipHandler	tests/epub/moc_ziphandler.cpp	/^static const char qt_meta_stringdata_ZipHandler[] = {$/;"	v	file:
+qt_meta_stringdata_ZipHandler	tests/zip/moc_ziphandler.cpp	/^static const char qt_meta_stringdata_ZipHandler[] = {$/;"	v	file:
+qt_metacall	tests/epub/moc_epub.cpp	/^int Epub::qt_metacall(QMetaObject::Call _c, int _id, void **_a)$/;"	f	class:Epub	signature:(QMetaObject::Call _c, int _id, void **_a)
+qt_metacall	tests/epub/moc_ziphandler.cpp	/^int ZipHandler::qt_metacall(QMetaObject::Call _c, int _id, void **_a)$/;"	f	class:ZipHandler	signature:(QMetaObject::Call _c, int _id, void **_a)
+qt_metacall	tests/zip/moc_ziphandler.cpp	/^int ZipHandler::qt_metacall(QMetaObject::Call _c, int _id, void **_a)$/;"	f	class:ZipHandler	signature:(QMetaObject::Call _c, int _id, void **_a)
+qt_metacast	tests/epub/moc_epub.cpp	/^void *Epub::qt_metacast(const char *_clname)$/;"	f	class:Epub	signature:(const char *_clname)
+qt_metacast	tests/epub/moc_ziphandler.cpp	/^void *ZipHandler::qt_metacast(const char *_clname)$/;"	f	class:ZipHandler	signature:(const char *_clname)
+qt_metacast	tests/zip/moc_ziphandler.cpp	/^void *ZipHandler::qt_metacast(const char *_clname)$/;"	f	class:ZipHandler	signature:(const char *_clname)
+raw	minizip/unzip.c	/^    int   raw;$/;"	m	struct:__anon3	file:	access:public
+raw	minizip/zip.c	/^    int  raw;                   \/* 1 for directly writing raw data *\/$/;"	m	struct:__anon5	file:	access:public
+readCurrentFileInfo	ziphandler.cpp	/^bool ZipHandler::readCurrentFileInfo()$/;"	f	class:ZipHandler	signature:()
+readCurrentFileInfo	ziphandler.h	/^    bool readCurrentFileInfo();$/;"	p	class:ZipHandler	access:private	signature:()
+readOPF	epub.cpp	/^bool Epub::readOPF(OPFDataType type, QList<OPFHandler::OPFData> *result)$/;"	f	class:Epub	signature:(OPFDataType type, QList<OPFHandler::OPFData> *result)
+readOPF	epub.h	/^    bool readOPF(OPFDataType type, QList<OPFHandler::OPFData> *result);$/;"	p	class:Epub	access:private	signature:(OPFDataType type, QList<OPFHandler::OPFData> *result)
+read_buffer	minizip/unzip.c	/^    char  *read_buffer;         \/* internal buffer for compressed data *\/$/;"	m	struct:__anon3	file:	access:public
+read_zipinfo	ziphandler.cpp	/^bool ZipHandler::read_zipinfo()$/;"	f	class:ZipHandler	signature:()
+read_zipinfo	ziphandler.h	/^    bool read_zipinfo();$/;"	p	class:ZipHandler	access:private	signature:()
+rest_read_compressed	minizip/unzip.c	/^    ZPOS64_T rest_read_compressed; \/* number of byte to be decompressed *\/$/;"	m	struct:__anon3	file:	access:public
+rest_read_uncompressed	minizip/unzip.c	/^    ZPOS64_T rest_read_uncompressed;\/*number of byte to be obtained after decomp*\/$/;"	m	struct:__anon3	file:	access:public
+rootfile	epub.h	/^    QString rootfile() const{$/;"	f	class:ContainerHandler	access:public	signature:() const
+seek64_file_func	minizip/ioapi.h	/^typedef long     (ZCALLBACK *seek64_file_func)    OF((voidpf opaque, voidpf stream, ZPOS64_T offset, int origin));$/;"	t
+seek_file_func	minizip/ioapi.h	/^typedef long     (ZCALLBACK *seek_file_func)      OF((voidpf opaque, voidpf stream, uLong offset, int origin));$/;"	t
+setParsingParameters	opfhandler.cpp	/^void OPFHandler::setParsingParameters(const QString &tag, bool readContent, QStringList atts)$/;"	f	class:OPFHandler	signature:(const QString &tag, bool readContent, QStringList atts)
+setParsingParameters	opfhandler.h	/^    void setParsingParameters(const QString &tag, bool readContent = true, QStringList atts = QStringList());$/;"	p	class:OPFHandler	access:public	signature:(const QString &tag, bool readContent = true, QStringList atts = QStringList())
+size_centralExtra	minizip/zip.c	/^    uLong size_centralExtra;$/;"	m	struct:__anon5	file:	access:public
+size_centralExtraFree	minizip/zip.c	/^    uLong size_centralExtraFree; \/* Extra bytes allocated to the centralheader but that are not used *\/$/;"	m	struct:__anon5	file:	access:public
+size_central_dir	minizip/unzip.c	/^    ZPOS64_T size_central_dir;     \/* size of the central directory  *\/$/;"	m	struct:__anon4	file:	access:public
+size_centralheader	minizip/zip.c	/^    uLong size_centralheader;   \/* size of the central header for cur file *\/$/;"	m	struct:__anon5	file:	access:public
+size_comment	minizip/unzip.h	/^    uLong size_comment;         \/* size of the global comment of the zipfile *\/$/;"	m	struct:unz_global_info64_s	access:public
+size_comment	minizip/unzip.h	/^    uLong size_comment;         \/* size of the global comment of the zipfile *\/$/;"	m	struct:unz_global_info_s	access:public
+size_file_comment	minizip/unzip.h	/^    uLong size_file_comment;    \/* file comment length             2 bytes *\/$/;"	m	struct:unz_file_info64_s	access:public
+size_file_comment	minizip/unzip.h	/^    uLong size_file_comment;    \/* file comment length             2 bytes *\/$/;"	m	struct:unz_file_info_s	access:public
+size_file_extra	minizip/unzip.h	/^    uLong size_file_extra;      \/* extra field length              2 bytes *\/$/;"	m	struct:unz_file_info64_s	access:public
+size_file_extra	minizip/unzip.h	/^    uLong size_file_extra;      \/* extra field length              2 bytes *\/$/;"	m	struct:unz_file_info_s	access:public
+size_filename	minizip/unzip.h	/^    uLong size_filename;        \/* filename length                 2 bytes *\/$/;"	m	struct:unz_file_info64_s	access:public
+size_filename	minizip/unzip.h	/^    uLong size_filename;        \/* filename length                 2 bytes *\/$/;"	m	struct:unz_file_info_s	access:public
+size_local_extrafield	minizip/unzip.c	/^    uInt  size_local_extrafield;\/* size of the local extra field *\/$/;"	m	struct:__anon3	file:	access:public
+spine	epub.cpp	/^QStringList Epub::spine()$/;"	f	class:Epub	signature:()
+spine	epub.h	/^    QStringList spine();$/;"	p	class:Epub	access:public	signature:()
+spine	tests/epub/testepub.cpp	/^    void spine();$/;"	p	class:TestEpub	file:	access:private	signature:()
+spine	tests/epub/testepub.cpp	/^void TestEpub::spine()$/;"	f	class:TestEpub	signature:()
+startElement	epub.h	/^    bool startElement(const QString &namespaceURI, $/;"	f	class:ContainerHandler	access:public	signature:(const QString &namespaceURI, const QString &localName, const QString &qName, const QXmlAttributes &atts)
+startElement	ncxhandler.cpp	/^bool NCXHandler::startElement(const QString &namespaceURI, $/;"	f	class:NCXHandler	signature:(const QString &namespaceURI, const QString &localName, const QString &qName, const QXmlAttributes &atts)
+startElement	ncxhandler.h	/^    bool startElement(const QString &namespaceURI, $/;"	p	class:NCXHandler	access:public	signature:(const QString &namespaceURI, const QString &localName, const QString &qName, const QXmlAttributes &atts)
+startElement	opfhandler.cpp	/^bool OPFHandler::startElement(const QString &namespaceURI,$/;"	f	class:OPFHandler	signature:(const QString &namespaceURI, const QString &localName, const QString &qName, const QXmlAttributes &atts)
+startElement	opfhandler.h	/^    bool startElement(const QString &namespaceURI, $/;"	p	class:OPFHandler	access:public	signature:(const QString &namespaceURI, const QString &localName, const QString &qName, const QXmlAttributes &atts)
+staticMetaObject	tests/epub/moc_epub.cpp	/^const QMetaObject Epub::staticMetaObject = {$/;"	m	class:Epub	file:
+staticMetaObject	tests/epub/moc_ziphandler.cpp	/^const QMetaObject ZipHandler::staticMetaObject = {$/;"	m	class:ZipHandler	file:
+staticMetaObject	tests/zip/moc_ziphandler.cpp	/^const QMetaObject ZipHandler::staticMetaObject = {$/;"	m	class:ZipHandler	file:
+strcmpcasenosensitive_internal	minizip/unzip.c	/^local int strcmpcasenosensitive_internal (const char* fileName1, const char* fileName2)$/;"	f	signature:(const char* fileName1, const char* fileName2)
+stream	minizip/unzip.c	/^    z_stream stream;            \/* zLib stream structure for inflate *\/$/;"	m	struct:__anon3	file:	access:public
+stream	minizip/zip.c	/^    z_stream stream;            \/* zLib stream structure for inflate *\/$/;"	m	struct:__anon5	file:	access:public
+stream_initialised	minizip/unzip.c	/^    uLong stream_initialised;   \/* flag set if stream structure is initialised*\/$/;"	m	struct:__anon3	file:	access:public
+stream_initialised	minizip/zip.c	/^    int  stream_initialised;    \/* 1 is stream is initialised *\/$/;"	m	struct:__anon5	file:	access:public
+subjects	epub.cpp	/^QStringList Epub::subjects()$/;"	f	class:Epub	signature:()
+subjects	epub.h	/^    QStringList subjects();$/;"	p	class:Epub	access:public	signature:()
+tell_file_func	minizip/ioapi.h	/^typedef long     (ZCALLBACK *tell_file_func)      OF((voidpf opaque, voidpf stream));$/;"	t
+tempText	epub.h	/^    QString tempText;$/;"	m	class:ContainerHandler	access:private
+tempText	ncxhandler.h	/^    QString tempText;$/;"	m	class:NCXHandler	access:private
+tempText	opfhandler.h	/^    QString tempText;$/;"	m	class:OPFHandler	access:private
+testerror_file_func	minizip/ioapi.h	/^typedef int      (ZCALLBACK *testerror_file_func) OF((voidpf opaque, voidpf stream));$/;"	t
+title	epub.cpp	/^QString Epub::title()$/;"	f	class:Epub	signature:()
+title	epub.h	/^        QString title;$/;"	m	struct:Epub::GuideItem	access:public
+title	epub.h	/^        QString title;$/;"	m	struct:Epub::NCXItem	access:public
+title	epub.h	/^    QString title(); $/;"	p	class:Epub	access:public	signature:()
+title	ncxhandler.h	/^        QString title;$/;"	m	struct:NCXHandler::NavPoint	access:public
+title	tests/epub/testepub.cpp	/^    void title();$/;"	p	class:TestEpub	file:	access:private	signature:()
+title	tests/epub/testepub.cpp	/^void TestEpub::title()$/;"	f	class:TestEpub	signature:()
+tm_hour	minizip/unzip.h	/^    uInt tm_hour;           \/* hours since midnight - [0,23] *\/$/;"	m	struct:tm_unz_s	access:public
+tm_hour	minizip/zip.h	/^    uInt tm_hour;           \/* hours since midnight - [0,23] *\/$/;"	m	struct:tm_zip_s	access:public
+tm_mday	minizip/unzip.h	/^    uInt tm_mday;           \/* day of the month - [1,31] *\/$/;"	m	struct:tm_unz_s	access:public
+tm_mday	minizip/zip.h	/^    uInt tm_mday;           \/* day of the month - [1,31] *\/$/;"	m	struct:tm_zip_s	access:public
+tm_min	minizip/unzip.h	/^    uInt tm_min;            \/* minutes after the hour - [0,59] *\/$/;"	m	struct:tm_unz_s	access:public
+tm_min	minizip/zip.h	/^    uInt tm_min;            \/* minutes after the hour - [0,59] *\/$/;"	m	struct:tm_zip_s	access:public
+tm_mon	minizip/unzip.h	/^    uInt tm_mon;            \/* months since January - [0,11] *\/$/;"	m	struct:tm_unz_s	access:public
+tm_mon	minizip/zip.h	/^    uInt tm_mon;            \/* months since January - [0,11] *\/$/;"	m	struct:tm_zip_s	access:public
+tm_sec	minizip/unzip.h	/^    uInt tm_sec;            \/* seconds after the minute - [0,59] *\/$/;"	m	struct:tm_unz_s	access:public
+tm_sec	minizip/zip.h	/^    uInt tm_sec;            \/* seconds after the minute - [0,59] *\/$/;"	m	struct:tm_zip_s	access:public
+tm_unz	minizip/unzip.h	/^} tm_unz;$/;"	t	typeref:struct:tm_unz_s
+tm_unz_s	minizip/unzip.h	/^typedef struct tm_unz_s$/;"	s
+tm_unz_s::tm_hour	minizip/unzip.h	/^    uInt tm_hour;           \/* hours since midnight - [0,23] *\/$/;"	m	struct:tm_unz_s	access:public
+tm_unz_s::tm_mday	minizip/unzip.h	/^    uInt tm_mday;           \/* day of the month - [1,31] *\/$/;"	m	struct:tm_unz_s	access:public
+tm_unz_s::tm_min	minizip/unzip.h	/^    uInt tm_min;            \/* minutes after the hour - [0,59] *\/$/;"	m	struct:tm_unz_s	access:public
+tm_unz_s::tm_mon	minizip/unzip.h	/^    uInt tm_mon;            \/* months since January - [0,11] *\/$/;"	m	struct:tm_unz_s	access:public
+tm_unz_s::tm_sec	minizip/unzip.h	/^    uInt tm_sec;            \/* seconds after the minute - [0,59] *\/$/;"	m	struct:tm_unz_s	access:public
+tm_unz_s::tm_year	minizip/unzip.h	/^    uInt tm_year;           \/* years - [1980..2044] *\/$/;"	m	struct:tm_unz_s	access:public
+tm_year	minizip/unzip.h	/^    uInt tm_year;           \/* years - [1980..2044] *\/$/;"	m	struct:tm_unz_s	access:public
+tm_year	minizip/zip.h	/^    uInt tm_year;           \/* years - [1980..2044] *\/$/;"	m	struct:tm_zip_s	access:public
+tm_zip	minizip/zip.h	/^} tm_zip;$/;"	t	typeref:struct:tm_zip_s
+tm_zip_s	minizip/zip.h	/^typedef struct tm_zip_s$/;"	s
+tm_zip_s::tm_hour	minizip/zip.h	/^    uInt tm_hour;           \/* hours since midnight - [0,23] *\/$/;"	m	struct:tm_zip_s	access:public
+tm_zip_s::tm_mday	minizip/zip.h	/^    uInt tm_mday;           \/* day of the month - [1,31] *\/$/;"	m	struct:tm_zip_s	access:public
+tm_zip_s::tm_min	minizip/zip.h	/^    uInt tm_min;            \/* minutes after the hour - [0,59] *\/$/;"	m	struct:tm_zip_s	access:public
+tm_zip_s::tm_mon	minizip/zip.h	/^    uInt tm_mon;            \/* months since January - [0,11] *\/$/;"	m	struct:tm_zip_s	access:public
+tm_zip_s::tm_sec	minizip/zip.h	/^    uInt tm_sec;            \/* seconds after the minute - [0,59] *\/$/;"	m	struct:tm_zip_s	access:public
+tm_zip_s::tm_year	minizip/zip.h	/^    uInt tm_year;           \/* years - [1980..2044] *\/$/;"	m	struct:tm_zip_s	access:public
+tmu_date	minizip/unzip.h	/^    tm_unz tmu_date;$/;"	m	struct:unz_file_info64_s	access:public
+tmu_date	minizip/unzip.h	/^    tm_unz tmu_date;$/;"	m	struct:unz_file_info_s	access:public
+tmz_date	minizip/zip.h	/^    tm_zip      tmz_date;       \/* date in understandable format           *\/$/;"	m	struct:__anon1	access:public
+totalCompressedData	minizip/zip.c	/^    ZPOS64_T totalCompressedData;$/;"	m	struct:__anon5	file:	access:public
+totalUncompressedData	minizip/zip.c	/^    ZPOS64_T totalUncompressedData;$/;"	m	struct:__anon5	file:	access:public
+total_out_64	minizip/unzip.c	/^    ZPOS64_T total_out_64;$/;"	m	struct:__anon3	file:	access:public
+uncompressed_size	minizip/unzip.h	/^    ZPOS64_T uncompressed_size; \/* uncompressed size               8 bytes *\/$/;"	m	struct:unz_file_info64_s	access:public
+uncompressed_size	minizip/unzip.h	/^    uLong uncompressed_size;    \/* uncompressed size               4 bytes *\/$/;"	m	struct:unz_file_info_s	access:public
+unused	minizip/unzip.h	/^typedef struct TagunzFile__ { int unused; } unzFile__;$/;"	m	struct:TagunzFile__	access:public
+unused	minizip/zip.c	/^  uLong  unused; \/* for future use and alignement *\/$/;"	m	struct:linkedlist_datablock_internal_s	file:	access:public
+unused	minizip/zip.h	/^typedef struct TagzipFile__ { int unused; } zipFile__;$/;"	m	struct:TagzipFile__	access:public
+unz64_file_pos	minizip/unzip.h	/^} unz64_file_pos;$/;"	t	typeref:struct:unz64_file_pos_s
+unz64_file_pos_s	minizip/unzip.h	/^typedef struct unz64_file_pos_s$/;"	s
+unz64_file_pos_s::num_of_file	minizip/unzip.h	/^    ZPOS64_T num_of_file;            \/* # of file *\/$/;"	m	struct:unz64_file_pos_s	access:public
+unz64_file_pos_s::pos_in_zip_directory	minizip/unzip.h	/^    ZPOS64_T pos_in_zip_directory;   \/* offset in zip file directory *\/$/;"	m	struct:unz64_file_pos_s	access:public
+unz64_s	minizip/unzip.c	/^} unz64_s;$/;"	t	typeref:struct:__anon4	file:
+unz64local_CheckCurrentFileCoherencyHeader	minizip/unzip.c	/^local int unz64local_CheckCurrentFileCoherencyHeader (unz64_s* s, uInt* piSizeVar,$/;"	f	signature:(unz64_s* s, uInt* piSizeVar, ZPOS64_T * poffset_local_extrafield, uInt * psize_local_extrafield)
+unz64local_DosDateToTmuDate	minizip/unzip.c	/^local void unz64local_DosDateToTmuDate (ZPOS64_T ulDosDate, tm_unz* ptm)$/;"	f	signature:(ZPOS64_T ulDosDate, tm_unz* ptm)
+unz64local_GetCurrentFileInfoInternal	minizip/unzip.c	/^local int unz64local_GetCurrentFileInfoInternal (unzFile file,$/;"	f	signature:(unzFile file, unz_file_info64 *pfile_info, unz_file_info64_internal *pfile_info_internal, char *szFileName, uLong fileNameBufferSize, void *extraField, uLong extraFieldBufferSize, char *szComment, uLong commentBufferSize)
+unz64local_GetCurrentFileInfoInternal	minizip/unzip.c	/^local int unz64local_GetCurrentFileInfoInternal OF((unzFile file,$/;"	p	file:	signature:(unzFile file, unz_file_info64 *pfile_info, unz_file_info64_internal *pfile_info_internal, char *szFileName, uLong fileNameBufferSize, void *extraField, uLong extraFieldBufferSize, char *szComment, uLong commentBufferSize)
+unz64local_SearchCentralDir	minizip/unzip.c	/^local ZPOS64_T unz64local_SearchCentralDir OF((const zlib_filefunc64_32_def* pzlib_filefunc_def, voidpf filestream));$/;"	p	file:	signature:(const zlib_filefunc64_32_def* pzlib_filefunc_def, voidpf filestream)
+unz64local_SearchCentralDir	minizip/unzip.c	/^local ZPOS64_T unz64local_SearchCentralDir(const zlib_filefunc64_32_def* pzlib_filefunc_def, voidpf filestream)$/;"	f	signature:(const zlib_filefunc64_32_def* pzlib_filefunc_def, voidpf filestream)
+unz64local_SearchCentralDir64	minizip/unzip.c	/^local ZPOS64_T unz64local_SearchCentralDir64 OF(($/;"	p	file:	signature:( const zlib_filefunc64_32_def* pzlib_filefunc_def, voidpf filestream)
+unz64local_SearchCentralDir64	minizip/unzip.c	/^local ZPOS64_T unz64local_SearchCentralDir64(const zlib_filefunc64_32_def* pzlib_filefunc_def,$/;"	f	signature:(const zlib_filefunc64_32_def* pzlib_filefunc_def, voidpf filestream)
+unz64local_getByte	minizip/unzip.c	/^local int unz64local_getByte OF(($/;"	p	file:	signature:( const zlib_filefunc64_32_def* pzlib_filefunc_def, voidpf filestream, int *pi)
+unz64local_getByte	minizip/unzip.c	/^local int unz64local_getByte(const zlib_filefunc64_32_def* pzlib_filefunc_def, voidpf filestream, int *pi)$/;"	f	signature:(const zlib_filefunc64_32_def* pzlib_filefunc_def, voidpf filestream, int *pi)
+unz64local_getLong	minizip/unzip.c	/^local int unz64local_getLong (const zlib_filefunc64_32_def* pzlib_filefunc_def,$/;"	f	signature:(const zlib_filefunc64_32_def* pzlib_filefunc_def, voidpf filestream, uLong *pX)
+unz64local_getLong	minizip/unzip.c	/^local int unz64local_getLong OF(($/;"	p	file:	signature:( const zlib_filefunc64_32_def* pzlib_filefunc_def, voidpf filestream, uLong *pX)
+unz64local_getLong64	minizip/unzip.c	/^local int unz64local_getLong64 (const zlib_filefunc64_32_def* pzlib_filefunc_def,$/;"	f	signature:(const zlib_filefunc64_32_def* pzlib_filefunc_def, voidpf filestream, ZPOS64_T *pX)
+unz64local_getLong64	minizip/unzip.c	/^local int unz64local_getLong64 OF(($/;"	p	file:	signature:( const zlib_filefunc64_32_def* pzlib_filefunc_def, voidpf filestream, ZPOS64_T *pX)
+unz64local_getShort	minizip/unzip.c	/^local int unz64local_getShort (const zlib_filefunc64_32_def* pzlib_filefunc_def,$/;"	f	signature:(const zlib_filefunc64_32_def* pzlib_filefunc_def, voidpf filestream, uLong *pX)
+unz64local_getShort	minizip/unzip.c	/^local int unz64local_getShort OF(($/;"	p	file:	signature:( const zlib_filefunc64_32_def* pzlib_filefunc_def, voidpf filestream, uLong *pX)
+unzClose	minizip/unzip.c	/^extern int ZEXPORT unzClose (unzFile file)$/;"	f	signature:(unzFile file)
+unzClose	minizip/unzip.h	/^extern int ZEXPORT unzClose OF((unzFile file));$/;"	p	signature:(unzFile file)
+unzCloseCurrentFile	minizip/unzip.c	/^extern int ZEXPORT unzCloseCurrentFile (unzFile file)$/;"	f	signature:(unzFile file)
+unzCloseCurrentFile	minizip/unzip.h	/^extern int ZEXPORT unzCloseCurrentFile OF((unzFile file));$/;"	p	signature:(unzFile file)
+unzFile	minizip/unzip.h	/^typedef unzFile__ *unzFile;$/;"	t
+unzFile	minizip/unzip.h	/^typedef voidp unzFile;$/;"	t
+unzFile__	minizip/unzip.h	/^typedef struct TagunzFile__ { int unused; } unzFile__;$/;"	t	typeref:struct:TagunzFile__
+unzGetCurrentFileInfo	minizip/unzip.c	/^extern int ZEXPORT unzGetCurrentFileInfo (unzFile file,$/;"	f	signature:(unzFile file, unz_file_info * pfile_info, char * szFileName, uLong fileNameBufferSize, void *extraField, uLong extraFieldBufferSize, char* szComment, uLong commentBufferSize)
+unzGetCurrentFileInfo	minizip/unzip.h	/^extern int ZEXPORT unzGetCurrentFileInfo OF((unzFile file,$/;"	p	signature:(unzFile file, unz_file_info *pfile_info, char *szFileName, uLong fileNameBufferSize, void *extraField, uLong extraFieldBufferSize, char *szComment, uLong commentBufferSize)
+unzGetCurrentFileInfo64	minizip/unzip.c	/^extern int ZEXPORT unzGetCurrentFileInfo64 (unzFile file,$/;"	f	signature:(unzFile file, unz_file_info64 * pfile_info, char * szFileName, uLong fileNameBufferSize, void *extraField, uLong extraFieldBufferSize, char* szComment, uLong commentBufferSize)
+unzGetCurrentFileInfo64	minizip/unzip.h	/^extern int ZEXPORT unzGetCurrentFileInfo64 OF((unzFile file,$/;"	p	signature:(unzFile file, unz_file_info64 *pfile_info, char *szFileName, uLong fileNameBufferSize, void *extraField, uLong extraFieldBufferSize, char *szComment, uLong commentBufferSize)
+unzGetCurrentFileZStreamPos64	minizip/unzip.c	/^extern ZPOS64_T ZEXPORT unzGetCurrentFileZStreamPos64( unzFile file)$/;"	f	signature:( unzFile file)
+unzGetCurrentFileZStreamPos64	minizip/unzip.h	/^extern ZPOS64_T ZEXPORT unzGetCurrentFileZStreamPos64 OF((unzFile file));$/;"	p	signature:(unzFile file)
+unzGetFilePos	minizip/unzip.c	/^extern int ZEXPORT unzGetFilePos($/;"	f	signature:( unzFile file, unz_file_pos* file_pos)
+unzGetFilePos	minizip/unzip.h	/^extern int ZEXPORT unzGetFilePos($/;"	p	signature:( unzFile file, unz_file_pos* file_pos)
+unzGetFilePos64	minizip/unzip.c	/^extern int ZEXPORT unzGetFilePos64(unzFile file, unz64_file_pos*  file_pos)$/;"	f	signature:(unzFile file, unz64_file_pos* file_pos)
+unzGetFilePos64	minizip/unzip.h	/^extern int ZEXPORT unzGetFilePos64($/;"	p	signature:( unzFile file, unz64_file_pos* file_pos)
+unzGetGlobalComment	minizip/unzip.c	/^extern int ZEXPORT unzGetGlobalComment (unzFile file, char * szComment, uLong uSizeBuf)$/;"	f	signature:(unzFile file, char * szComment, uLong uSizeBuf)
+unzGetGlobalComment	minizip/unzip.h	/^extern int ZEXPORT unzGetGlobalComment OF((unzFile file,$/;"	p	signature:(unzFile file, char *szComment, uLong uSizeBuf)
+unzGetGlobalInfo	minizip/unzip.c	/^extern int ZEXPORT unzGetGlobalInfo (unzFile file, unz_global_info* pglobal_info32)$/;"	f	signature:(unzFile file, unz_global_info* pglobal_info32)
+unzGetGlobalInfo	minizip/unzip.h	/^extern int ZEXPORT unzGetGlobalInfo OF((unzFile file,$/;"	p	signature:(unzFile file, unz_global_info *pglobal_info)
+unzGetGlobalInfo64	minizip/unzip.c	/^extern int ZEXPORT unzGetGlobalInfo64 (unzFile file, unz_global_info64* pglobal_info)$/;"	f	signature:(unzFile file, unz_global_info64* pglobal_info)
+unzGetGlobalInfo64	minizip/unzip.h	/^extern int ZEXPORT unzGetGlobalInfo64 OF((unzFile file,$/;"	p	signature:(unzFile file, unz_global_info64 *pglobal_info)
+unzGetLocalExtrafield	minizip/unzip.c	/^extern int ZEXPORT unzGetLocalExtrafield (unzFile file, voidp buf, unsigned len)$/;"	f	signature:(unzFile file, voidp buf, unsigned len)
+unzGetLocalExtrafield	minizip/unzip.h	/^extern int ZEXPORT unzGetLocalExtrafield OF((unzFile file,$/;"	p	signature:(unzFile file, voidp buf, unsigned len)
+unzGetOffset	minizip/unzip.c	/^extern uLong ZEXPORT unzGetOffset (unzFile file)$/;"	f	signature:(unzFile file)
+unzGetOffset	minizip/unzip.h	/^extern uLong ZEXPORT unzGetOffset (unzFile file);$/;"	p	signature:(unzFile file)
+unzGetOffset64	minizip/unzip.c	/^extern ZPOS64_T ZEXPORT unzGetOffset64(unzFile file)$/;"	f	signature:(unzFile file)
+unzGetOffset64	minizip/unzip.h	/^extern ZPOS64_T ZEXPORT unzGetOffset64 (unzFile file);$/;"	p	signature:(unzFile file)
+unzGoToFilePos	minizip/unzip.c	/^extern int ZEXPORT unzGoToFilePos($/;"	f	signature:( unzFile file, unz_file_pos* file_pos)
+unzGoToFilePos	minizip/unzip.h	/^extern int ZEXPORT unzGoToFilePos($/;"	p	signature:( unzFile file, unz_file_pos* file_pos)
+unzGoToFilePos64	minizip/unzip.c	/^extern int ZEXPORT unzGoToFilePos64(unzFile file, const unz64_file_pos* file_pos)$/;"	f	signature:(unzFile file, const unz64_file_pos* file_pos)
+unzGoToFilePos64	minizip/unzip.h	/^extern int ZEXPORT unzGoToFilePos64($/;"	p	signature:( unzFile file, const unz64_file_pos* file_pos)
+unzGoToFirstFile	minizip/unzip.c	/^extern int ZEXPORT unzGoToFirstFile (unzFile file)$/;"	f	signature:(unzFile file)
+unzGoToFirstFile	minizip/unzip.h	/^extern int ZEXPORT unzGoToFirstFile OF((unzFile file));$/;"	p	signature:(unzFile file)
+unzGoToNextFile	minizip/unzip.c	/^extern int ZEXPORT unzGoToNextFile (unzFile  file)$/;"	f	signature:(unzFile file)
+unzGoToNextFile	minizip/unzip.h	/^extern int ZEXPORT unzGoToNextFile OF((unzFile file));$/;"	p	signature:(unzFile file)
+unzLocateFile	minizip/unzip.c	/^extern int ZEXPORT unzLocateFile (unzFile file, const char *szFileName, int iCaseSensitivity)$/;"	f	signature:(unzFile file, const char *szFileName, int iCaseSensitivity)
+unzLocateFile	minizip/unzip.h	/^extern int ZEXPORT unzLocateFile OF((unzFile file,$/;"	p	signature:(unzFile file, const char *szFileName, int iCaseSensitivity)
+unzOpen	minizip/unzip.c	/^extern unzFile ZEXPORT unzOpen (const char *path)$/;"	f	signature:(const char *path)
+unzOpen	minizip/unzip.h	/^extern unzFile ZEXPORT unzOpen OF((const char *path));$/;"	p	signature:(const char *path)
+unzOpen2	minizip/unzip.c	/^extern unzFile ZEXPORT unzOpen2 (const char *path,$/;"	f	signature:(const char *path, zlib_filefunc_def* pzlib_filefunc32_def)
+unzOpen2	minizip/unzip.h	/^extern unzFile ZEXPORT unzOpen2 OF((const char *path,$/;"	p	signature:(const char *path, zlib_filefunc_def* pzlib_filefunc_def)
+unzOpen2_64	minizip/unzip.c	/^extern unzFile ZEXPORT unzOpen2_64 (const void *path,$/;"	f	signature:(const void *path, zlib_filefunc64_def* pzlib_filefunc_def)
+unzOpen2_64	minizip/unzip.h	/^extern unzFile ZEXPORT unzOpen2_64 OF((const void *path,$/;"	p	signature:(const void *path, zlib_filefunc64_def* pzlib_filefunc_def)
+unzOpen64	minizip/unzip.c	/^extern unzFile ZEXPORT unzOpen64 (const void *path)$/;"	f	signature:(const void *path)
+unzOpen64	minizip/unzip.h	/^extern unzFile ZEXPORT unzOpen64 OF((const void *path));$/;"	p	signature:(const void *path)
+unzOpenCurrentFile	minizip/unzip.c	/^extern int ZEXPORT unzOpenCurrentFile (unzFile file)$/;"	f	signature:(unzFile file)
+unzOpenCurrentFile	minizip/unzip.h	/^extern int ZEXPORT unzOpenCurrentFile OF((unzFile file));$/;"	p	signature:(unzFile file)
+unzOpenCurrentFile2	minizip/unzip.c	/^extern int ZEXPORT unzOpenCurrentFile2 (unzFile file, int* method, int* level, int raw)$/;"	f	signature:(unzFile file, int* method, int* level, int raw)
+unzOpenCurrentFile2	minizip/unzip.h	/^extern int ZEXPORT unzOpenCurrentFile2 OF((unzFile file,$/;"	p	signature:(unzFile file, int* method, int* level, int raw)
+unzOpenCurrentFile3	minizip/unzip.c	/^extern int ZEXPORT unzOpenCurrentFile3 (unzFile file, int* method,$/;"	f	signature:(unzFile file, int* method, int* level, int raw, const char* password)
+unzOpenCurrentFile3	minizip/unzip.h	/^extern int ZEXPORT unzOpenCurrentFile3 OF((unzFile file,$/;"	p	signature:(unzFile file, int* method, int* level, int raw, const char* password)
+unzOpenCurrentFilePassword	minizip/unzip.c	/^extern int ZEXPORT unzOpenCurrentFilePassword (unzFile file, const char*  password)$/;"	f	signature:(unzFile file, const char* password)
+unzOpenCurrentFilePassword	minizip/unzip.h	/^extern int ZEXPORT unzOpenCurrentFilePassword OF((unzFile file,$/;"	p	signature:(unzFile file, const char* password)
+unzOpenInternal	minizip/unzip.c	/^local unzFile unzOpenInternal (const void *path,$/;"	f	signature:(const void *path, zlib_filefunc64_32_def* pzlib_filefunc64_32_def, int is64bitOpenFunction)
+unzReadCurrentFile	minizip/unzip.c	/^extern int ZEXPORT unzReadCurrentFile  (unzFile file, voidp buf, unsigned len)$/;"	f	signature:(unzFile file, voidp buf, unsigned len)
+unzReadCurrentFile	minizip/unzip.h	/^extern int ZEXPORT unzReadCurrentFile OF((unzFile file,$/;"	p	signature:(unzFile file, voidp buf, unsigned len)
+unzRepair	minizip/mztools.c	/^extern int ZEXPORT unzRepair(file, fileOut, fileOutTmp, nRecovered, bytesRecovered)$/;"	f
+unzRepair	minizip/mztools.h	/^extern int ZEXPORT unzRepair(const char* file,$/;"	p	signature:(const char* file, const char* fileOut, const char* fileOutTmp, uLong* nRecovered, uLong* bytesRecovered)
+unzSetOffset	minizip/unzip.c	/^extern int ZEXPORT unzSetOffset (unzFile file, uLong pos)$/;"	f	signature:(unzFile file, uLong pos)
+unzSetOffset	minizip/unzip.h	/^extern int ZEXPORT unzSetOffset (unzFile file, uLong pos);$/;"	p	signature:(unzFile file, uLong pos)
+unzSetOffset64	minizip/unzip.c	/^extern int ZEXPORT unzSetOffset64(unzFile file, ZPOS64_T pos)$/;"	f	signature:(unzFile file, ZPOS64_T pos)
+unzSetOffset64	minizip/unzip.h	/^extern int ZEXPORT unzSetOffset64 (unzFile file, ZPOS64_T pos);$/;"	p	signature:(unzFile file, ZPOS64_T pos)
+unzStringFileNameCompare	minizip/unzip.c	/^extern int ZEXPORT unzStringFileNameCompare (const char*  fileName1,$/;"	f	signature:(const char* fileName1, const char* fileName2, int iCaseSensitivity)
+unzStringFileNameCompare	minizip/unzip.h	/^extern int ZEXPORT unzStringFileNameCompare OF ((const char* fileName1,$/;"	p	signature:(const char* fileName1, const char* fileName2, int iCaseSensitivity)
+unz_copyright	minizip/unzip.c	/^const char unz_copyright[] =$/;"	v
+unz_file_info	minizip/unzip.h	/^} unz_file_info;$/;"	t	typeref:struct:unz_file_info_s
+unz_file_info64	minizip/unzip.h	/^} unz_file_info64;$/;"	t	typeref:struct:unz_file_info64_s
+unz_file_info64_internal	minizip/unzip.c	/^} unz_file_info64_internal;$/;"	t	typeref:struct:unz_file_info64_internal_s	file:
+unz_file_info64_internal_s	minizip/unzip.c	/^typedef struct unz_file_info64_internal_s$/;"	s	file:
+unz_file_info64_internal_s::offset_curfile	minizip/unzip.c	/^    ZPOS64_T offset_curfile;\/* relative offset of local header 8 bytes *\/$/;"	m	struct:unz_file_info64_internal_s	file:	access:public
+unz_file_info64_s	minizip/unzip.h	/^typedef struct unz_file_info64_s$/;"	s
+unz_file_info64_s::compressed_size	minizip/unzip.h	/^    ZPOS64_T compressed_size;   \/* compressed size                 8 bytes *\/$/;"	m	struct:unz_file_info64_s	access:public
+unz_file_info64_s::compression_method	minizip/unzip.h	/^    uLong compression_method;   \/* compression method              2 bytes *\/$/;"	m	struct:unz_file_info64_s	access:public
+unz_file_info64_s::crc	minizip/unzip.h	/^    uLong crc;                  \/* crc-32                          4 bytes *\/$/;"	m	struct:unz_file_info64_s	access:public
+unz_file_info64_s::disk_num_start	minizip/unzip.h	/^    uLong disk_num_start;       \/* disk number start               2 bytes *\/$/;"	m	struct:unz_file_info64_s	access:public
+unz_file_info64_s::dosDate	minizip/unzip.h	/^    uLong dosDate;              \/* last mod file date in Dos fmt   4 bytes *\/$/;"	m	struct:unz_file_info64_s	access:public
+unz_file_info64_s::external_fa	minizip/unzip.h	/^    uLong external_fa;          \/* external file attributes        4 bytes *\/$/;"	m	struct:unz_file_info64_s	access:public
+unz_file_info64_s::flag	minizip/unzip.h	/^    uLong flag;                 \/* general purpose bit flag        2 bytes *\/$/;"	m	struct:unz_file_info64_s	access:public
+unz_file_info64_s::internal_fa	minizip/unzip.h	/^    uLong internal_fa;          \/* internal file attributes        2 bytes *\/$/;"	m	struct:unz_file_info64_s	access:public
+unz_file_info64_s::size_file_comment	minizip/unzip.h	/^    uLong size_file_comment;    \/* file comment length             2 bytes *\/$/;"	m	struct:unz_file_info64_s	access:public
+unz_file_info64_s::size_file_extra	minizip/unzip.h	/^    uLong size_file_extra;      \/* extra field length              2 bytes *\/$/;"	m	struct:unz_file_info64_s	access:public
+unz_file_info64_s::size_filename	minizip/unzip.h	/^    uLong size_filename;        \/* filename length                 2 bytes *\/$/;"	m	struct:unz_file_info64_s	access:public
+unz_file_info64_s::tmu_date	minizip/unzip.h	/^    tm_unz tmu_date;$/;"	m	struct:unz_file_info64_s	access:public
+unz_file_info64_s::uncompressed_size	minizip/unzip.h	/^    ZPOS64_T uncompressed_size; \/* uncompressed size               8 bytes *\/$/;"	m	struct:unz_file_info64_s	access:public
+unz_file_info64_s::version	minizip/unzip.h	/^    uLong version;              \/* version made by                 2 bytes *\/$/;"	m	struct:unz_file_info64_s	access:public
+unz_file_info64_s::version_needed	minizip/unzip.h	/^    uLong version_needed;       \/* version needed to extract       2 bytes *\/$/;"	m	struct:unz_file_info64_s	access:public
+unz_file_info_s	minizip/unzip.h	/^typedef struct unz_file_info_s$/;"	s
+unz_file_info_s::compressed_size	minizip/unzip.h	/^    uLong compressed_size;      \/* compressed size                 4 bytes *\/$/;"	m	struct:unz_file_info_s	access:public
+unz_file_info_s::compression_method	minizip/unzip.h	/^    uLong compression_method;   \/* compression method              2 bytes *\/$/;"	m	struct:unz_file_info_s	access:public
+unz_file_info_s::crc	minizip/unzip.h	/^    uLong crc;                  \/* crc-32                          4 bytes *\/$/;"	m	struct:unz_file_info_s	access:public
+unz_file_info_s::disk_num_start	minizip/unzip.h	/^    uLong disk_num_start;       \/* disk number start               2 bytes *\/$/;"	m	struct:unz_file_info_s	access:public
+unz_file_info_s::dosDate	minizip/unzip.h	/^    uLong dosDate;              \/* last mod file date in Dos fmt   4 bytes *\/$/;"	m	struct:unz_file_info_s	access:public
+unz_file_info_s::external_fa	minizip/unzip.h	/^    uLong external_fa;          \/* external file attributes        4 bytes *\/$/;"	m	struct:unz_file_info_s	access:public
+unz_file_info_s::flag	minizip/unzip.h	/^    uLong flag;                 \/* general purpose bit flag        2 bytes *\/$/;"	m	struct:unz_file_info_s	access:public
+unz_file_info_s::internal_fa	minizip/unzip.h	/^    uLong internal_fa;          \/* internal file attributes        2 bytes *\/$/;"	m	struct:unz_file_info_s	access:public
+unz_file_info_s::size_file_comment	minizip/unzip.h	/^    uLong size_file_comment;    \/* file comment length             2 bytes *\/$/;"	m	struct:unz_file_info_s	access:public
+unz_file_info_s::size_file_extra	minizip/unzip.h	/^    uLong size_file_extra;      \/* extra field length              2 bytes *\/$/;"	m	struct:unz_file_info_s	access:public
+unz_file_info_s::size_filename	minizip/unzip.h	/^    uLong size_filename;        \/* filename length                 2 bytes *\/$/;"	m	struct:unz_file_info_s	access:public
+unz_file_info_s::tmu_date	minizip/unzip.h	/^    tm_unz tmu_date;$/;"	m	struct:unz_file_info_s	access:public
+unz_file_info_s::uncompressed_size	minizip/unzip.h	/^    uLong uncompressed_size;    \/* uncompressed size               4 bytes *\/$/;"	m	struct:unz_file_info_s	access:public
+unz_file_info_s::version	minizip/unzip.h	/^    uLong version;              \/* version made by                 2 bytes *\/$/;"	m	struct:unz_file_info_s	access:public
+unz_file_info_s::version_needed	minizip/unzip.h	/^    uLong version_needed;       \/* version needed to extract       2 bytes *\/$/;"	m	struct:unz_file_info_s	access:public
+unz_file_pos	minizip/unzip.h	/^} unz_file_pos;$/;"	t	typeref:struct:unz_file_pos_s
+unz_file_pos_s	minizip/unzip.h	/^typedef struct unz_file_pos_s$/;"	s
+unz_file_pos_s::num_of_file	minizip/unzip.h	/^    uLong num_of_file;            \/* # of file *\/$/;"	m	struct:unz_file_pos_s	access:public
+unz_file_pos_s::pos_in_zip_directory	minizip/unzip.h	/^    uLong pos_in_zip_directory;   \/* offset in zip file directory *\/$/;"	m	struct:unz_file_pos_s	access:public
+unz_global_info	minizip/unzip.h	/^} unz_global_info;$/;"	t	typeref:struct:unz_global_info_s
+unz_global_info64	minizip/unzip.h	/^} unz_global_info64;$/;"	t	typeref:struct:unz_global_info64_s
+unz_global_info64_s	minizip/unzip.h	/^typedef struct unz_global_info64_s$/;"	s
+unz_global_info64_s::number_entry	minizip/unzip.h	/^    ZPOS64_T number_entry;         \/* total number of entries in$/;"	m	struct:unz_global_info64_s	access:public
+unz_global_info64_s::size_comment	minizip/unzip.h	/^    uLong size_comment;         \/* size of the global comment of the zipfile *\/$/;"	m	struct:unz_global_info64_s	access:public
+unz_global_info_s	minizip/unzip.h	/^typedef struct unz_global_info_s$/;"	s
+unz_global_info_s::number_entry	minizip/unzip.h	/^    uLong number_entry;         \/* total number of entries in$/;"	m	struct:unz_global_info_s	access:public
+unz_global_info_s::size_comment	minizip/unzip.h	/^    uLong size_comment;         \/* size of the global comment of the zipfile *\/$/;"	m	struct:unz_global_info_s	access:public
+unzeof	minizip/unzip.c	/^extern int ZEXPORT unzeof (unzFile file)$/;"	f	signature:(unzFile file)
+unzeof	minizip/unzip.h	/^extern int ZEXPORT unzeof OF((unzFile file));$/;"	p	signature:(unzFile file)
+unztell	minizip/unzip.c	/^extern z_off_t ZEXPORT unztell (unzFile file)$/;"	f	signature:(unzFile file)
+unztell	minizip/unzip.h	/^extern z_off_t ZEXPORT unztell OF((unzFile file));$/;"	p	signature:(unzFile file)
+unztell64	minizip/unzip.c	/^extern ZPOS64_T ZEXPORT unztell64 (unzFile file)$/;"	f	signature:(unzFile file)
+unztell64	minizip/unzip.h	/^extern ZPOS64_T ZEXPORT unztell64 OF((unzFile file));$/;"	p	signature:(unzFile file)
+update_keys	minizip/crypt.h	/^static int update_keys(unsigned long* pkeys,const unsigned long* pcrc_32_tab,int c)$/;"	f	signature:(unsigned long* pkeys,const unsigned long* pcrc_32_tab,int c)
+version	minizip/unzip.h	/^    uLong version;              \/* version made by                 2 bytes *\/$/;"	m	struct:unz_file_info64_s	access:public
+version	minizip/unzip.h	/^    uLong version;              \/* version made by                 2 bytes *\/$/;"	m	struct:unz_file_info_s	access:public
+version_needed	minizip/unzip.h	/^    uLong version_needed;       \/* version needed to extract       2 bytes *\/$/;"	m	struct:unz_file_info64_s	access:public
+version_needed	minizip/unzip.h	/^    uLong version_needed;       \/* version needed to extract       2 bytes *\/$/;"	m	struct:unz_file_info_s	access:public
+win32_build_iowin	minizip/iowin32.c	/^static voidpf win32_build_iowin(HANDLE hFile)$/;"	f	file:	signature:(HANDLE hFile)
+win32_close_file_func	minizip/iowin32.c	/^int     ZCALLBACK win32_close_file_func OF((voidpf opaque, voidpf stream));$/;"	p	file:	signature:(voidpf opaque, voidpf stream)
+win32_close_file_func	minizip/iowin32.c	/^int ZCALLBACK win32_close_file_func (voidpf opaque, voidpf stream)$/;"	f	signature:(voidpf opaque, voidpf stream)
+win32_error_file_func	minizip/iowin32.c	/^int     ZCALLBACK win32_error_file_func OF((voidpf opaque, voidpf stream));$/;"	p	file:	signature:(voidpf opaque, voidpf stream)
+win32_error_file_func	minizip/iowin32.c	/^int ZCALLBACK win32_error_file_func (voidpf opaque,voidpf stream)$/;"	f	signature:(voidpf opaque,voidpf stream)
+win32_open64_file_func	minizip/iowin32.c	/^voidpf ZCALLBACK win32_open64_file_func (voidpf opaque,const void* filename,int mode)$/;"	f	signature:(voidpf opaque,const void* filename,int mode)
+win32_open64_file_funcA	minizip/iowin32.c	/^voidpf ZCALLBACK win32_open64_file_funcA (voidpf opaque,const void* filename,int mode)$/;"	f	signature:(voidpf opaque,const void* filename,int mode)
+win32_open64_file_funcW	minizip/iowin32.c	/^voidpf ZCALLBACK win32_open64_file_funcW (voidpf opaque,const void* filename,int mode)$/;"	f	signature:(voidpf opaque,const void* filename,int mode)
+win32_open_file_func	minizip/iowin32.c	/^voidpf  ZCALLBACK win32_open_file_func  OF((voidpf opaque, const char* filename, int mode));$/;"	p	file:	signature:(voidpf opaque, const char* filename, int mode)
+win32_open_file_func	minizip/iowin32.c	/^voidpf ZCALLBACK win32_open_file_func (voidpf opaque,const char* filename,int mode)$/;"	f	signature:(voidpf opaque,const char* filename,int mode)
+win32_read_file_func	minizip/iowin32.c	/^uLong   ZCALLBACK win32_read_file_func  OF((voidpf opaque, voidpf stream, void* buf, uLong size));$/;"	p	file:	signature:(voidpf opaque, voidpf stream, void* buf, uLong size)
+win32_read_file_func	minizip/iowin32.c	/^uLong ZCALLBACK win32_read_file_func (voidpf opaque, voidpf stream, void* buf,uLong size)$/;"	f	signature:(voidpf opaque, voidpf stream, void* buf,uLong size)
+win32_seek64_file_func	minizip/iowin32.c	/^long    ZCALLBACK win32_seek64_file_func  OF((voidpf opaque, voidpf stream, ZPOS64_T offset, int origin));$/;"	p	file:	signature:(voidpf opaque, voidpf stream, ZPOS64_T offset, int origin)
+win32_seek64_file_func	minizip/iowin32.c	/^long ZCALLBACK win32_seek64_file_func (voidpf opaque, voidpf stream,ZPOS64_T offset,int origin)$/;"	f	signature:(voidpf opaque, voidpf stream,ZPOS64_T offset,int origin)
+win32_seek_file_func	minizip/iowin32.c	/^long ZCALLBACK win32_seek_file_func (voidpf opaque,voidpf stream,uLong offset,int origin)$/;"	f	signature:(voidpf opaque,voidpf stream,uLong offset,int origin)
+win32_tell64_file_func	minizip/iowin32.c	/^ZPOS64_T ZCALLBACK win32_tell64_file_func  OF((voidpf opaque, voidpf stream));$/;"	p	file:	signature:(voidpf opaque, voidpf stream)
+win32_tell64_file_func	minizip/iowin32.c	/^ZPOS64_T ZCALLBACK win32_tell64_file_func (voidpf opaque, voidpf stream)$/;"	f	signature:(voidpf opaque, voidpf stream)
+win32_tell_file_func	minizip/iowin32.c	/^long ZCALLBACK win32_tell_file_func (voidpf opaque,voidpf stream)$/;"	f	signature:(voidpf opaque,voidpf stream)
+win32_translate_open_mode	minizip/iowin32.c	/^static void win32_translate_open_mode(int mode,$/;"	f	file:	signature:(int mode, DWORD* lpdwDesiredAccess, DWORD* lpdwCreationDisposition, DWORD* lpdwShareMode, DWORD* lpdwFlagsAndAttributes)
+win32_write_file_func	minizip/iowin32.c	/^uLong   ZCALLBACK win32_write_file_func OF((voidpf opaque, voidpf stream, const void* buf, uLong size));$/;"	p	file:	signature:(voidpf opaque, voidpf stream, const void* buf, uLong size)
+win32_write_file_func	minizip/iowin32.c	/^uLong ZCALLBACK win32_write_file_func (voidpf opaque,voidpf stream,const void* buf,uLong size)$/;"	f	signature:(voidpf opaque,voidpf stream,const void* buf,uLong size)
+z_filefunc	minizip/unzip.c	/^    zlib_filefunc64_32_def z_filefunc;$/;"	m	struct:__anon3	file:	access:public
+z_filefunc	minizip/unzip.c	/^    zlib_filefunc64_32_def z_filefunc;$/;"	m	struct:__anon4	file:	access:public
+z_filefunc	minizip/zip.c	/^    zlib_filefunc64_32_def z_filefunc;$/;"	m	struct:__anon6	file:	access:public
+zclose_file	minizip/ioapi.h	/^    close_file_func     zclose_file;$/;"	m	struct:zlib_filefunc64_def_s	access:public
+zclose_file	minizip/ioapi.h	/^    close_file_func     zclose_file;$/;"	m	struct:zlib_filefunc_def_s	access:public
+zdecode	minizip/crypt.h	76;"	d
+zencode	minizip/crypt.h	79;"	d
+zerror_file	minizip/ioapi.h	/^    testerror_file_func zerror_file;$/;"	m	struct:zlib_filefunc64_def_s	access:public
+zerror_file	minizip/ioapi.h	/^    testerror_file_func zerror_file;$/;"	m	struct:zlib_filefunc_def_s	access:public
+zfile_func64	minizip/ioapi.h	/^    zlib_filefunc64_def zfile_func64;$/;"	m	struct:zlib_filefunc64_32_def_s	access:public
+zip64	minizip/zip.c	/^    int  zip64;               \/* Add ZIP64 extened information in the extra field *\/$/;"	m	struct:__anon5	file:	access:public
+zip64FlushWriteBuffer	minizip/zip.c	/^local int zip64FlushWriteBuffer(zip64_internal* zi)$/;"	f	signature:(zip64_internal* zi)
+zip64_internal	minizip/zip.c	/^} zip64_internal;$/;"	t	typeref:struct:__anon6	file:
+zip64local_SearchCentralDir	minizip/zip.c	/^local ZPOS64_T zip64local_SearchCentralDir OF((const zlib_filefunc64_32_def* pzlib_filefunc_def, voidpf filestream));$/;"	p	file:	signature:(const zlib_filefunc64_32_def* pzlib_filefunc_def, voidpf filestream)
+zip64local_SearchCentralDir	minizip/zip.c	/^local ZPOS64_T zip64local_SearchCentralDir(const zlib_filefunc64_32_def* pzlib_filefunc_def, voidpf filestream)$/;"	f	signature:(const zlib_filefunc64_32_def* pzlib_filefunc_def, voidpf filestream)
+zip64local_SearchCentralDir64	minizip/zip.c	/^local ZPOS64_T zip64local_SearchCentralDir64 OF((const zlib_filefunc64_32_def* pzlib_filefunc_def, voidpf filestream));$/;"	p	file:	signature:(const zlib_filefunc64_32_def* pzlib_filefunc_def, voidpf filestream)
+zip64local_SearchCentralDir64	minizip/zip.c	/^local ZPOS64_T zip64local_SearchCentralDir64(const zlib_filefunc64_32_def* pzlib_filefunc_def, voidpf filestream)$/;"	f	signature:(const zlib_filefunc64_32_def* pzlib_filefunc_def, voidpf filestream)
+zip64local_TmzDateToDosDate	minizip/zip.c	/^local uLong zip64local_TmzDateToDosDate(const tm_zip* ptm)$/;"	f	signature:(const tm_zip* ptm)
+zip64local_getByte	minizip/zip.c	/^local int zip64local_getByte OF((const zlib_filefunc64_32_def* pzlib_filefunc_def, voidpf filestream, int *pi));$/;"	p	file:	signature:(const zlib_filefunc64_32_def* pzlib_filefunc_def, voidpf filestream, int *pi)
+zip64local_getByte	minizip/zip.c	/^local int zip64local_getByte(const zlib_filefunc64_32_def* pzlib_filefunc_def,voidpf filestream,int* pi)$/;"	f	signature:(const zlib_filefunc64_32_def* pzlib_filefunc_def,voidpf filestream,int* pi)
+zip64local_getLong	minizip/zip.c	/^local int zip64local_getLong (const zlib_filefunc64_32_def* pzlib_filefunc_def, voidpf filestream, uLong* pX)$/;"	f	signature:(const zlib_filefunc64_32_def* pzlib_filefunc_def, voidpf filestream, uLong* pX)
+zip64local_getLong	minizip/zip.c	/^local int zip64local_getLong OF((const zlib_filefunc64_32_def* pzlib_filefunc_def, voidpf filestream, uLong *pX));$/;"	p	file:	signature:(const zlib_filefunc64_32_def* pzlib_filefunc_def, voidpf filestream, uLong *pX)
+zip64local_getLong64	minizip/zip.c	/^local int zip64local_getLong64 (const zlib_filefunc64_32_def* pzlib_filefunc_def, voidpf filestream, ZPOS64_T *pX)$/;"	f	signature:(const zlib_filefunc64_32_def* pzlib_filefunc_def, voidpf filestream, ZPOS64_T *pX)
+zip64local_getLong64	minizip/zip.c	/^local int zip64local_getLong64 OF((const zlib_filefunc64_32_def* pzlib_filefunc_def, voidpf filestream, ZPOS64_T *pX));$/;"	p	file:	signature:(const zlib_filefunc64_32_def* pzlib_filefunc_def, voidpf filestream, ZPOS64_T *pX)
+zip64local_getShort	minizip/zip.c	/^local int zip64local_getShort (const zlib_filefunc64_32_def* pzlib_filefunc_def, voidpf filestream, uLong* pX)$/;"	f	signature:(const zlib_filefunc64_32_def* pzlib_filefunc_def, voidpf filestream, uLong* pX)
+zip64local_getShort	minizip/zip.c	/^local int zip64local_getShort OF((const zlib_filefunc64_32_def* pzlib_filefunc_def, voidpf filestream, uLong *pX));$/;"	p	file:	signature:(const zlib_filefunc64_32_def* pzlib_filefunc_def, voidpf filestream, uLong *pX)
+zip64local_putValue	minizip/zip.c	/^local int zip64local_putValue (const zlib_filefunc64_32_def* pzlib_filefunc_def, voidpf filestream, ZPOS64_T x, int nbByte)$/;"	f	signature:(const zlib_filefunc64_32_def* pzlib_filefunc_def, voidpf filestream, ZPOS64_T x, int nbByte)
+zip64local_putValue	minizip/zip.c	/^local int zip64local_putValue OF((const zlib_filefunc64_32_def* pzlib_filefunc_def, voidpf filestream, ZPOS64_T x, int nbByte));$/;"	p	file:	signature:(const zlib_filefunc64_32_def* pzlib_filefunc_def, voidpf filestream, ZPOS64_T x, int nbByte)
+zip64local_putValue_inmemory	minizip/zip.c	/^local void zip64local_putValue_inmemory (void* dest, ZPOS64_T x, int nbByte)$/;"	f	signature:(void* dest, ZPOS64_T x, int nbByte)
+zip64local_putValue_inmemory	minizip/zip.c	/^local void zip64local_putValue_inmemory OF((void* dest, ZPOS64_T x, int nbByte));$/;"	p	file:	signature:(void* dest, ZPOS64_T x, int nbByte)
+zipClose	minizip/zip.c	/^extern int ZEXPORT zipClose (zipFile file, const char* global_comment)$/;"	f	signature:(zipFile file, const char* global_comment)
+zipClose	minizip/zip.h	/^extern int ZEXPORT zipClose OF((zipFile file,$/;"	p	signature:(zipFile file, const char* global_comment)
+zipCloseFileInZip	minizip/zip.c	/^extern int ZEXPORT zipCloseFileInZip (zipFile file)$/;"	f	signature:(zipFile file)
+zipCloseFileInZip	minizip/zip.h	/^extern int ZEXPORT zipCloseFileInZip OF((zipFile file));$/;"	p	signature:(zipFile file)
+zipCloseFileInZipRaw	minizip/zip.c	/^extern int ZEXPORT zipCloseFileInZipRaw (zipFile file, uLong uncompressed_size, uLong crc32)$/;"	f	signature:(zipFile file, uLong uncompressed_size, uLong crc32)
+zipCloseFileInZipRaw	minizip/zip.h	/^extern int ZEXPORT zipCloseFileInZipRaw OF((zipFile file,$/;"	p	signature:(zipFile file, uLong uncompressed_size, uLong crc32)
+zipCloseFileInZipRaw64	minizip/zip.c	/^extern int ZEXPORT zipCloseFileInZipRaw64 (zipFile file, ZPOS64_T uncompressed_size, uLong crc32)$/;"	f	signature:(zipFile file, ZPOS64_T uncompressed_size, uLong crc32)
+zipCloseFileInZipRaw64	minizip/zip.h	/^extern int ZEXPORT zipCloseFileInZipRaw64 OF((zipFile file,$/;"	p	signature:(zipFile file, ZPOS64_T uncompressed_size, uLong crc32)
+zipFile	minizip/zip.h	/^typedef voidp zipFile;$/;"	t
+zipFile	minizip/zip.h	/^typedef zipFile__ *zipFile;$/;"	t
+zipFile__	minizip/zip.h	/^typedef struct TagzipFile__ { int unused; } zipFile__;$/;"	t	typeref:struct:TagzipFile__
+zipOpen	minizip/zip.c	/^extern zipFile ZEXPORT zipOpen (const char* pathname, int append)$/;"	f	signature:(const char* pathname, int append)
+zipOpen	minizip/zip.h	/^extern zipFile ZEXPORT zipOpen OF((const char *pathname, int append));$/;"	p	signature:(const char *pathname, int append)
+zipOpen2	minizip/zip.c	/^extern zipFile ZEXPORT zipOpen2 (const char *pathname, int append, zipcharpc* globalcomment, zlib_filefunc_def* pzlib_filefunc32_def)$/;"	f	signature:(const char *pathname, int append, zipcharpc* globalcomment, zlib_filefunc_def* pzlib_filefunc32_def)
+zipOpen2	minizip/zip.h	/^extern zipFile ZEXPORT zipOpen2 OF((const char *pathname,$/;"	p	signature:(const char *pathname, int append, zipcharpc* globalcomment, zlib_filefunc_def* pzlib_filefunc_def)
+zipOpen2_64	minizip/zip.c	/^extern zipFile ZEXPORT zipOpen2_64 (const void *pathname, int append, zipcharpc* globalcomment, zlib_filefunc64_def* pzlib_filefunc_def)$/;"	f	signature:(const void *pathname, int append, zipcharpc* globalcomment, zlib_filefunc64_def* pzlib_filefunc_def)
+zipOpen2_64	minizip/zip.h	/^extern zipFile ZEXPORT zipOpen2_64 OF((const void *pathname,$/;"	p	signature:(const void *pathname, int append, zipcharpc* globalcomment, zlib_filefunc64_def* pzlib_filefunc_def)
+zipOpen3	minizip/zip.c	/^extern zipFile ZEXPORT zipOpen3 (const void *pathname, int append, zipcharpc* globalcomment, zlib_filefunc64_32_def* pzlib_filefunc64_32_def)$/;"	f	signature:(const void *pathname, int append, zipcharpc* globalcomment, zlib_filefunc64_32_def* pzlib_filefunc64_32_def)
+zipOpen64	minizip/zip.c	/^extern zipFile ZEXPORT zipOpen64 (const void* pathname, int append)$/;"	f	signature:(const void* pathname, int append)
+zipOpen64	minizip/zip.h	/^extern zipFile ZEXPORT zipOpen64 OF((const void *pathname, int append));$/;"	p	signature:(const void *pathname, int append)
+zipOpenNewFileInZip	minizip/zip.c	/^extern int ZEXPORT zipOpenNewFileInZip (zipFile file, const char* filename, const zip_fileinfo* zipfi,$/;"	f	signature:(zipFile file, const char* filename, const zip_fileinfo* zipfi, const void* extrafield_local, uInt size_extrafield_local, const void*extrafield_global, uInt size_extrafield_global, const char* comment, int method, int level)
+zipOpenNewFileInZip	minizip/zip.h	/^extern int ZEXPORT zipOpenNewFileInZip OF((zipFile file,$/;"	p	signature:(zipFile file, const char* filename, const zip_fileinfo* zipfi, const void* extrafield_local, uInt size_extrafield_local, const void* extrafield_global, uInt size_extrafield_global, const char* comment, int method, int level)
+zipOpenNewFileInZip2	minizip/zip.c	/^extern int ZEXPORT zipOpenNewFileInZip2(zipFile file, const char* filename, const zip_fileinfo* zipfi,$/;"	f	signature:(zipFile file, const char* filename, const zip_fileinfo* zipfi, const void* extrafield_local, uInt size_extrafield_local, const void* extrafield_global, uInt size_extrafield_global, const char* comment, int method, int level, int raw)
+zipOpenNewFileInZip2	minizip/zip.h	/^extern int ZEXPORT zipOpenNewFileInZip2 OF((zipFile file,$/;"	p	signature:(zipFile file, const char* filename, const zip_fileinfo* zipfi, const void* extrafield_local, uInt size_extrafield_local, const void* extrafield_global, uInt size_extrafield_global, const char* comment, int method, int level, int raw)
+zipOpenNewFileInZip2_64	minizip/zip.c	/^extern int ZEXPORT zipOpenNewFileInZip2_64(zipFile file, const char* filename, const zip_fileinfo* zipfi,$/;"	f	signature:(zipFile file, const char* filename, const zip_fileinfo* zipfi, const void* extrafield_local, uInt size_extrafield_local, const void* extrafield_global, uInt size_extrafield_global, const char* comment, int method, int level, int raw, int zip64)
+zipOpenNewFileInZip2_64	minizip/zip.h	/^extern int ZEXPORT zipOpenNewFileInZip2_64 OF((zipFile file,$/;"	p	signature:(zipFile file, const char* filename, const zip_fileinfo* zipfi, const void* extrafield_local, uInt size_extrafield_local, const void* extrafield_global, uInt size_extrafield_global, const char* comment, int method, int level, int raw, int zip64)
+zipOpenNewFileInZip3	minizip/zip.c	/^extern int ZEXPORT zipOpenNewFileInZip3 (zipFile file, const char* filename, const zip_fileinfo* zipfi,$/;"	f	signature:(zipFile file, const char* filename, const zip_fileinfo* zipfi, const void* extrafield_local, uInt size_extrafield_local, const void* extrafield_global, uInt size_extrafield_global, const char* comment, int method, int level, int raw, int windowBits,int memLevel, int strategy, const char* password, uLong crcForCrypting)
+zipOpenNewFileInZip3	minizip/zip.h	/^extern int ZEXPORT zipOpenNewFileInZip3 OF((zipFile file,$/;"	p	signature:(zipFile file, const char* filename, const zip_fileinfo* zipfi, const void* extrafield_local, uInt size_extrafield_local, const void* extrafield_global, uInt size_extrafield_global, const char* comment, int method, int level, int raw, int windowBits, int memLevel, int strategy, const char* password, uLong crcForCrypting)
+zipOpenNewFileInZip3_64	minizip/zip.c	/^extern int ZEXPORT zipOpenNewFileInZip3_64(zipFile file, const char* filename, const zip_fileinfo* zipfi,$/;"	f	signature:(zipFile file, const char* filename, const zip_fileinfo* zipfi, const void* extrafield_local, uInt size_extrafield_local, const void* extrafield_global, uInt size_extrafield_global, const char* comment, int method, int level, int raw, int windowBits,int memLevel, int strategy, const char* password, uLong crcForCrypting, int zip64)
+zipOpenNewFileInZip3_64	minizip/zip.h	/^extern int ZEXPORT zipOpenNewFileInZip3_64 OF((zipFile file,$/;"	p	signature:(zipFile file, const char* filename, const zip_fileinfo* zipfi, const void* extrafield_local, uInt size_extrafield_local, const void* extrafield_global, uInt size_extrafield_global, const char* comment, int method, int level, int raw, int windowBits, int memLevel, int strategy, const char* password, uLong crcForCrypting, int zip64 )
+zipOpenNewFileInZip4	minizip/zip.c	/^extern int ZEXPORT zipOpenNewFileInZip4 (zipFile file, const char* filename, const zip_fileinfo* zipfi,$/;"	f	signature:(zipFile file, const char* filename, const zip_fileinfo* zipfi, const void* extrafield_local, uInt size_extrafield_local, const void* extrafield_global, uInt size_extrafield_global, const char* comment, int method, int level, int raw, int windowBits,int memLevel, int strategy, const char* password, uLong crcForCrypting, uLong versionMadeBy, uLong flagBase)
+zipOpenNewFileInZip4	minizip/zip.h	/^extern int ZEXPORT zipOpenNewFileInZip4 OF((zipFile file,$/;"	p	signature:(zipFile file, const char* filename, const zip_fileinfo* zipfi, const void* extrafield_local, uInt size_extrafield_local, const void* extrafield_global, uInt size_extrafield_global, const char* comment, int method, int level, int raw, int windowBits, int memLevel, int strategy, const char* password, uLong crcForCrypting, uLong versionMadeBy, uLong flagBase )
+zipOpenNewFileInZip4_64	minizip/zip.c	/^extern int ZEXPORT zipOpenNewFileInZip4_64 (zipFile file, const char* filename, const zip_fileinfo* zipfi,$/;"	f	signature:(zipFile file, const char* filename, const zip_fileinfo* zipfi, const void* extrafield_local, uInt size_extrafield_local, const void* extrafield_global, uInt size_extrafield_global, const char* comment, int method, int level, int raw, int windowBits,int memLevel, int strategy, const char* password, uLong crcForCrypting, uLong versionMadeBy, uLong flagBase, int zip64)
+zipOpenNewFileInZip4_64	minizip/zip.h	/^extern int ZEXPORT zipOpenNewFileInZip4_64 OF((zipFile file,$/;"	p	signature:(zipFile file, const char* filename, const zip_fileinfo* zipfi, const void* extrafield_local, uInt size_extrafield_local, const void* extrafield_global, uInt size_extrafield_global, const char* comment, int method, int level, int raw, int windowBits, int memLevel, int strategy, const char* password, uLong crcForCrypting, uLong versionMadeBy, uLong flagBase, int zip64 )
+zipOpenNewFileInZip64	minizip/zip.c	/^extern int ZEXPORT zipOpenNewFileInZip64 (zipFile file, const char* filename, const zip_fileinfo* zipfi,$/;"	f	signature:(zipFile file, const char* filename, const zip_fileinfo* zipfi, const void* extrafield_local, uInt size_extrafield_local, const void*extrafield_global, uInt size_extrafield_global, const char* comment, int method, int level, int zip64)
+zipOpenNewFileInZip64	minizip/zip.h	/^extern int ZEXPORT zipOpenNewFileInZip64 OF((zipFile file,$/;"	p	signature:(zipFile file, const char* filename, const zip_fileinfo* zipfi, const void* extrafield_local, uInt size_extrafield_local, const void* extrafield_global, uInt size_extrafield_global, const char* comment, int method, int level, int zip64)
+zipRemoveExtraInfoBlock	minizip/zip.c	/^extern int ZEXPORT zipRemoveExtraInfoBlock (char* pData, int* dataLen, short sHeader)$/;"	f	signature:(char* pData, int* dataLen, short sHeader)
+zipRemoveExtraInfoBlock	minizip/zip.h	/^extern int ZEXPORT zipRemoveExtraInfoBlock OF((char* pData, int* dataLen, short sHeader));$/;"	p	signature:(char* pData, int* dataLen, short sHeader)
+zipWriteInFileInZip	minizip/zip.c	/^extern int ZEXPORT zipWriteInFileInZip (zipFile file,const void* buf,unsigned int len)$/;"	f	signature:(zipFile file,const void* buf,unsigned int len)
+zipWriteInFileInZip	minizip/zip.h	/^extern int ZEXPORT zipWriteInFileInZip OF((zipFile file,$/;"	p	signature:(zipFile file, const void* buf, unsigned len)
+zip_copyright	minizip/zip.c	/^const char zip_copyright[] =" zip 1.01 Copyright 1998-2004 Gilles Vollant - http:\/\/www.winimage.com\/zLibDll";$/;"	v
+zip_fileinfo	minizip/zip.h	/^} zip_fileinfo;$/;"	t	typeref:struct:__anon1
+zipcharpc	minizip/zip.h	/^typedef const char* zipcharpc;$/;"	t
+zlib_filefunc64_32_def	minizip/ioapi.h	/^} zlib_filefunc64_32_def;$/;"	t	typeref:struct:zlib_filefunc64_32_def_s
+zlib_filefunc64_32_def_s	minizip/ioapi.h	/^typedef struct zlib_filefunc64_32_def_s$/;"	s
+zlib_filefunc64_32_def_s::zfile_func64	minizip/ioapi.h	/^    zlib_filefunc64_def zfile_func64;$/;"	m	struct:zlib_filefunc64_32_def_s	access:public
+zlib_filefunc64_32_def_s::zopen32_file	minizip/ioapi.h	/^    open_file_func      zopen32_file;$/;"	m	struct:zlib_filefunc64_32_def_s	access:public
+zlib_filefunc64_32_def_s::zseek32_file	minizip/ioapi.h	/^    seek_file_func      zseek32_file;$/;"	m	struct:zlib_filefunc64_32_def_s	access:public
+zlib_filefunc64_32_def_s::ztell32_file	minizip/ioapi.h	/^    tell_file_func      ztell32_file;$/;"	m	struct:zlib_filefunc64_32_def_s	access:public
+zlib_filefunc64_def	minizip/ioapi.h	/^} zlib_filefunc64_def;$/;"	t	typeref:struct:zlib_filefunc64_def_s
+zlib_filefunc64_def_s	minizip/ioapi.h	/^typedef struct zlib_filefunc64_def_s$/;"	s
+zlib_filefunc64_def_s::opaque	minizip/ioapi.h	/^    voidpf              opaque;$/;"	m	struct:zlib_filefunc64_def_s	access:public
+zlib_filefunc64_def_s::zclose_file	minizip/ioapi.h	/^    close_file_func     zclose_file;$/;"	m	struct:zlib_filefunc64_def_s	access:public
+zlib_filefunc64_def_s::zerror_file	minizip/ioapi.h	/^    testerror_file_func zerror_file;$/;"	m	struct:zlib_filefunc64_def_s	access:public
+zlib_filefunc64_def_s::zopen64_file	minizip/ioapi.h	/^    open64_file_func    zopen64_file;$/;"	m	struct:zlib_filefunc64_def_s	access:public
+zlib_filefunc64_def_s::zread_file	minizip/ioapi.h	/^    read_file_func      zread_file;$/;"	m	struct:zlib_filefunc64_def_s	access:public
+zlib_filefunc64_def_s::zseek64_file	minizip/ioapi.h	/^    seek64_file_func    zseek64_file;$/;"	m	struct:zlib_filefunc64_def_s	access:public
+zlib_filefunc64_def_s::ztell64_file	minizip/ioapi.h	/^    tell64_file_func    ztell64_file;$/;"	m	struct:zlib_filefunc64_def_s	access:public
+zlib_filefunc64_def_s::zwrite_file	minizip/ioapi.h	/^    write_file_func     zwrite_file;$/;"	m	struct:zlib_filefunc64_def_s	access:public
+zlib_filefunc_def	minizip/ioapi.h	/^} zlib_filefunc_def;$/;"	t	typeref:struct:zlib_filefunc_def_s
+zlib_filefunc_def_s	minizip/ioapi.h	/^typedef struct zlib_filefunc_def_s$/;"	s
+zlib_filefunc_def_s::opaque	minizip/ioapi.h	/^    voidpf              opaque;$/;"	m	struct:zlib_filefunc_def_s	access:public
+zlib_filefunc_def_s::zclose_file	minizip/ioapi.h	/^    close_file_func     zclose_file;$/;"	m	struct:zlib_filefunc_def_s	access:public
+zlib_filefunc_def_s::zerror_file	minizip/ioapi.h	/^    testerror_file_func zerror_file;$/;"	m	struct:zlib_filefunc_def_s	access:public
+zlib_filefunc_def_s::zopen_file	minizip/ioapi.h	/^    open_file_func      zopen_file;$/;"	m	struct:zlib_filefunc_def_s	access:public
+zlib_filefunc_def_s::zread_file	minizip/ioapi.h	/^    read_file_func      zread_file;$/;"	m	struct:zlib_filefunc_def_s	access:public
+zlib_filefunc_def_s::zseek_file	minizip/ioapi.h	/^    seek_file_func      zseek_file;$/;"	m	struct:zlib_filefunc_def_s	access:public
+zlib_filefunc_def_s::ztell_file	minizip/ioapi.h	/^    tell_file_func      ztell_file;$/;"	m	struct:zlib_filefunc_def_s	access:public
+zlib_filefunc_def_s::zwrite_file	minizip/ioapi.h	/^    write_file_func     zwrite_file;$/;"	m	struct:zlib_filefunc_def_s	access:public
+zopen32_file	minizip/ioapi.h	/^    open_file_func      zopen32_file;$/;"	m	struct:zlib_filefunc64_32_def_s	access:public
+zopen64_file	minizip/ioapi.h	/^    open64_file_func    zopen64_file;$/;"	m	struct:zlib_filefunc64_def_s	access:public
+zopen_file	minizip/ioapi.h	/^    open_file_func      zopen_file;$/;"	m	struct:zlib_filefunc_def_s	access:public
+zread_file	minizip/ioapi.h	/^    read_file_func      zread_file;$/;"	m	struct:zlib_filefunc64_def_s	access:public
+zread_file	minizip/ioapi.h	/^    read_file_func      zread_file;$/;"	m	struct:zlib_filefunc_def_s	access:public
+zseek32_file	minizip/ioapi.h	/^    seek_file_func      zseek32_file;$/;"	m	struct:zlib_filefunc64_32_def_s	access:public
+zseek64_file	minizip/ioapi.h	/^    seek64_file_func    zseek64_file;$/;"	m	struct:zlib_filefunc64_def_s	access:public
+zseek_file	minizip/ioapi.h	/^    seek_file_func      zseek_file;$/;"	m	struct:zlib_filefunc_def_s	access:public
+ztell32_file	minizip/ioapi.h	/^    tell_file_func      ztell32_file;$/;"	m	struct:zlib_filefunc64_32_def_s	access:public
+ztell64_file	minizip/ioapi.h	/^    tell64_file_func    ztell64_file;$/;"	m	struct:zlib_filefunc64_def_s	access:public
+ztell_file	minizip/ioapi.h	/^    tell_file_func      ztell_file;$/;"	m	struct:zlib_filefunc_def_s	access:public
+zwrite_file	minizip/ioapi.h	/^    write_file_func     zwrite_file;$/;"	m	struct:zlib_filefunc64_def_s	access:public
+zwrite_file	minizip/ioapi.h	/^    write_file_func     zwrite_file;$/;"	m	struct:zlib_filefunc_def_s	access:public
+~Epub	epub.cpp	/^Epub::~Epub()$/;"	f	class:Epub	signature:()
+~Epub	epub.h	/^    ~Epub();$/;"	p	class:Epub	access:public	signature:()
+~ZipHandler	ziphandler.cpp	/^ZipHandler::~ZipHandler()$/;"	f	class:ZipHandler	signature:()
+~ZipHandler	ziphandler.h	/^    ~ZipHandler();$/;"	p	class:ZipHandler	access:public	signature:()

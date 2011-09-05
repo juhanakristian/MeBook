@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE ncx PUBLIC
+     "-//NISO//DTD ncx 2005-1//EN"
+     "http://www.daisy.org/z3986/2005/ncx-2005-1.dtd">
+
+<ncx version="2005-1"
+     xml:lang="en"
+     xmlns="http://www.daisy.org/z3986/2005/ncx/">
+
+  <head>
+    <!-- The following four metadata items are required for all
+        NCX documents, including those conforming to the relaxed
+        constraints of OPS 2.0 -->
+
+    <meta name="dtb:uid" content="10cb05c4-5a79-11df-9d12-001cc0a62c0b"/>
+
+    <meta name="dtb:depth" content="1"/>
+
+    <meta name="dtb:totalPageCount" content="0"/>
+
+    <meta name="dtb:maxPageNumber" content="0"/>
+  </head>
+
+ <docTitle>
+   <text>Free As In Freedom</text>
+ </docTitle>
+
+ <docAuthor>
+   
+     <text>Williams, Sam</text>
+   
+ </docAuthor>
+
+  
+
+
+
+  <navMap>
+    
+    <navPoint class="titlepage" id="level1-titlepage" playOrder="1">
+      <navLabel><text>Title</text></navLabel>
+      <content src="title.xml"/>
+    </navPoint>
+    
+    
+    
+    
+    <navPoint class="about" id="level1-about" playOrder="2">
+      <navLabel><text>About</text></navLabel>
+      <content src="about.xml"/>
+    </navPoint>
+    
+    
+    
+    
+    
+    
+    
+    
+      
+        
+
+
+
+
+
+<navPoint class="section" id="sec212633" playOrder="3">
+  <navLabel><text>Preface</text></navLabel>
+  
+    <content src="main0.xml"/>
+  
+    
+    
+    
+  
+</navPoint>
+
+        
+       
+    
+      
+        
+        
+
+
+
+
+
+
+  
+
+
+<navPoint class="chapter" id="chap212634" playOrder="4">
+  <navLabel><text>Chapter 1 - For Want of a Printer</text></navLabel> 
+  <content src="main1.xml"/>
+    
+  
+    
+    
+  
+</navPoint>
+        
+        
+       
+    
+      
+        
+        
+
+
+
+
+
+
+  
+
+
+<navPoint class="chapter" id="chap212635" playOrder="5">
+  <navLabel><text>Chapter 2 - 2001: A Hacker's Odyssey</text></navLabel> 
+  <content src="main2.xml"/>
+    
+  
+    
+    
+  
+</navPoint>
+        
+        
+       
+    
+      
+        
+        
+
+
+
+
+
+
+  
+
+
+<navPoint class="chapter" id="chap212636" playOrder="6">
+  <navLabel><text>Chapter 3 - A Portrait of the Hacker as a Young Man</text></navLabel> 
+  <content src="main3.xml"/>
+    
+  
+    
+    
+  
+</navPoint>
+        
+        
+       
+    
+      
+        
+        
+
+
+
+
+
+
+  
+
+
+<navPoint class="chapter" id="chap212637" playOrder="7">
+  <navLabel><text>Chapter 4 - Impeach God</text></navLabel> 
+  <content src="main4.xml"/>
+    
+  
+    
+    
+  
+</navPoint>
+        
+        
+       
+    
+      
+        
+        
+
+
+
+
+
+
+  
+
+
+<navPoint class="chapter" id="chap212638" playOrder="8">
+  <navLabel><text>Chapter 5 - Small Puddle of Freedom</text></navLabel> 
+  <content src="main5.xml"/>
+    
+  
+    
+    
+  
+</navPoint>
+        
+        
+       
+    
+      
+        
+        
+
+
+
+
+
+
+  
+
+
+<navPoint class="chapter" id="chap212639" playOrder="9">
+  <navLabel><text>Chapter 6 - The Emacs Commune</text></navLabel> 
+  <content src="main6.xml"/>
+    
+  
+    
+    
+  
+</navPoint>
+        
+        
+       
+    
+      
+        
+        
+
+
+
+
+
+
+  
+
+
+<navPoint class="chapter" id="chap212640" playOrder="10">
+  <navLabel><text>Chapter 7 - A Stark Moral Choice</text></navLabel> 
+  <content src="main7.xml"/>
+    
+  
+    
+    
+  
+</navPoint>
+        
+        
+       
+    
+      
+        
+        
+
+
+
+
+
+
+  
+
+
+<navPoint class="chapter" id="chap212641" playOrder="11">
+  <navLabel><text>Chapter 8 - St. Ignucius</text></navLabel> 
+  <content src="main8.xml"/>
+    
+  
+    
+    
+  
+</navPoint>
+        
+        
+       
+    
+      
+        
+        
+
+
+
+
+
+
+  
+
+
+<navPoint class="chapter" id="chap212642" playOrder="12">
+  <navLabel><text>Chapter 9 - The GNU General Public License</text></navLabel> 
+  <content src="main9.xml"/>
+    
+  
+    
+    
+  
+</navPoint>
+        
+        
+       
+    
+      
+        
+        
+
+
+
+
+
+
+  
+
+
+<navPoint class="chapter" id="chap212643" playOrder="13">
+  <navLabel><text>Chapter 10 - GNU/Linux</text></navLabel> 
+  <content src="main10.xml"/>
+    
+  
+    
+    
+  
+</navPoint>
+        
+        
+       
+    
+      
+        
+        
+
+
+
+
+
+
+  
+
+
+<navPoint class="chapter" id="chap212644" playOrder="14">
+  <navLabel><text>Chapter 11 - Open Source</text></navLabel> 
+  <content src="main11.xml"/>
+    
+  
+    
+    
+  
+</navPoint>
+        
+        
+       
+    
+      
+        
+        
+
+
+
+
+
+
+  
+
+
+<navPoint class="chapter" id="chap212645" playOrder="15">
+  <navLabel><text>Chapter 12 - A Brief Journey Through Hacker Hell</text></navLabel> 
+  <content src="main12.xml"/>
+    
+  
+    
+    
+  
+</navPoint>
+        
+        
+       
+    
+      
+        
+        
+
+
+
+
+
+
+  
+
+
+<navPoint class="chapter" id="chap212646" playOrder="16">
+  <navLabel><text>Chapter 13 - Continuing the Fight</text></navLabel> 
+  <content src="main13.xml"/>
+    
+  
+    
+    
+  
+</navPoint>
+        
+        
+       
+    
+      
+        
+        
+
+
+
+
+
+
+  
+
+
+<navPoint class="chapter" id="chap212647" playOrder="17">
+  <navLabel><text>Chapter 14 - Epilogue: Crushing Loneliness</text></navLabel> 
+  <content src="main14.xml"/>
+    
+  
+    
+    
+  
+</navPoint>
+        
+        
+       
+    
+      
+        
+
+
+
+
+
+<navPoint class="section" id="sec212648" playOrder="18">
+  <navLabel><text>Appendix A: Terminology</text></navLabel>
+  
+    <content src="main15.xml"/>
+  
+    
+    
+    
+  
+</navPoint>
+
+        
+       
+    
+      
+        
+
+
+
+
+
+<navPoint class="section" id="sec212649" playOrder="19">
+  <navLabel><text>Appendix B: Hack, Hackers, and Hacking</text></navLabel>
+  
+    <content src="main16.xml"/>
+  
+    
+    
+    
+  
+</navPoint>
+
+        
+       
+    
+      
+        
+
+
+
+
+
+<navPoint class="section" id="sec212650" playOrder="20">
+  <navLabel><text>Appendix C: GNU Free Documentation License (GFDL)</text></navLabel>
+  
+    <content src="main17.xml"/>
+  
+    
+    
+    
+  
+</navPoint>
+
+        
+       
+    
+    
+    
+      
+    
+      <navPoint class="similar" id="level1-similar" playOrder="21">
+        <navLabel><text>Recommendations</text></navLabel>
+        <content src="similar.xml"/>
+      </navPoint>
+    
+    
+    
+    
+  </navMap>
+
+</ncx>

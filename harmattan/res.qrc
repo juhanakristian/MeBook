@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/">
+        <file>qml/main.qml</file>
+        <file>qml/MainPage.qml</file>
+        <file>qml/components/MBookListItem.qml</file>
+        <file>images/startwindow_bg.png</file>
+        <file>qml/SettingsPage.qml</file>
+        <file>qml/components/SelectorButton.qml</file>
+        <file>qml/ReadingPage.qml</file>
+        <file>qml/components/SelectorDialog.qml</file>
+        <file>qml/components/SearchBar.qml</file>
+        <file>qml/DownloadBooksPage.qml</file>
+    </qresource>
+</RCC>
