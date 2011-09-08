@@ -121,6 +121,7 @@ namespace MeBook{
     signals:
         void positionInBookChanged();
         void contextMenu(const QPoint &point);
+        void doubleClicked();
 
     };
 

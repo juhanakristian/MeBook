@@ -57,6 +57,9 @@ Page {
         anchors.top: parent.top
         anchors.bottom: bottomBar.top
         onPositionInBookChanged: progressSlider.value = positionInBook * 100.0
+        onDoubleClicked: {
+            appWindow.showToolBar = !appWindow.showToolBar;
+        }
     }
 
     Rectangle{

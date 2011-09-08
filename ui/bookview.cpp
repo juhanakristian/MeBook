@@ -336,6 +336,9 @@ bool BookView::sceneEventFilter(QGraphicsItem *watched, QEvent *event)
         if(m_tapAndHoldTimer.isActive())
             m_tapAndHoldTimer.stop();
 
+        if(m_mode == Settings::PageMode)
+            return true;
+
         if(m_previousPoints.length() < 1)
             return true;
 
@@ -346,15 +349,19 @@ bool BookView::sceneEventFilter(QGraphicsItem *watched, QEvent *event)
             final += (l.y()-f.y()) * i;
         }
         final /= m_previousPoints.length();
+        qDebug() << final;
         if( qAbs(final) > 3 ){
             m_acceleration = (final < max_acceleration) ? final : max_acceleration;
             m_kineticTimer.start();
         }
-        else{
+        else if(final != 0){
             checkForBounce();
             m_kineticTimer.start();
         }
+
+
         m_last = QPoint();
+
         m_previousPoints.clear();
 
 
@@ -362,6 +369,10 @@ bool BookView::sceneEventFilter(QGraphicsItem *watched, QEvent *event)
         QGraphicsSceneMouseEvent *mouseEvent = static_cast<QGraphicsSceneMouseEvent*>(event);
 
         QPointF p = watched->mapToScene(mouseEvent->pos());
+
+
+        if(m_last.isNull())
+            return true;
 
         //Fix for harmattan..
         if(width() < height()) {
@@ -372,6 +383,11 @@ bool BookView::sceneEventFilter(QGraphicsItem *watched, QEvent *event)
 
         QPointF d = p - m_last;
         m_last = p;
+
+        if(m_mode == Settings::PageMode) {
+            m_webview->moveBy(-d.x(), 0);
+            return true;
+        }
         m_webview->moveBy(0, d.y());
 
         //FIXME: Calculating position on every move creates a lot of lag on big books
@@ -386,6 +402,8 @@ bool BookView::sceneEventFilter(QGraphicsItem *watched, QEvent *event)
             m_previousPoints.pop_front();
             
         m_tapAndHoldTimer.stop();
+    } else if(event->type() == QEvent::GraphicsSceneMouseDoubleClick) {
+        emit doubleClicked();
     }
 
     //Prevent further processing by returning true
@@ -528,7 +546,14 @@ void BookView::checkForBounce()
 void BookView::finished(bool ok)
 {
     disconnect(m_webview, SIGNAL(loadFinished(bool)), this, SLOT(finished(bool)));
-    m_webview->setY(-m_currentPosition * m_webview->boundingRect().height());
+    if(m_mode == Settings::ScrollingMode) {
+        m_webview->setY(-m_currentPosition * m_webview->boundingRect().height());
+        m_webview->setX(0);
+    } else {
+        m_webview->setX(-m_currentPosition * m_webview->boundingRect().width());
+        m_webview->setY(0);
+    }
+
     makeDOMChangesEffective();
 
     if(m_mode == Settings::PageMode) {
@@ -561,7 +586,8 @@ void BookView::finished(bool ok)
         
 void BookView::doKineticScroll()
 {
-    if(!m_currentBook){
+    qDebug()<<"doKineticSCroll";
+    if(!m_currentBook || m_mode == Settings::PageMode){
         m_kineticTimer.stop();
         return;
     }
