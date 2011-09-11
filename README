@@ -4,11 +4,9 @@ Currently a MeeGo/Harmattan version of MeBook is in active development.
 
 To build for Harmattan you need Qt SDK with Harmattan target. (http://qt.nokia.com/downloads/)
 
-ToDo:
-Epub support
-- resources not loading sometimes
-- better toc
-
-UI
+TODO:
+- epub resources not loading sometimes
+- better toc handling
 - page view
 - annotation and bookmark dialogs
+- fix database operations and remove library class
