@@ -8,5 +8,6 @@ TODO:
 - epub resources not loading sometimes
 - better toc handling
 - page view
+  * moving from section to another
 - annotation and bookmark dialogs
 - fix database operations and remove library class

@@ -78,12 +78,6 @@ namespace MeBook{
 
         void openHTMLContent(const QString &html);
 
-        /*! \brief Page size.
-         *
-         * The size of the page. If in page mode the pages will be no bigger than this size.
-         * In scroll mode the view will use the width of pageSize.
-         */
-        QSizeF m_pageSize;
         QHash<QString, QString> cssSettings;
         QHash<QString, QString> htmlAttributes;
 
@@ -109,6 +103,8 @@ namespace MeBook{
         QPointF m_tapAndHoldPoint;
 
         Settings::BookViewMode m_mode;
+
+        int m_pageWidth;
 
     private slots:
         void finished(bool ok);

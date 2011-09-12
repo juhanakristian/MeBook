@@ -70,15 +70,7 @@ bool BookView::loadBookWithId(const QString &id)
     m_currentPosition = 0.0;
 
     QString s = m_currentBook->getSection(0);
-    // m_webview->setHtml(s, QUrl(dummyURL));
-    // p->currentFrame()->setHtml(s, QUrl(dummyURL));
     openHTMLContent(s);
-
-    // // makeDOMChangesEffective();    
-    // p->setPreferredContentsSize(boundingRect().size().toSize());
-
-    // delete m_webview->page();
-    // m_webview->setPage(p);
 }
         
 void BookView::closeCurrentBook()
@@ -234,9 +226,7 @@ void BookView::goToPosition(float position)
 }
 
 QString BookView::getParagraphAt(const QPoint &position){
-    // QPointF p = m_webview->mapFromScene(position);
     QPointF p = QPointF(position);
-    qDebug() << p;
     QWebHitTestResult result = m_webview->page()->mainFrame()->hitTestContent(p.toPoint());
     QWebElement element = result.enclosingBlockElement();
     if(element.tagName() == "P" && !element.isNull())
@@ -277,7 +267,12 @@ qreal BookView::positionInBook() const
 
     int start = m_currentBook->getSectionStart(m_currentChapter);
 
-    float c = qAbs(m_webview->y() / m_webview->boundingRect().height());
+    float c = 0.0f;
+    if(m_mode == Settings::ScrollingMode)
+        c = qAbs(m_webview->y() / m_webview->boundingRect().height());
+    else
+        c = qAbs(m_webview->x() / m_webview->boundingRect().width());
+
     int cp = m_currentBook->getSectionLength(m_currentChapter) * c;
 
     qreal r = static_cast<qreal>(start+cp) / static_cast<qreal>(m_currentBook->getBookLength());
@@ -290,13 +285,6 @@ void BookView::geometryChanged(const QRectF &newGeometry, const QRectF &oldGeome
     if(newGeometry == oldGeometry)
         return;
 
-    // QRectF r;
-    // r.setTopLeft(QPoint(0, 0));
-    // r.setWidth(newGeometry.width());
-    // r.setHeight(newGeometry.height());
-    // m_webview->setGeometry(r);
-
-    // m_webview->setPreferredWidth(newGeometry.width());
     m_webview->page()->setPreferredContentsSize(newGeometry.size().toSize());
 
     QDeclarativeItem::geometryChanged(newGeometry, oldGeometry);
@@ -314,7 +302,6 @@ bool BookView::sceneEventFilter(QGraphicsItem *watched, QEvent *event)
             m_last.setX(m_last.y());
             m_last.setY(temp);
         }
-        // m_accelerationTimer.start();
         m_acceleration = 0.0;
         m_kineticTimer.stop();
         m_tapAndHoldPoint = mouseEvent->pos();
@@ -336,8 +323,15 @@ bool BookView::sceneEventFilter(QGraphicsItem *watched, QEvent *event)
         if(m_tapAndHoldTimer.isActive())
             m_tapAndHoldTimer.stop();
 
-        if(m_mode == Settings::PageMode)
+        if(m_mode == Settings::PageMode) {
+            int l = qAbs(static_cast<int>(m_webview->x() / m_pageWidth));
+            float mx = qAbs(m_webview->x()) - static_cast<float>(m_pageWidth * l);
+            if(mx > (m_pageWidth / 2))
+                l++;
+            m_webview->setX(-m_pageWidth * l);
+            emit positionInBookChanged();
             return true;
+        }
 
         if(m_previousPoints.length() < 1)
             return true;
@@ -575,7 +569,7 @@ void BookView::finished(bool ok)
         page->setPreferredContentsSize(QSize(fullWidth, pageHeight));
         // page->setViewportSize(QSize(fullWidth, pageHeight));
 
-
+        m_pageWidth = pageWidth;
     }
 
     m_webview->setMinimumHeight(m_webview->page()->mainFrame()->contentsSize().height());
