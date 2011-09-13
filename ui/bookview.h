@@ -76,6 +76,7 @@ namespace MeBook{
          */
         QGraphicsWebView *m_webview;
 
+
         void openHTMLContent(const QString &html);
 
         QHash<QString, QString> cssSettings;
@@ -105,6 +106,9 @@ namespace MeBook{
         Settings::BookViewMode m_mode;
 
         int m_pageWidth;
+
+        int numPages() const;
+        int currentPage() const;
 
     private slots:
         void finished(bool ok);

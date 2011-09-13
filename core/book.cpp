@@ -14,24 +14,28 @@ Book::Book() :
         generator(0), 
         loaded(false), 
         lengthInWords(0),
-        inLibrary(false)
+        inLibrary(false),
+        m_section(0),
+        m_sectionProgress(0.0)
 {
 
 }
 
 Book::Book(const QString &bookFilename, bool loadLater) : 
-        filename(QString()),
+        filename(bookFilename),
         generator(0), 
         loaded(false), 
         lengthInWords(0),
-        inLibrary(false)
+        inLibrary(false),
+        m_section(0),
+        m_sectionProgress(0.0)
 {
-    filename = bookFilename;
     if(!loadLater){
         setUpGenerator();
         openBook(filename);
     }
 
+    loadProgress();
 }
 
 
@@ -42,11 +46,14 @@ Book::~Book()
     for(QList<BookSectionData>::iterator iter = sections.begin(); iter != sections.end(); ++iter){
         delete (*iter).content;
     }
+
+    saveProgress();
 }
 
 void Book::openBook(const QString &bookFilename)
 {
     filename = bookFilename;
+    loadProgress();
     if(!generator)
         setUpGenerator();
     generator->readMetaData();
@@ -377,16 +384,58 @@ void Book::setLengthInWords(unsigned int length)
     lengthInWords = length;
 }
 
-BookProgress Book::getProgress()
+void Book::progress(int &section, float &sectionProgress) const
 {
-    return bookProgress; 
+    section = m_section;
+    sectionProgress = m_sectionProgress;
 }
 
-void Book::setProgress(BookProgress p)
+void Book::setProgress(int section, float sectionProgress)
 {
-    bookProgress = p;
+    m_section = section;
+    m_sectionProgress = sectionProgress;
+    qDebug() << m_section << ":"<<m_sectionProgress;
+    saveProgress();
 }
 
+void Book::loadProgress()
+{
+    QSqlQuery query("SELECT * FROM lastspot WHERE filename=:filename");
+    query.bindValue(":filename", filename);
+    if(query.exec()){
+        if(query.next()){
+            m_section = query.value(1).toInt();
+            m_sectionProgress = query.value(2).toFloat();
+        }
+    }
+    else{
+        qDebug() << "Database error: " << query.lastError();
+    }
+}
+
+void Book::saveProgress() const
+{
+    QSqlQuery selectQuery("SELECT * FROM lastspot WHERE filename=:filename");
+    selectQuery.bindValue(":filename", filename);
+    selectQuery.exec();
+    if(!selectQuery.next()){
+        QSqlQuery insertQuery("INSERT INTO lastspot VALUES(:filename, :section, :percentage)");
+        insertQuery.bindValue(":filename", filename);
+        insertQuery.bindValue(":section", m_section);
+        insertQuery.bindValue(":percentage", m_sectionProgress);
+
+        if(!insertQuery.exec())
+            qDebug() << "Database error: " << insertQuery.lastError();
+    }else{
+        QSqlQuery updateQuery("UPDATE lastspot SET section=:section, percentage=:percentage WHERE filename=:filename");
+        updateQuery.bindValue(":section", m_section);
+        updateQuery.bindValue(":percentage", m_sectionProgress);
+        updateQuery.bindValue(":filename", filename);
+
+        if(!updateQuery.exec())
+            qDebug() << "Database error: " << updateQuery.lastError();
+    }
+}
 
 void Book::loadBookmarks()
 {

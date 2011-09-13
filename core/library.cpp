@@ -130,50 +130,50 @@ void Library::connectdb(const QString &databasefile)
 
 }
 
-void Library::saveBookProgress(Book *book)
-{
+//void Library::saveBookProgress(Book *book)
+//{
     
-    BookProgress progress = book->getProgress();
-    if(!progress.isValid())
-        return;
-    QSqlQuery selectQuery("SELECT * FROM lastspot WHERE filename=:filename", database);
-    selectQuery.bindValue(":filename", book->getFilename());
-    selectQuery.exec();
-    if(!selectQuery.next()){
-        QSqlQuery insertQuery("INSERT INTO lastspot VALUES(:filename, :section, :percentage)");
-        insertQuery.bindValue(":filename", book->getFilename());
-        insertQuery.bindValue(":section", progress.getSection());
-        insertQuery.bindValue(":percentage", progress.getPercentage());
+//    BookProgress progress = book->getProgress();
+//    if(!progress.isValid())
+//        return;
+//    QSqlQuery selectQuery("SELECT * FROM lastspot WHERE filename=:filename", database);
+//    selectQuery.bindValue(":filename", book->getFilename());
+//    selectQuery.exec();
+//    if(!selectQuery.next()){
+//        QSqlQuery insertQuery("INSERT INTO lastspot VALUES(:filename, :section, :percentage)");
+//        insertQuery.bindValue(":filename", book->getFilename());
+//        insertQuery.bindValue(":section", progress.getSection());
+//        insertQuery.bindValue(":percentage", progress.getPercentage());
 
-        if(!insertQuery.exec())
-            qDebug() << "Database error: " << insertQuery.lastError();
-    }else{
-        QSqlQuery updateQuery("UPDATE lastspot SET section=:section, percentage=:percentage WHERE filename=:filename", database);
-        updateQuery.bindValue(":section", progress.getSection());
-        updateQuery.bindValue(":percentage", progress.getPercentage());
-        updateQuery.bindValue(":filename", book->getFilename());
+//        if(!insertQuery.exec())
+//            qDebug() << "Database error: " << insertQuery.lastError();
+//    }else{
+//        QSqlQuery updateQuery("UPDATE lastspot SET section=:section, percentage=:percentage WHERE filename=:filename", database);
+//        updateQuery.bindValue(":section", progress.getSection());
+//        updateQuery.bindValue(":percentage", progress.getPercentage());
+//        updateQuery.bindValue(":filename", book->getFilename());
 
-        if(!updateQuery.exec())
-            qDebug() << "Database error: " << updateQuery.lastError();
-    }
-}
+//        if(!updateQuery.exec())
+//            qDebug() << "Database error: " << updateQuery.lastError();
+//    }
+//}
 
-void Library::loadBookProgress(Book *book)
-{
-    QSqlQuery query("SELECT * FROM lastspot WHERE filename=:filename", database);
-    query.bindValue(":filename", book->getFilename());
-    if(query.exec()){
-        if(query.next()){
+//void Library::loadBookProgress(Book *book)
+//{
+//    QSqlQuery query("SELECT * FROM lastspot WHERE filename=:filename", database);
+//    query.bindValue(":filename", book->getFilename());
+//    if(query.exec()){
+//        if(query.next()){
 
-            BookProgress progress;
-            progress.setProgress(query.value(1).toInt(), query.value(2).toFloat());
-            book->setProgress(progress);
-        }
-    }
-    else{
-        qDebug() << "Database error: " << query.lastError();
-    }
-}
+//            BookProgress progress;
+//            progress.setProgress(query.value(1).toInt(), query.value(2).toFloat());
+//            book->setProgress(progress);
+//        }
+//    }
+//    else{
+//        qDebug() << "Database error: " << query.lastError();
+//    }
+//}
 
 
 void Library::saveBookmark(const Bookmark &bookmark, Book *book)
@@ -326,7 +326,7 @@ void Library::loadBooksfromdb()
         if(!cover.isNull())
             book->addCoverImage(cover);
 
-        loadBookProgress(book);
+        //loadBookProgress(book);
         // loadBookmarks(book);
         loadAnnotations(book);
 

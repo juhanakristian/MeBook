@@ -3,6 +3,9 @@
 
 #include <QList>
 
+#include <QSqlQuery>
+#include <QSqlError>
+
 #include "epubgenerator.h"
 #include "bookmark.h"
 #include "annotation.h"
@@ -10,34 +13,6 @@
 class QObject;
 
 namespace MeBook{
-
-    //Class for saving progress in a book.
-    //TODO: This should be renamed and used in bookmarks and annotations.
-    class BookProgress
-    {
-    public:
-    BookProgress() : progressSection(-1), percentage(-1.0){}
-    //TODO: Check for correct values.
-    void setProgress(int section, float p){
-        progressSection = section;
-        percentage = p;
-        
-    }
-
-    //Returns the book section.
-    int getSection(){return progressSection;}
-
-    //Returns a float number between 0.0 and 1.0
-    float getPercentage(){return percentage;}
-
-    //Returns true if progress is valid
-    bool isValid(){ 
-        return (percentage != -1.0);
-    }
-    private:
-    int progressSection;
-    float percentage;
-    };
 
     //Struct for Book-class's internal book data handling.
     struct BookSectionData{
@@ -151,8 +126,8 @@ namespace MeBook{
     unsigned int getLengthInWords();
     void setLengthInWords(unsigned int);
 
-    BookProgress getProgress();
-    void setProgress(BookProgress);
+    void progress(int &section, float &sectionProgress) const;
+    void setProgress(int section, float sectionProgress);
 
     void loadBookmarks();
     QList<Bookmark> getBookmarks();
@@ -172,7 +147,7 @@ namespace MeBook{
     //Without this QWebPage can't load css-stylesheets or images found in book's html.
     QNetworkAccessManager *getResourceManager();
 
-    private:
+private:
     QString title;
     QString author;
     QString publisher;
@@ -195,7 +170,11 @@ namespace MeBook{
 
     EpubGenerator *generator;
 
-    BookProgress bookProgress;
+
+    int m_section;
+    float m_sectionProgress;
+    void loadProgress();
+    void saveProgress() const;
 
     bool loaded;
     unsigned int lengthInWords;

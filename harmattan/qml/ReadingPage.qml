@@ -21,7 +21,10 @@ Page {
         visible: true
         ToolIcon { platformIconId: "toolbar-back";
              anchors.left: parent===undefined ? undefined : parent.left
-             onClicked: pageStack.pop()
+             onClicked: {
+                 bookView.closeCurrentBook();
+                 pageStack.pop();
+             }
         }
         ToolIcon {
             platformIconId: "toolbar-view-menu";

@@ -162,8 +162,8 @@ namespace MeBook{
 
         QStringList filenames;
         void connectdb(const QString&);
-        void saveBookProgress(Book*);
-        void loadBookProgress(Book*);
+//        void saveBookProgress(Book*);
+//        void loadBookProgress(Book*);
         void loadBookmarks(Book*);
         void loadAnnotations(Book*);
         //Check if books in database still exists and if a there's any new files in book directory.

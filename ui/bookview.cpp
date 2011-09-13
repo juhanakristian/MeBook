@@ -69,25 +69,27 @@ bool BookView::loadBookWithId(const QString &id)
     m_currentChapter = 0;
     m_currentPosition = 0.0;
 
-    QString s = m_currentBook->getSection(0);
+    m_currentBook->progress(m_currentChapter, m_currentPosition);
+
+    QString s = m_currentBook->getSection(m_currentChapter);
     openHTMLContent(s);
 }
         
 void BookView::closeCurrentBook()
 {
 
-    int scrollPosition = qAbs(m_webview->y());
+    float multiplier = 0.0;
+    if(m_mode == Settings::ScrollingMode)
+        multiplier = static_cast<float>(qAbs(m_webview->y())) / static_cast<float>(m_webview->boundingRect().height());
+    else
+        multiplier = static_cast<float>(qAbs(m_webview->x())) / static_cast<float>(m_webview->boundingRect().width());
+
     int section = m_currentChapter;
-    float multiplier = ((float)scrollPosition / (float)m_webview->boundingRect().height());
 
-    BookProgress progress;
-    progress.setProgress(section, multiplier);
-    m_currentBook->setProgress(progress);
+    m_currentBook->setProgress(section, multiplier);
 
-    qDebug() << "Delete currentBook";
     delete m_currentBook;
     m_currentBook = 0;
-    qDebug() << "Bye";
 }
 
 RoleItemModel* BookView::tableOfContent()
@@ -330,6 +332,11 @@ bool BookView::sceneEventFilter(QGraphicsItem *watched, QEvent *event)
                 l++;
             m_webview->setX(-m_pageWidth * l);
             emit positionInBookChanged();
+            if(currentPage() >= numPages()) {
+                nextChapter();
+            } else if(currentPage() < 0) {
+                previousChapter();
+            }
             return true;
         }
 
@@ -540,13 +547,7 @@ void BookView::checkForBounce()
 void BookView::finished(bool ok)
 {
     disconnect(m_webview, SIGNAL(loadFinished(bool)), this, SLOT(finished(bool)));
-    if(m_mode == Settings::ScrollingMode) {
-        m_webview->setY(-m_currentPosition * m_webview->boundingRect().height());
-        m_webview->setX(0);
-    } else {
-        m_webview->setX(-m_currentPosition * m_webview->boundingRect().width());
-        m_webview->setY(0);
-    }
+
 
     makeDOMChangesEffective();
 
@@ -575,12 +576,19 @@ void BookView::finished(bool ok)
     m_webview->setMinimumHeight(m_webview->page()->mainFrame()->contentsSize().height());
     m_webview->setMaximumHeight(m_webview->page()->mainFrame()->contentsSize().height());
 
+    if(m_mode == Settings::ScrollingMode) {
+        m_webview->setY(-m_currentPosition * m_webview->boundingRect().height());
+        m_webview->setX(0);
+    } else {
+        m_webview->setX(-m_currentPosition * m_webview->boundingRect().width());
+        m_webview->setY(0);
+    }
+
     emit positionInBookChanged();
 }
         
 void BookView::doKineticScroll()
 {
-    qDebug()<<"doKineticSCroll";
     if(!m_currentBook || m_mode == Settings::PageMode){
         m_kineticTimer.stop();
         return;
@@ -617,6 +625,16 @@ void BookView::gatherScrollData()
 void BookView::tapAndHold()
 {
     emit contextMenu(m_webview->mapToScene(m_tapAndHoldPoint).toPoint());
+}
+
+int MeBook::BookView::numPages() const
+{
+    return m_webview->boundingRect().width() / m_pageWidth;
+}
+
+int MeBook::BookView::currentPage() const
+{
+    return (-m_webview->x() / m_webview->boundingRect().width()) * numPages();
 }
         
 // void BookView::contextMenu(const QPoint &point)

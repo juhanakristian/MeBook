@@ -7,7 +7,6 @@ To build for Harmattan you need Qt SDK with Harmattan target. (http://qt.nokia.c
 TODO:
 - epub resources not loading sometimes
 - better toc handling
-- page view
-  * moving from section to another
+- some glitches when moving from and to ReadingPage
 - annotation and bookmark dialogs
 - fix database operations and remove library class
