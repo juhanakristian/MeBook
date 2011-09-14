@@ -98,7 +98,7 @@ RoleItemModel* BookView::tableOfContent()
         return NULL;
 
     QHash<int, QByteArray> roleNames;
-    roleNames.insert(Qt::UserRole + 1, "itemText");
+    roleNames.insert(Qt::UserRole + 1, "name");
 
     RoleItemModel *model = new RoleItemModel(roleNames);
     QStringList list(m_currentBook->getTOC());
@@ -108,7 +108,6 @@ RoleItemModel* BookView::tableOfContent()
         model->appendRow(item);
     }
 
-    qDebug() << "Model:" << model->rowCount();
     return model;
 }
 
@@ -125,14 +124,12 @@ RoleItemModel* BookView::bookmarks()
     roleNames.insert(Qt::UserRole + 2, "image");
     
     RoleItemModel *model = new RoleItemModel(roleNames);
-    //TODO: Render a square image with color..
     foreach(Bookmark b, bm){
         QStandardItem *item = new QStandardItem();
         item->setData(b.getName(), Qt::UserRole + 1);
         item->setData(b.getColor(), Qt::UserRole + 2);
         model->appendRow(item);
     }
-    qDebug() << "Model:" << model->rowCount();
     return model;
 }
 
@@ -337,6 +334,9 @@ bool BookView::sceneEventFilter(QGraphicsItem *watched, QEvent *event)
             } else if(currentPage() < 0) {
                 previousChapter();
             }
+
+            qDebug() << "pos:" << m_currentPosition;
+            qDebug() << "width:" << m_webview->boundingRect().width();
             return true;
         }
 
@@ -581,6 +581,8 @@ void BookView::finished(bool ok)
         m_webview->setX(0);
     } else {
         m_webview->setX(-m_currentPosition * m_webview->boundingRect().width());
+        qDebug() << "pos:" << m_currentPosition;
+        qDebug() << "width:" << m_webview->boundingRect().width();
         m_webview->setY(0);
     }
 

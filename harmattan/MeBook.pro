@@ -64,9 +64,11 @@ OTHER_FILES += \
     qml/SettingsPage.qml \
     qml/components/SelectorButton.qml \
     qml/ReadingPage.qml \
-    qml/components/SelectorDialog.qml \
     qml/components/SearchBar.qml \
-    qml/DownloadBooksPage.qml
+    qml/DownloadBooksPage.qml \
+    qml/components/UIConstants.js \
+    qml/components/MySelectionDialog.qml \
+    qml/components/MyCommonDialog.qml
 
 RESOURCES += \
     res.qrc
@@ -79,5 +81,8 @@ qtcAddDeployment()
 CONFIG += qdeclarative-boostable
 QMAKE_CXXFLAGS += -fPIC -fvisibility=hidden -fvisibility-inlines-hidden
 QMAKE_LFLAGS += -pie -rdynamic
+
+
+
 
 

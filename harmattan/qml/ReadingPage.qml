@@ -19,30 +19,40 @@ Page {
     ToolBarLayout {
         id: readingPageTools
         visible: true
-        ToolIcon { platformIconId: "toolbar-back";
-             anchors.left: parent===undefined ? undefined : parent.left
-             onClicked: {
+        ToolIcon {
+            platformIconId: "toolbar-back";
+            anchors.left: parent===undefined ? undefined : parent.left
+            onClicked: {
                  bookView.closeCurrentBook();
                  pageStack.pop();
-             }
+            }
         }
         ToolIcon {
             platformIconId: "toolbar-view-menu";
             onClicked: {
-                selectorDialog.selected.connect(bookView.openTOCItem);
                 selectorDialog.titleText = "Table of content"
-                selectorDialog.listModel = bookView.tableOfContent();
+                selectorDialog.model = bookView.tableOfContent();
+                selectorDialog.accepted.connect(loadTOCItem);
                 selectorDialog.open();
             }
         }
         ToolIcon {
+            platformIconId: "toolbar-attachment"
+        }
+        ToolIcon {
+            platformIconId: "toolbar-edit"
+        }
+
+        ToolIcon {
             platformIconId: "toolbar-previous";
             onClicked: bookView.previousChapter();
+            visible: !settings.viewMode();
         }
 
         ToolIcon {
             platformIconId: "toolbar-next";
             onClicked: bookView.nextChapter();
+            visible: !settings.viewMode();
         }
 
 
@@ -52,6 +62,11 @@ Page {
 
     function setBook(id) {
         bookView.loadBookWithId(id);
+    }
+
+    function loadTOCItem() {
+        bookView.openTOCItem(selectorDialog.selectedIndex);
+        selectorDialog.accepted.disconnect(loadTOCItem);
     }
 
     BookView {
@@ -84,13 +99,10 @@ Page {
 
     }
 
-
-
-
-    SelectorDialog {
+    MySelectionDialog{
         id: selectorDialog
-        onSelectedIndexChanged: selected.disconnect(bookView.openTOCItem);
     }
+
 
 
 }

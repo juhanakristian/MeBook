@@ -51,6 +51,7 @@ namespace MeBook{
                                         const QString &paragraph,
                                         const QColor &color);
 
+
         QPoint tapAndHoldPoint(){
             return m_tapAndHoldPoint.toPoint();
         }

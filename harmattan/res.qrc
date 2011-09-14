@@ -10,5 +10,8 @@
         <file>qml/components/SelectorDialog.qml</file>
         <file>qml/components/SearchBar.qml</file>
         <file>qml/DownloadBooksPage.qml</file>
+        <file>qml/components/MyCommonDialog.qml</file>
+        <file>qml/components/MySelectionDialog.qml</file>
+        <file>qml/components/UIConstants.js</file>
     </qresource>
 </RCC>

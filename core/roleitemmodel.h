@@ -11,12 +11,13 @@
  */
 class RoleItemModel : public QStandardItemModel{
     Q_OBJECT
+    Q_PROPERTY(int count READ count CONSTANT)
 public:
     RoleItemModel(QObject *parent = 0) : QStandardItemModel(parent){
 
     }
 
-    int count()
+    Q_INVOKABLE int count()
     {
         return rowCount();
     }
