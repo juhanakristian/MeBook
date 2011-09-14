@@ -75,6 +75,7 @@ Page {
         anchors.top: parent.top
         anchors.bottom: bottomBar.top
         onPositionInBookChanged: progressSlider.value = positionInBook * 100.0
+        clip: true
         onDoubleClicked: {
             appWindow.showToolBar = !appWindow.showToolBar;
         }
