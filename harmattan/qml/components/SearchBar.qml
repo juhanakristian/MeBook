@@ -9,13 +9,15 @@ TextField{
     placeholderText: "Search"
 
     signal search(string s)
-
-    ToolIcon {
+    onFocusChanged: console.log("focus");
+    Image {
         anchors.right: parent.right
-        anchors.rightMargin: -10
         anchors.verticalCenter: parent.verticalCenter
-        iconSource: "image://theme/icon-m-common-search"
-        onClicked: search(searchField.text)
+        source: (searchField.text.toString() !== "") ? "image://theme/icon-m-input-clear" : "image://theme/icon-m-common-search"
+        MouseArea{
+            anchors.fill: parent
+            onClicked: console.log("1:" + searchField.text + " 2: " + searchField.text.toString());
+        }
     }
 
     Keys.onPressed: if(event.key == Qt.Key_Enter) search(searchField.text)

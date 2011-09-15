@@ -108,6 +108,7 @@ Page {
                 spacing: 5
                 anchors.margins: 10
                 anchors.left: parent.left
+                anchors.right: parent.right
                 anchors.top: parent.top
                 height: childrenRect.height + 20
                 Image{
@@ -119,26 +120,31 @@ Page {
 
                 Column{
                     anchors.margins: 10
+                    width: mainPage.width - coverImage.width - 65
                     spacing: 5
+
                     Label{
                         id: nameLabel
                         text: title
+                        width: parent.width
                         font.pixelSize: 22
-                        wrapMode: "WordWrap"
+                        wrapMode: Text.WordWrap
                     }
 
                     Label{
                         id: authorLabel
                         text: author
+                        width: parent.width
                         font.pixelSize: 16
-                        wrapMode: "WordWrap"
+                        wrapMode: Text.WordWrap
                     }
 
                     Label{
                         id: categoryLabel
                         text: subject
+                        width: parent.width
                         font.pixelSize: 12
-                        wrapMode: "WordWrap"
+                        wrapMode: Text.WordWrap
                     }
 
                 }
@@ -146,14 +152,7 @@ Page {
         }
 
         ScrollDecorator{ flickableItem: bookListView }
-        /*delegate: MBookListItem{*/
-        /*    id: booklistitem*/
-        /*    anchors.margins: 10*/
-        /*    bookAuthor: author*/
-        /*    bookName: title*/
-        /*    bookCategory: subject*/
-        /*    coverImageSource: "image://covers/" + id*/
-        /*}*/
+
     }
 
 }

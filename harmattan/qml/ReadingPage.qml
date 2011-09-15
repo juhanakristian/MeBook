@@ -46,13 +46,13 @@ Page {
         ToolIcon {
             platformIconId: "toolbar-previous";
             onClicked: bookView.previousChapter();
-            visible: !settings.viewMode();
+            visible: !settings.viewMode;
         }
 
         ToolIcon {
             platformIconId: "toolbar-next";
             onClicked: bookView.nextChapter();
-            visible: !settings.viewMode();
+            visible: !settings.viewMode;
         }
 
 
@@ -75,9 +75,10 @@ Page {
         anchors.top: parent.top
         anchors.bottom: bottomBar.top
         onPositionInBookChanged: progressSlider.value = positionInBook * 100.0
-        clip: true
+        clip: settings.viewMode
         onDoubleClicked: {
             appWindow.showToolBar = !appWindow.showToolBar;
+            appWindow.showStatusBar = !appWindow.showStatusBar;
         }
     }
 

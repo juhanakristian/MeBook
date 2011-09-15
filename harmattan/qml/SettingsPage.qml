@@ -53,17 +53,9 @@ Page {
                 anchors.left: parent.left
                 anchors.right: parent.right
                 anchors.margins: 5
-                Button{ id: scroll; text: "Scroll"; onClicked: settings.setViewMode(0);}
-                Button{ id: page; text: "Page"; onClicked: settings.setViewMode(1);}
+                Button{ id: scroll; text: "Scroll"; checked: !settings.viewMode; onClicked: settings.setViewMode(0);}
+                Button{ id: page; text: "Page"; checked: settings.viewMode; onClicked: settings.setViewMode(1);}
 
-                Component.onCompleted: {
-                    var mode = settings.viewMode();
-                    if(mode)
-                        page.checked = true;
-                    else
-                        scroll.checked = true;
-
-                }
 
             }
 

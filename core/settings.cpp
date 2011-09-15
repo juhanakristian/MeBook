@@ -19,6 +19,7 @@ int Settings::viewMode() const
 void Settings::setViewMode(int mode)
 {
     m_settings.setValue("viewmode", mode);
+    emit viewModeChanged();
 }
 
 

@@ -12,6 +12,7 @@ namespace MeBook{
         Q_ENUMS(BookViewMode)
         Q_ENUMS(Sorting)
         Q_ENUMS(Orientation)
+        Q_PROPERTY(int viewMode READ viewMode NOTIFY viewModeChanged)
     private:
         Settings(const Settings&){}
         Settings &operator=(const Settings&){}
@@ -57,6 +58,9 @@ namespace MeBook{
 
         Q_INVOKABLE bool backlightForcing() const;
         Q_INVOKABLE void setBacklightForcing(bool backlightforcing);
+
+    signals:
+        void viewModeChanged();
     };
 
 }
