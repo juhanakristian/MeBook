@@ -266,6 +266,7 @@ qreal BookView::positionInBook() const
 
     int start = m_currentBook->getSectionStart(m_currentChapter);
 
+
     float c = 0.0f;
     if(m_mode == Settings::ScrollingMode)
         c = qAbs(m_webview->y() / m_webview->boundingRect().height());
@@ -285,6 +286,13 @@ void BookView::geometryChanged(const QRectF &newGeometry, const QRectF &oldGeome
         return;
 
     m_webview->page()->setPreferredContentsSize(newGeometry.size().toSize());
+    if(m_mode == Settings::PageMode) {
+        m_webview->page()->setPreferredContentsSize(newGeometry.size().toSize());
+        handlePaging();
+//        m_currentPosition = 0.0f;
+        resetPosition();
+    }
+
 
     QDeclarativeItem::geometryChanged(newGeometry, oldGeometry);
 }
@@ -301,6 +309,7 @@ bool BookView::sceneEventFilter(QGraphicsItem *watched, QEvent *event)
             m_last.setX(m_last.y());
             m_last.setY(temp);
         }
+
         m_acceleration = 0.0;
         m_kineticTimer.stop();
         m_tapAndHoldPoint = mouseEvent->pos();
@@ -334,9 +343,7 @@ bool BookView::sceneEventFilter(QGraphicsItem *watched, QEvent *event)
             } else if(currentPage() < 0) {
                 previousChapter();
             }
-
-            qDebug() << "pos:" << m_currentPosition;
-            qDebug() << "width:" << m_webview->boundingRect().width();
+            recalculatePosition();
             return true;
         }
 
@@ -386,6 +393,9 @@ bool BookView::sceneEventFilter(QGraphicsItem *watched, QEvent *event)
         m_last = p;
 
         if(m_mode == Settings::PageMode) {
+            qDebug()<<p.x();
+            if(width() > height())
+                d = -d;
             m_webview->moveBy(-d.x(), 0);
             return true;
         }
@@ -552,39 +562,10 @@ void BookView::finished(bool ok)
     makeDOMChangesEffective();
 
     if(m_mode == Settings::PageMode) {
-        int pageHeight = boundingRect().size().height();
-        int pageWidth = boundingRect().size().width() - 15;
-        QWebPage *page = m_webview->page();
-        QWebElement bodyElement = page->mainFrame()->findFirstElement("body");
-        int pageCount = (bodyElement.geometry().height() / pageHeight) + 1;
-        QString paginationScript = "var d = document.getElementsByTagName('body')[0];" \
-                                   "var totalHeight = d.offsetHeight;" \
-                                   "var pageCount = Math.floor(totalHeight / " + QString::number(pageHeight) + ") + 1;" \
-                                   "d.style.marginLeft= \"20px\";" \ 
-                                   "d.style.WebkitColumnCount = pageCount;" \
-                                   "d.style.width= ((" + QString::number(pageWidth) + " * pageCount) - 20) + \"px\";" \ 
-                                   "d.style.height= \"" + QString::number(pageHeight) + "px\";";
-        page->mainFrame()->evaluateJavaScript(paginationScript);
-        int fullWidth = (pageCount * pageWidth) - 20;
-        // emit numberOfPages(pageCount);
-        page->setPreferredContentsSize(QSize(fullWidth, pageHeight));
-        // page->setViewportSize(QSize(fullWidth, pageHeight));
-
-        m_pageWidth = pageWidth;
+        handlePaging();
     }
 
-    m_webview->setMinimumHeight(m_webview->page()->mainFrame()->contentsSize().height());
-    m_webview->setMaximumHeight(m_webview->page()->mainFrame()->contentsSize().height());
-
-    if(m_mode == Settings::ScrollingMode) {
-        m_webview->setY(-m_currentPosition * m_webview->boundingRect().height());
-        m_webview->setX(0);
-    } else {
-        m_webview->setX(-m_currentPosition * m_webview->boundingRect().width());
-        qDebug() << "pos:" << m_currentPosition;
-        qDebug() << "width:" << m_webview->boundingRect().width();
-        m_webview->setY(0);
-    }
+    resetPosition();
 
     emit positionInBookChanged();
 }
@@ -637,6 +618,54 @@ int MeBook::BookView::numPages() const
 int MeBook::BookView::currentPage() const
 {
     return (-m_webview->x() / m_webview->boundingRect().width()) * numPages();
+}
+
+void MeBook::BookView::handlePaging()
+{
+    int pageHeight = m_webview->page()->preferredContentsSize().height();
+    int pageWidth =m_webview->page()->preferredContentsSize().width() - 15;
+    QWebPage *page = m_webview->page();
+    QWebElement bodyElement = page->mainFrame()->findFirstElement("body");
+    int pageCount = (bodyElement.geometry().height() / pageHeight) + 1;
+    QString paginationScript = "var d = document.getElementsByTagName('body')[0];" \
+                               "var totalHeight = d.offsetHeight;" \
+                               "var pageCount = Math.floor(totalHeight / " + QString::number(pageHeight) + ") + 1;" \
+                               "d.style.marginLeft= \"20px\";" \
+                               "d.style.WebkitColumnCount = pageCount;" \
+                               "d.style.width= ((" + QString::number(pageWidth) + " * pageCount) - 20) + \"px\";" \
+                               "d.style.height= \"" + QString::number(pageHeight) + "px\";";
+    page->mainFrame()->evaluateJavaScript(paginationScript);
+    int fullWidth = (pageCount * pageWidth) - 20;
+    page->setPreferredContentsSize(QSize(fullWidth, pageHeight));
+
+    m_pageWidth = pageWidth;
+}
+
+void MeBook::BookView::resetPosition()
+{
+    m_webview->setMinimumHeight(m_webview->page()->mainFrame()->contentsSize().height());
+    m_webview->setMaximumHeight(m_webview->page()->mainFrame()->contentsSize().height());
+    int pageHeight = m_webview->page()->preferredContentsSize().height();
+    int pageWidth =m_webview->page()->preferredContentsSize().width() - 15;
+
+    if(m_mode == Settings::ScrollingMode) {
+        m_webview->setY(-m_currentPosition * pageHeight);
+        m_webview->setX(0);
+    } else {
+        m_webview->setX(-m_currentPosition * pageWidth);
+        m_webview->setY(0);
+    }
+}
+
+void MeBook::BookView::recalculatePosition()
+{
+    float c = 0.0f;
+    if(m_mode == Settings::ScrollingMode)
+        c = qAbs(m_webview->y() / m_webview->boundingRect().height());
+    else
+        c = qAbs(m_webview->x() / m_webview->boundingRect().width());
+
+    m_currentPosition = c;
 }
         
 // void BookView::contextMenu(const QPoint &point)

@@ -16,6 +16,8 @@ Page {
         color: "#edeadb"
     }
 
+    orientationLock: PageOrientation.LockPortrait
+
     ToolBarLayout {
         id: readingPageTools
         visible: true

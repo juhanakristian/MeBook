@@ -7,7 +7,7 @@ import com.mebook.settings 1.0
 import "components"
 
 Page {
-    id: mainPage
+    id: root
     tools: mainPageTools
 
     ToolBarLayout {
@@ -49,6 +49,7 @@ Page {
         anchors.fill: parent
         model: books
         spacing: 10
+
         header: Column {
             anchors.left: parent.left
             anchors.right: parent.right
@@ -79,6 +80,7 @@ Page {
 
         SearchBar{
             id: searchBar
+
         }
 
 
@@ -98,8 +100,12 @@ Page {
                 id: mouseArea
                 anchors.fill: parent
                 onClicked: {
-                    readingPage.setBook(id);
-                    pageStack.push(readingPage);
+                    if(inputContext.softwareInputPanelVisible) {
+                        inputContext.simulateSipClose();
+                    } else {
+                        readingPage.setBook(id);
+                        pageStack.push(readingPage);
+                    }
                 }
             }
 
@@ -120,7 +126,7 @@ Page {
 
                 Column{
                     anchors.margins: 10
-                    width: mainPage.width - coverImage.width - 65
+                    width: root.width - coverImage.width - 65
                     spacing: 5
 
                     Label{

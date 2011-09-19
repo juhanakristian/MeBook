@@ -9,7 +9,14 @@ TextField{
     placeholderText: "Search"
 
     signal search(string s)
-    onFocusChanged: console.log("focus");
+
+    SipAttributes{
+        id: sipAttributes
+        actionKeyLabel: "Search"
+    }
+
+    platformSipAttributes: sipAttributes
+
     Image {
         anchors.right: parent.right
         anchors.verticalCenter: parent.verticalCenter
@@ -17,6 +24,7 @@ TextField{
         MouseArea{
             anchors.fill: parent
             onClicked: console.log("1:" + searchField.text + " 2: " + searchField.text.toString());
+
         }
     }
 
