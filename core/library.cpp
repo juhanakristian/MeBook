@@ -16,13 +16,6 @@
 
 #include <QRegExp>
 
-#ifndef QT_NO_DEBUG
-#include <QDebug>
-const QString color = "\033[35;1m";
-const QString colorend = "\033[0m";
-const QString func = __PRETTY_FUNCTION__;
-#endif
-
 using namespace MeBook;
 
 //TODO: Move progress, bookmarks and annotations related code to Book-class
@@ -62,24 +55,40 @@ Library::~Library()
 
 void Library::loadLibrary()
 {
-    // scanDirectory(libraryDirectory);
-    // loadBooksfromdb();
-    // checkForChanges();
-    // TODO: Fix support for adding new books from directory
+    QList<QString> files = scanDirectory(libraryDirectory);
+    QList<QString> filesindb = booksInDatabase();
+
+    QList<QString> newfiles;
+    for(QList<QString>::const_iterator iter = files.begin(); iter != files.end(); ++iter)
+    {
+        if(!filesindb.contains((*iter))){
+            newfiles.push_back(*iter);
+        }
+    }
+
+
+    for(QList<QString>::const_iterator iter = newfiles.begin(); iter != newfiles.end(); ++iter)
+    {
+        Book *book = new Book(*iter, true);
+        book->loadMetaData();
+        addToLibrary(book);
+    }
+
     m_booksModel->sortByColumn(2);
     qDebug() << "Num:" << m_booksModel->rowCount();
 }
 
-void Library::scanDirectory(const QString &directory)
+QList<QString> Library::scanDirectory(const QString &directory)
 {
     QDir dir(directory);
+    QList<QString> fn;
     if(dir.exists()){
         QStringList sbooks = dir.entryList(QStringList("*.epub"), QDir::Files);
         for(QStringList::iterator iter = sbooks.begin(); iter != sbooks.end(); ++iter)
         {
             (*iter) = dir.absolutePath() + "/" + (*iter);
         }
-        filenames.append(sbooks);
+        fn.append(sbooks);
         QStringList dirs = dir.entryList(QDir::Dirs | QDir::NoSymLinks);
 
         QStringList::const_iterator iter;
@@ -88,6 +97,8 @@ void Library::scanDirectory(const QString &directory)
                 scanDirectory(dir.absolutePath() + "/" + *iter);
         }
     }
+
+    return fn;
 }
 
 void Library::connectdb(const QString &databasefile)
@@ -122,58 +133,8 @@ void Library::connectdb(const QString &databasefile)
     m_booksModel->generateRoleNames();
 
 
-    // m_booksModel->select();
-    // m_booksModel->sort(1, Qt::DescendingOrder);
-    // m_booksModel->sortByColumn(4);
-    // m_booksModel->select();
-
-
 }
 
-//void Library::saveBookProgress(Book *book)
-//{
-    
-//    BookProgress progress = book->getProgress();
-//    if(!progress.isValid())
-//        return;
-//    QSqlQuery selectQuery("SELECT * FROM lastspot WHERE filename=:filename", database);
-//    selectQuery.bindValue(":filename", book->getFilename());
-//    selectQuery.exec();
-//    if(!selectQuery.next()){
-//        QSqlQuery insertQuery("INSERT INTO lastspot VALUES(:filename, :section, :percentage)");
-//        insertQuery.bindValue(":filename", book->getFilename());
-//        insertQuery.bindValue(":section", progress.getSection());
-//        insertQuery.bindValue(":percentage", progress.getPercentage());
-
-//        if(!insertQuery.exec())
-//            qDebug() << "Database error: " << insertQuery.lastError();
-//    }else{
-//        QSqlQuery updateQuery("UPDATE lastspot SET section=:section, percentage=:percentage WHERE filename=:filename", database);
-//        updateQuery.bindValue(":section", progress.getSection());
-//        updateQuery.bindValue(":percentage", progress.getPercentage());
-//        updateQuery.bindValue(":filename", book->getFilename());
-
-//        if(!updateQuery.exec())
-//            qDebug() << "Database error: " << updateQuery.lastError();
-//    }
-//}
-
-//void Library::loadBookProgress(Book *book)
-//{
-//    QSqlQuery query("SELECT * FROM lastspot WHERE filename=:filename", database);
-//    query.bindValue(":filename", book->getFilename());
-//    if(query.exec()){
-//        if(query.next()){
-
-//            BookProgress progress;
-//            progress.setProgress(query.value(1).toInt(), query.value(2).toFloat());
-//            book->setProgress(progress);
-//        }
-//    }
-//    else{
-//        qDebug() << "Database error: " << query.lastError();
-//    }
-//}
 
 
 void Library::saveBookmark(const Bookmark &bookmark, Book *book)
@@ -271,36 +232,36 @@ void Library::loadAnnotations(Book *book)
     }
 }
 
-bool Library::checkForChanges()
-{
-    QStringList filesindb;
-    for(QList<Book*>::iterator iter = books.begin(); iter != books.end(); ++iter)
-    {
-        Book *book = *iter;
-        filesindb.push_back(book->getFilename());
-    }
+//bool Library::checkForChanges()
+//{
+//    QStringList filesindb;
+//    for(QList<Book*>::iterator iter = books.begin(); iter != books.end(); ++iter)
+//    {
+//        Book *book = *iter;
+//        filesindb.push_back(book->getFilename());
+//    }
 
-    QStringList newfiles;
-    for(QStringList::const_iterator iter = filenames.begin(); iter != filenames.end(); ++iter)
-    {
-        if(!filesindb.contains((*iter))){
-            newfiles.push_back(*iter);
-        }
-    }
+//    QStringList newfiles;
+//    for(QStringList::const_iterator iter = filenames.begin(); iter != filenames.end(); ++iter)
+//    {
+//        if(!filesindb.contains((*iter))){
+//            newfiles.push_back(*iter);
+//        }
+//    }
 
-    if(newfiles.isEmpty())
-        return false;
+//    if(newfiles.isEmpty())
+//        return false;
 
-    for(QStringList::const_iterator iter = newfiles.begin(); iter != newfiles.end(); ++iter)
-    { 
-        Book *book = new Book(*iter, true);         
-        book->loadMetaData();
-        addToLibrary(book);
-    }
+//    for(QStringList::const_iterator iter = newfiles.begin(); iter != newfiles.end(); ++iter)
+//    {
+//        Book *book = new Book(*iter, true);
+//        book->loadMetaData();
+//        addToLibrary(book);
+//    }
 
-    return true;
+//    return true;
 
-}
+//}
 
 void Library::loadBooksfromdb()
 {
@@ -498,4 +459,22 @@ void Library::deleteBookmark(Book *book, Bookmark bookmark)
 QList<Book*> Library::getBooks(Settings::Sorting sorting)
 { 
     return books;
+}
+
+QList<QString> MeBook::Library::booksInDatabase()
+{
+    QList<QString> l;
+    QSqlQuery query("SELECT * FROM books");
+    if(!query.exec()) {
+        qDebug() << "Error with database operation" << query.lastError();
+        return l;
+    }
+
+    int filenameIndex = query.record().indexOf("filename");
+    while(query.next()){
+        QString filename = query.value(filenameIndex).toString();
+        l.append(filename);
+    }
+
+    return l;
 }

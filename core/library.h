@@ -137,7 +137,8 @@ namespace MeBook{
         void loadLibrary();
 
         //Recursively scans a directory tree for epub-files.
-        void scanDirectory(const QString&);
+        QList<QString> scanDirectory(const QString&);
+        QList<QString> booksInDatabase();
 
         //Loads books from database and creates Book-objects.
         void loadBooksfromdb();
@@ -162,12 +163,10 @@ namespace MeBook{
 
         QStringList filenames;
         void connectdb(const QString&);
-//        void saveBookProgress(Book*);
-//        void loadBookProgress(Book*);
         void loadBookmarks(Book*);
         void loadAnnotations(Book*);
-        //Check if books in database still exists and if a there's any new files in book directory.
-        bool checkForChanges();
+//        //Check if books in database still exists and if a there's any new files in book directory.
+//        bool checkForChanges();
 
         class BookDownload
         {
