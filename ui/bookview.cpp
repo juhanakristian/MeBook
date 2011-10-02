@@ -286,12 +286,9 @@ void BookView::geometryChanged(const QRectF &newGeometry, const QRectF &oldGeome
         return;
 
     m_webview->page()->setPreferredContentsSize(newGeometry.size().toSize());
-    if(m_mode == Settings::PageMode) {
-        m_webview->page()->setPreferredContentsSize(newGeometry.size().toSize());
-        handlePaging();
-//        m_currentPosition = 0.0f;
-        resetPosition();
-    }
+    //Set frame height to content height
+    m_webview->setMinimumHeight(m_webview->page()->mainFrame()->contentsSize().height());
+    m_webview->setMaximumHeight(m_webview->page()->mainFrame()->contentsSize().height());
 
 
     QDeclarativeItem::geometryChanged(newGeometry, oldGeometry);
@@ -357,7 +354,6 @@ bool BookView::sceneEventFilter(QGraphicsItem *watched, QEvent *event)
             final += (l.y()-f.y()) * i;
         }
         final /= m_previousPoints.length();
-        qDebug() << final;
         if( qAbs(final) > 3 ){
             m_acceleration = (final < max_acceleration) ? final : max_acceleration;
             m_kineticTimer.start();
@@ -393,7 +389,6 @@ bool BookView::sceneEventFilter(QGraphicsItem *watched, QEvent *event)
         m_last = p;
 
         if(m_mode == Settings::PageMode) {
-            qDebug()<<p.x();
             if(width() > height())
                 d = -d;
             m_webview->moveBy(-d.x(), 0);
@@ -531,7 +526,6 @@ void BookView::checkForBounce()
 
     if(webview_bottom < height()){
         m_acceleration += bounce_accel + (bounce_accel * ((height() - webview_bottom) / height())) * 2.0f;
-        qDebug()<<(bounce_accel + (height() - webview_bottom));
         m_bounce = true;
 
         if((webview_bottom + m_acceleration) > height()){
@@ -610,38 +604,33 @@ void BookView::tapAndHold()
     emit contextMenu(m_webview->mapToScene(m_tapAndHoldPoint).toPoint());
 }
 
-int MeBook::BookView::numPages() const
+int BookView::numPages() const
 {
     return m_webview->boundingRect().width() / m_pageWidth;
 }
 
-int MeBook::BookView::currentPage() const
+int BookView::currentPage() const
 {
     return (-m_webview->x() / m_webview->boundingRect().width()) * numPages();
 }
 
-void MeBook::BookView::handlePaging()
+void BookView::handlePaging()
 {
     int pageHeight = m_webview->page()->preferredContentsSize().height();
-    int pageWidth =m_webview->page()->preferredContentsSize().width() - 15;
+    int pageWidth =m_webview->page()->preferredContentsSize().width();
     QWebPage *page = m_webview->page();
     QWebElement bodyElement = page->mainFrame()->findFirstElement("body");
     int pageCount = (bodyElement.geometry().height() / pageHeight) + 1;
-    QString paginationScript = "var d = document.getElementsByTagName('body')[0];" \
-                               "var totalHeight = d.offsetHeight;" \
-                               "var pageCount = Math.floor(totalHeight / " + QString::number(pageHeight) + ") + 1;" \
-                               "d.style.marginLeft= \"20px\";" \
-                               "d.style.WebkitColumnCount = pageCount;" \
-                               "d.style.width= ((" + QString::number(pageWidth) + " * pageCount) - 20) + \"px\";" \
-                               "d.style.height= \"" + QString::number(pageHeight) + "px\";";
-    page->mainFrame()->evaluateJavaScript(paginationScript);
-    int fullWidth = (pageCount * pageWidth) - 20;
-    page->setPreferredContentsSize(QSize(fullWidth, pageHeight));
 
-    m_pageWidth = pageWidth;
+    QString paginationScript = "var d = document.getElementsByTagName('body')[0];" \
+                               "d.style.WebkitColumnWidth= (" + QString::number(pageWidth) + ") + \"px\";" \
+                               "d.style.height= \"100%\";"; //TODO: Replace with height=100% ?
+    page->mainFrame()->evaluateJavaScript(paginationScript);
+
+    m_pageWidth = pageWidth + 6;
 }
 
-void MeBook::BookView::resetPosition()
+void BookView::resetPosition()
 {
     m_webview->setMinimumHeight(m_webview->page()->mainFrame()->contentsSize().height());
     m_webview->setMaximumHeight(m_webview->page()->mainFrame()->contentsSize().height());
@@ -657,7 +646,7 @@ void MeBook::BookView::resetPosition()
     }
 }
 
-void MeBook::BookView::recalculatePosition()
+void BookView::recalculatePosition()
 {
     float c = 0.0f;
     if(m_mode == Settings::ScrollingMode)
