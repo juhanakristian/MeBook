@@ -43,6 +43,10 @@ BookView::BookView(QDeclarativeItem *parent) :
     setCSSSetting("white-space", "normal");
     // setCSSSetting("line-height", "22em");
     setCSSSetting("text-align", "justify");
+    setCSSSetting("margin-left", "0px");
+    setCSSSetting("padding-left", "0px");
+    setCSSSetting("margin-right", "0px");
+    setCSSSetting("padding-right", "0px");
 
     
     setFiltersChildEvents(true);
@@ -285,7 +289,9 @@ void BookView::geometryChanged(const QRectF &newGeometry, const QRectF &oldGeome
     if(newGeometry == oldGeometry)
         return;
 
-    m_webview->page()->setPreferredContentsSize(newGeometry.size().toSize());
+    QSize s = newGeometry.size().toSize();
+//    s.setWidth(s.width()+);
+    m_webview->page()->setPreferredContentsSize(s);
     //Set frame height to content height
     m_webview->setMinimumHeight(m_webview->page()->mainFrame()->contentsSize().height());
     m_webview->setMaximumHeight(m_webview->page()->mainFrame()->contentsSize().height());
@@ -333,6 +339,8 @@ bool BookView::sceneEventFilter(QGraphicsItem *watched, QEvent *event)
             float mx = qAbs(m_webview->x()) - static_cast<float>(m_pageWidth * l);
             if(mx > (m_pageWidth / 2))
                 l++;
+
+//            int add = (l == 0) ? 0 : 9;
             m_webview->setX(-m_pageWidth * l);
             emit positionInBookChanged();
             if(currentPage() >= numPages()) {
@@ -617,17 +625,18 @@ int BookView::currentPage() const
 void BookView::handlePaging()
 {
     int pageHeight = m_webview->page()->preferredContentsSize().height();
-    int pageWidth =m_webview->page()->preferredContentsSize().width();
+    int pageWidth = m_webview->page()->preferredContentsSize().width();
     QWebPage *page = m_webview->page();
     QWebElement bodyElement = page->mainFrame()->findFirstElement("body");
     int pageCount = (bodyElement.geometry().height() / pageHeight) + 1;
 
-    QString paginationScript = "var d = document.getElementsByTagName('body')[0];" \
-                               "d.style.WebkitColumnWidth= (" + QString::number(pageWidth) + ") + \"px\";" \
-                               "d.style.height= \"100%\";"; //TODO: Replace with height=100% ?
+    QString paginationScript = "var d = document.getElementsByTagName('body')[0];"
+                               "d.style.WebkitColumnGap=\"0px\";"
+                               "d.style.WebkitColumnWidth= (" + QString::number(pageWidth) + ") + \"px\";"
+                               "d.style.height= \"100%\";";
     page->mainFrame()->evaluateJavaScript(paginationScript);
 
-    m_pageWidth = pageWidth + 6;
+    m_pageWidth = pageWidth;
 }
 
 void BookView::resetPosition()
@@ -635,7 +644,7 @@ void BookView::resetPosition()
     m_webview->setMinimumHeight(m_webview->page()->mainFrame()->contentsSize().height());
     m_webview->setMaximumHeight(m_webview->page()->mainFrame()->contentsSize().height());
     int pageHeight = m_webview->page()->preferredContentsSize().height();
-    int pageWidth =m_webview->page()->preferredContentsSize().width() - 15;
+    int pageWidth =m_webview->page()->preferredContentsSize().width();
 
     if(m_mode == Settings::ScrollingMode) {
         m_webview->setY(-m_currentPosition * pageHeight);
