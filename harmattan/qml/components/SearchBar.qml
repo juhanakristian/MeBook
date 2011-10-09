@@ -23,10 +23,15 @@ TextField{
         source: (searchField.text.toString() !== "") ? "image://theme/icon-m-input-clear" : "image://theme/icon-m-common-search"
         MouseArea{
             anchors.fill: parent
-            onClicked: console.log("1:" + searchField.text + " 2: " + searchField.text.toString());
+            onClicked: searchField.text = "";
 
         }
     }
 
-    Keys.onPressed: if(event.key == Qt.Key_Enter) search(searchField.text)
+    Keys.onPressed: {
+        platformCloseSoftwareInputPanel();
+        console.log(searchField.text);
+        search(searchField.text);
+    }
+
 }

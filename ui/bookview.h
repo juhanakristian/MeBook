@@ -109,6 +109,7 @@ namespace MeBook{
         Settings::BookViewMode m_mode;
 
         int m_pageWidth;
+        int m_pageCount;
 
         int numPages() const;
         int currentPage() const;

@@ -323,6 +323,7 @@ bool BookView::sceneEventFilter(QGraphicsItem *watched, QEvent *event)
 
         QPointF p = watched->mapToScene(mouseEvent->pos());
 
+        qDebug() << "frame width:" << m_webview->page()->mainFrame()->contentsSize().width();
         //Fix for harmattan..
         if(width() < height()) {
             float temp = p.x();
@@ -340,7 +341,6 @@ bool BookView::sceneEventFilter(QGraphicsItem *watched, QEvent *event)
             if(mx > (m_pageWidth / 2))
                 l++;
 
-//            int add = (l == 0) ? 0 : 9;
             m_webview->setX(-m_pageWidth * l);
             emit positionInBookChanged();
             if(currentPage() >= numPages()) {
@@ -628,7 +628,6 @@ void BookView::handlePaging()
     int pageWidth = m_webview->page()->preferredContentsSize().width();
     QWebPage *page = m_webview->page();
     QWebElement bodyElement = page->mainFrame()->findFirstElement("body");
-    int pageCount = (bodyElement.geometry().height() / pageHeight) + 1;
 
     QString paginationScript = "var d = document.getElementsByTagName('body')[0];"
                                "d.style.WebkitColumnGap=\"0px\";"
@@ -636,21 +635,24 @@ void BookView::handlePaging()
                                "d.style.height= \"100%\";";
     page->mainFrame()->evaluateJavaScript(paginationScript);
 
+    m_pageCount = (bodyElement.geometry().height() / pageHeight) + 1;
     m_pageWidth = pageWidth;
 }
 
 void BookView::resetPosition()
 {
-    m_webview->setMinimumHeight(m_webview->page()->mainFrame()->contentsSize().height());
-    m_webview->setMaximumHeight(m_webview->page()->mainFrame()->contentsSize().height());
-    int pageHeight = m_webview->page()->preferredContentsSize().height();
-    int pageWidth =m_webview->page()->preferredContentsSize().width();
-
+    int pageHeight = m_webview->boundingRect().height();
+    int pageWidth = m_webview->boundingRect().width();
+    qDebug() << "CurrentPosition:" << m_currentPosition;
+    qDebug() << "height:" << pageHeight << " width: " << pageWidth;
+    qDebug() << "frame width:" << m_webview->page()->mainFrame()->contentsSize().width();
     if(m_mode == Settings::ScrollingMode) {
+        m_webview->setMinimumHeight(m_webview->page()->mainFrame()->contentsSize().height());
+        m_webview->setMaximumHeight(m_webview->page()->mainFrame()->contentsSize().height());
         m_webview->setY(-m_currentPosition * pageHeight);
         m_webview->setX(0);
     } else {
-        m_webview->setX(-m_currentPosition * pageWidth);
+        m_webview->setX(static_cast<int>(-m_currentPosition * m_pageCount) * m_pageWidth);
         m_webview->setY(0);
     }
 }
@@ -665,14 +667,3 @@ void BookView::recalculatePosition()
 
     m_currentPosition = c;
 }
-        
-// void BookView::contextMenu(const QPoint &point)
-// {
-//     qDebug() << "ContextMenu";
-// 
-//     QMenu *menu = new QMenu();
-//     QAction *bookmarkAction = menu->addAction(tr("Add bookmark"));
-//     if(menu->exec(view->mapToGlobal(pos)) == bookmarkAction){
-//         
-//     }
-// }
