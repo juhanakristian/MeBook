@@ -27,10 +27,6 @@ Page {
             platformIconId: "toolbar-down";
             onClicked: pageStack.push(downloadBooksPage)
         }
-
-        ToolIcon {
-            platformIconId: "toolbar-add";
-        }
     }
 
 
@@ -78,10 +74,10 @@ Page {
                 }
             }
 
-        SearchBar{
-            id: searchBar
+            SearchBar{
+                id: searchBar
 
-        }
+            }
 
 
         }

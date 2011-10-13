@@ -32,6 +32,7 @@ void Catalog::searchBooks(const QString &searchPhrase)
     request.setUrl(fullSearchURL);
 
 //    qDeleteAll(currentBooks);
+    m_searchResultsModel->removeRows(0, m_searchResultsModel->rowCount());
     //Clear currenBooks(QHash) and delete all Books that aren't in the library
     if(currentBooks.count() > 0){
         QHash<QString, Book*>::iterator iter = currentBooks.begin();

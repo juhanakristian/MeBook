@@ -95,6 +95,10 @@ namespace MeBook{
         QTimer m_accelerationTimer;
         QList<QPointF> m_previousPoints;
 
+        QTimer m_animationTimer;
+        int m_animationStep;
+        int m_step;
+
         bool m_bounce;
         float m_bounceAcceleration;
         void checkForBounce();
@@ -121,6 +125,8 @@ namespace MeBook{
         void gatherScrollData();
 
         void tapAndHold();
+
+        void doAnimation();
 
     signals:
         void positionInBookChanged();

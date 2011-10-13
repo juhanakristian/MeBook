@@ -17,6 +17,7 @@ using namespace MeBook;
 const float friction = 0.90;
 const float bounce_accel = 20.0;
 const float max_acceleration = 10.0;
+const int num_animation_steps = 10;
 
 BookView::BookView(QDeclarativeItem *parent) :
     QDeclarativeItem(parent),
@@ -24,7 +25,9 @@ BookView::BookView(QDeclarativeItem *parent) :
     m_bounce(false),
     m_currentChapter(0),
     m_currentPosition(0.0),
-    m_mode(Settings::PageMode)
+    m_mode(Settings::PageMode),
+    m_animationStep(0),
+    m_step(0)
 {
 
     m_webview = new QGraphicsWebView(this);
@@ -56,6 +59,10 @@ BookView::BookView(QDeclarativeItem *parent) :
     connect(&m_kineticTimer, SIGNAL(timeout()), this, SLOT(doKineticScroll()));
 
     connect(&m_tapAndHoldTimer, SIGNAL(timeout()), this, SLOT(tapAndHold()));
+
+    m_animationTimer.setInterval(10);
+    m_animationTimer.setSingleShot(true);
+    connect(&m_animationTimer, SIGNAL(timeout()), this, SLOT(doAnimation()));
 }
     
 bool BookView::loadBookWithId(const QString &id)
@@ -323,7 +330,6 @@ bool BookView::sceneEventFilter(QGraphicsItem *watched, QEvent *event)
 
         QPointF p = watched->mapToScene(mouseEvent->pos());
 
-        qDebug() << "frame width:" << m_webview->page()->mainFrame()->contentsSize().width();
         //Fix for harmattan..
         if(width() < height()) {
             float temp = p.x();
@@ -341,7 +347,10 @@ bool BookView::sceneEventFilter(QGraphicsItem *watched, QEvent *event)
             if(mx > (m_pageWidth / 2))
                 l++;
 
-            m_webview->setX(-m_pageWidth * l);
+//            m_webview->setX(-m_pageWidth * l);
+            m_animationStep = ((-m_pageWidth * l) - m_webview->x()) / num_animation_steps;
+            qDebug() << "Step size:" << m_animationStep;
+            m_animationTimer.start();
             emit positionInBookChanged();
             if(currentPage() >= numPages()) {
                 nextChapter();
@@ -446,6 +455,12 @@ void BookView::setDOMElementSettings(QWebElement &parentElement){
         for(QHash<QString, QString>::iterator iter = cssSettings.begin(); iter != cssSettings.end(); ++iter){
             if(!element.hasClass("MebookAnnotation"))
                 element.setStyleProperty(iter.key(), (*iter));
+
+            if(element.tagName() == "BODY") {
+                element.setStyleProperty("margin-right", "5px");
+                element.setStyleProperty("margin-left", "5px");
+            }
+
 
             //TODO: Handle image scaling better.
             // if(element.tagName() == "IMG"){
@@ -630,7 +645,7 @@ void BookView::handlePaging()
     QWebElement bodyElement = page->mainFrame()->findFirstElement("body");
 
     QString paginationScript = "var d = document.getElementsByTagName('body')[0];"
-                               "d.style.WebkitColumnGap=\"0px\";"
+                               "d.style.WebkitColumnGap=\"10px\";"
                                "d.style.WebkitColumnWidth= (" + QString::number(pageWidth) + ") + \"px\";"
                                "d.style.height= \"100%\";";
     page->mainFrame()->evaluateJavaScript(paginationScript);
@@ -666,4 +681,24 @@ void BookView::recalculatePosition()
         c = qAbs(m_webview->x() / m_webview->boundingRect().width());
 
     m_currentPosition = c;
+}
+
+void MeBook::BookView::doAnimation()
+{
+    qDebug() << "Step:"<<m_step;
+    if(m_step < num_animation_steps) {
+        m_webview->moveBy(m_animationStep, 0);
+        m_step++;
+        m_animationTimer.start();
+    }
+    else {
+        m_step = 0;
+        int l = qAbs(static_cast<int>(m_webview->x() / m_pageWidth));
+        float mx = qAbs(m_webview->x()) - static_cast<float>(m_pageWidth * l);
+        if(mx > (m_pageWidth / 2))
+            l++;
+
+        m_webview->setX(-m_pageWidth * l);
+    }
+
 }

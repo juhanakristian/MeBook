@@ -68,7 +68,8 @@ OTHER_FILES += \
     qml/DownloadBooksPage.qml \
     qml/components/UIConstants.js \
     qml/components/MySelectionDialog.qml \
-    qml/components/MyCommonDialog.qml
+    qml/components/MyCommonDialog.qml \
+    qml/BookInfoPage.qml
 
 RESOURCES += \
     res.qrc
@@ -81,6 +82,7 @@ qtcAddDeployment()
 CONFIG += qdeclarative-boostable
 QMAKE_CXXFLAGS += -fPIC -fvisibility=hidden -fvisibility-inlines-hidden
 QMAKE_LFLAGS += -pie -rdynamic
+
 
 
 
