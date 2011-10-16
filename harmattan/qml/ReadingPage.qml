@@ -76,6 +76,12 @@ Page {
         width:parent.width
         anchors.top: parent.top
         anchors.bottom: bottomBar.top
+        Rectangle{
+            anchors.fill: parent
+            color: "#edeadb"
+            z: -1
+        }
+
         onPositionInBookChanged: progressSlider.value = positionInBook * 100.0
         clip: settings.viewMode
         onDoubleClicked: {

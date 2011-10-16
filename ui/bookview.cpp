@@ -200,8 +200,9 @@ void BookView::nextChapter()
 
 }
 
-void BookView::previousChapter()
+void BookView::previousChapter(bool end)
 {
+    qDebug() << "Loading previous chapter";
     int index = m_currentChapter - 1;
     QString s = m_currentBook->getSectionOfTOCItem(index);
 
@@ -214,7 +215,7 @@ void BookView::previousChapter()
     openHTMLContent(s);
 
     m_currentChapter = index;
-    m_currentPosition = 0.0;
+    m_currentPosition = end ? 1.0 : 0.0;
 
 }
 
@@ -342,21 +343,22 @@ bool BookView::sceneEventFilter(QGraphicsItem *watched, QEvent *event)
             m_tapAndHoldTimer.stop();
 
         if(m_mode == Settings::PageMode) {
-            int l = qAbs(static_cast<int>(m_webview->x() / m_pageWidth));
+            if(m_webview->x() > (m_pageWidth / 2)){ //previous chapter
+                previousChapter(true);
+                return true;
+            }else if(m_webview->x() < (-m_webview->boundingRect().width() + (m_pageWidth / 2))) {
+                nextChapter();
+                return true;
+            }
+
+            int l = currentPage();//current page
             float mx = qAbs(m_webview->x()) - static_cast<float>(m_pageWidth * l);
             if(mx > (m_pageWidth / 2))
                 l++;
 
-//            m_webview->setX(-m_pageWidth * l);
             m_animationStep = ((-m_pageWidth * l) - m_webview->x()) / num_animation_steps;
-            qDebug() << "Step size:" << m_animationStep;
             m_animationTimer.start();
             emit positionInBookChanged();
-            if(currentPage() >= numPages()) {
-                nextChapter();
-            } else if(currentPage() < 0) {
-                previousChapter();
-            }
             recalculatePosition();
             return true;
         }
@@ -685,7 +687,6 @@ void BookView::recalculatePosition()
 
 void MeBook::BookView::doAnimation()
 {
-    qDebug() << "Step:"<<m_step;
     if(m_step < num_animation_steps) {
         m_webview->moveBy(m_animationStep, 0);
         m_step++;

@@ -39,7 +39,7 @@ namespace MeBook{
         Q_INVOKABLE void openTOCItem(int index, bool top = true);
 
         Q_INVOKABLE void nextChapter();
-        Q_INVOKABLE void previousChapter();
+        Q_INVOKABLE void previousChapter(bool end = false);
 
         Q_INVOKABLE void goToPosition(float position);
 
