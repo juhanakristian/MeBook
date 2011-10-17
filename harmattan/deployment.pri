@@ -93,16 +93,20 @@ symbian {
         export($$itempath)
         INSTALLS += $$item
     }
-    icon.files = $${TARGET}.png
-    icon.path = /usr/share/icons/hicolor/64x64/apps
+    icon.files = $${TARGET}.svg
+    icon.path = /usr/share/icons/hicolor/scalable/apps
     desktopfile.files = $${TARGET}.desktop
     target.path = $${installPrefix}/bin
+    splash_file.files = splash.png
+    splash_file.path = /usr/share/$${TARGET}
     export(icon.files)
     export(icon.path)
+    export(splash_file.files)
+    export(splash_file.path)
     export(desktopfile.files)
     export(desktopfile.path)
     export(target.path)
-    INSTALLS += desktopfile icon target
+    INSTALLS += desktopfile icon splash_file target
 }
 
 export (ICON)

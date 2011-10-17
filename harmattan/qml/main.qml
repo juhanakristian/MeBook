@@ -12,15 +12,4 @@ PageStackWindow {
     DownloadBooksPage{ id: downloadBooksPage }
     Component.onCompleted: theme.inverted = true;
 
-
-//    ToolBarLayout {
-//        id: commonTools
-//        visible: true
-//        ToolIcon { platformIconId: "toolbar-view-menu";
-//             anchors.right: parent===undefined ? undefined : parent.right
-//             onClicked: (myMenu.status == DialogStatus.Closed) ? myMenu.open() : myMenu.close()
-//        }
-//    }
-
-
 }

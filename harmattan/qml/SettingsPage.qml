@@ -41,25 +41,6 @@ Page {
             height:  childrenRect.height + 20
             spacing: 15
 
-//            Label{
-//                anchors.left: parent.left
-//                font.bold: true
-//                text: "Viewing mode"
-//                anchors.topMargin: 20
-//                anchors.margins: 5
-//            }
-
-            //View modes disabled for now
-//            ButtonRow {
-//                anchors.left: parent.left
-//                anchors.right: parent.right
-//                anchors.margins: 5
-//                Button{ id: scroll; text: "Scroll"; checked: !settings.viewMode; onClicked: settings.setViewMode(0);}
-//                Button{ id: page; text: "Page"; checked: settings.viewMode; onClicked: settings.setViewMode(1);}
-
-
-//            }
-
             Label{
                 anchors.left: parent.left
                 font.bold: true

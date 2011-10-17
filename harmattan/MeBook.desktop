@@ -4,7 +4,7 @@ Version=1.0
 Type=Application
 Terminal=false
 Name=MeBook
-Exec=invoker --single-instance --type=d /opt/MeBook/bin/MeBook
+Exec=invoker --single-instance --splash /usr/share/MeBook/splash.png --type=d /opt/MeBook/bin/MeBook
 Icon=/usr/share/icons/hicolor/scalable/apps/MeBook.svg
 X-Window-Icon=
 X-HildonDesk-ShowInToolbar=true

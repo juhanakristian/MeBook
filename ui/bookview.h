@@ -80,7 +80,6 @@ namespace MeBook{
 
         void openHTMLContent(const QString &html);
         void handlePaging();
-        void resetPosition();
         void recalculatePosition();
         QHash<QString, QString> cssSettings;
         QHash<QString, QString> htmlAttributes;
@@ -98,6 +97,8 @@ namespace MeBook{
         QTimer m_animationTimer;
         int m_animationStep;
         int m_step;
+
+        QTimer m_widthFixTimer;
 
         bool m_bounce;
         float m_bounceAcceleration;
@@ -127,6 +128,7 @@ namespace MeBook{
         void tapAndHold();
 
         void doAnimation();
+        void resetPosition();
 
     signals:
         void positionInBookChanged();
