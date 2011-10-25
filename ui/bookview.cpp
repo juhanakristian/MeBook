@@ -28,7 +28,8 @@ BookView::BookView(QDeclarativeItem *parent) :
     m_currentPosition(0.0),
     m_mode(Settings::PageMode),
     m_animationStep(0),
-    m_step(0)
+    m_step(0),
+    m_textSelectionEnabled(false)
 {
 
     m_webview = new QGraphicsWebView(this);
@@ -308,12 +309,17 @@ void BookView::geometryChanged(const QRectF &newGeometry, const QRectF &oldGeome
     m_webview->setMinimumHeight(m_webview->page()->mainFrame()->contentsSize().height());
     m_webview->setMaximumHeight(m_webview->page()->mainFrame()->contentsSize().height());
 
+    resetPosition();
 
     QDeclarativeItem::geometryChanged(newGeometry, oldGeometry);
 }
 
 bool BookView::sceneEventFilter(QGraphicsItem *watched, QEvent *event)
 {
+    qDebug() << m_textSelectionEnabled;
+    if(m_textSelectionEnabled)
+        return false;
+
     if(event->type() == QEvent::GraphicsSceneMousePress){
         QGraphicsSceneMouseEvent *mouseEvent = static_cast<QGraphicsSceneMouseEvent*>(event);
         m_last = watched->mapToScene(mouseEvent->pos());
@@ -403,6 +409,8 @@ bool BookView::sceneEventFilter(QGraphicsItem *watched, QEvent *event)
         if(m_last.isNull())
             return true;
 
+        m_tapAndHoldTimer.stop();
+
         //Fix for harmattan..
         if(width() < height()) {
             float temp = p.x();
@@ -431,8 +439,7 @@ bool BookView::sceneEventFilter(QGraphicsItem *watched, QEvent *event)
             m_previousPoints.append(p2);
         if(m_previousPoints.length() > 5)
             m_previousPoints.pop_front();
-            
-        m_tapAndHoldTimer.stop();
+
     } else if(event->type() == QEvent::GraphicsSceneMouseDoubleClick) {
         emit doubleClicked();
     }
@@ -707,5 +714,25 @@ void MeBook::BookView::doAnimation()
         m_webview->setX(-m_pageWidth * l);
     }
 
+}
+
+int MeBook::BookView::contentY() const
+{
+    return m_webview->y();
+}
+
+void MeBook::BookView::setContentY(int y)
+{
+    m_webview->setY(y);
+}
+
+void MeBook::BookView::setTextSelectionEnabled(bool enabled)
+{
+    m_textSelectionEnabled = enabled;
+}
+
+bool MeBook::BookView::textSelectionEnabled() const
+{
+    return m_textSelectionEnabled;
 }
 

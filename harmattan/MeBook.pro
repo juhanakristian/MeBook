@@ -70,7 +70,8 @@ OTHER_FILES += \
     qml/components/MySelectionDialog.qml \
     qml/components/MyCommonDialog.qml \
     qml/BookInfoPage.qml \
-    splash.png
+    splash.png \
+    qml/components/ColorSelector.qml
 
 RESOURCES += \
     res.qrc
@@ -83,6 +84,7 @@ qtcAddDeployment()
 CONFIG += qdeclarative-boostable
 QMAKE_CXXFLAGS += -fPIC -fvisibility=hidden -fvisibility-inlines-hidden
 QMAKE_LFLAGS += -pie -rdynamic
+
 
 
 

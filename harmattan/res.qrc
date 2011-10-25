@@ -12,5 +12,6 @@
         <file>qml/components/MyCommonDialog.qml</file>
         <file>qml/components/MySelectionDialog.qml</file>
         <file>qml/components/UIConstants.js</file>
+        <file>qml/components/ColorSelector.qml</file>
     </qresource>
 </RCC>

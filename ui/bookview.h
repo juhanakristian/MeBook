@@ -23,6 +23,8 @@ namespace MeBook{
          */
         Q_PROPERTY(qreal positionInBook READ positionInBook NOTIFY positionInBookChanged)
         Q_PROPERTY(QPoint tapAndHoldPoint READ tapAndHoldPoint)
+        Q_PROPERTY(int contentY READ contentY WRITE setContentY)
+        Q_PROPERTY(bool textSelectionEnabled READ textSelectionEnabled WRITE setTextSelectionEnabled)
     public:
         BookView(QDeclarativeItem *parent = 0);
 
@@ -58,6 +60,12 @@ namespace MeBook{
 
         qreal positionInBook() const;
 
+        int contentY() const;
+        void setContentY(int y);
+
+        bool textSelectionEnabled() const;
+        Q_INVOKABLE void setTextSelectionEnabled(bool enabled);
+
     protected:
         void geometryChanged(const QRectF &newGeometry, const QRectF &oldGeometry);
 
@@ -77,7 +85,7 @@ namespace MeBook{
          */
         QGraphicsWebView *m_webview;
 
-
+        bool m_textSelectionEnabled;
         void openHTMLContent(const QString &html);
         void handlePaging();
         void recalculatePosition();
