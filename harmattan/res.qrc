@@ -13,5 +13,6 @@
         <file>qml/components/MySelectionDialog.qml</file>
         <file>qml/components/UIConstants.js</file>
         <file>qml/components/ColorSelector.qml</file>
+        <file>qml/components/PopUpDialog.qml</file>
     </qresource>
 </RCC>

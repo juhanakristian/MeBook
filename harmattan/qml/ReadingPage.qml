@@ -123,62 +123,56 @@ Page {
         id: selectorDialog
     }
 
-    Rectangle {
-        id: bottomPane
-        height: 400
-        width: parent.width
-        state: "Hidden"
+    PopUpDialog {
+        id: popUpDialog
+        movingItem: bookView
+    }
 
-        Image {
-            id: bg
-            anchors.fill: parent
-            source: "qrc:/images/startwindow_bg.png"
-            fillMode: "TileVertically"
-            MouseArea{
-                id: mouseArea
-                anchors.fill: parent
-            }
-        }
+    Component.onCompleted: popUpDialog.content = bookmarkComponent
 
-        Button {
-            id: closeButton
-            text: "Close"
-            anchors.left: parent.left
-            anchors.top: parent.top
-            anchors.margins: 10
-            onClicked: bottomPane.state = "Hidden"
-            width: 150
-            height: 50
-        }
-
-        Button {
-            id: saveButton
-            text: "Save"
-            anchors.right: parent.right
-            anchors.top: parent.top
-            anchors.margins: 10
-            onClicked: bottomPane.state = "Hidden"
-            width: 150
-            height: 50
-        }
-
+    Component {
+        id: annotationComponent
         Item {
-            id: content
-            anchors.left: parent.left
-            anchors.right: parent.right
-            anchors.bottom: parent.bottom
-            anchors.top: closeButton.bottom
-            anchors.margins: 10
+          id: annotationDialog
 
 
+          Column {
+              anchors.fill: parent
+              spacing: 10
+
+              TextArea{
+                  id: annotationText
+                  width: parent.width
+                  height: parent.height - parent.spacing - colorSelector.height
+              }
+
+              ColorSelector{
+                  id: colorSelector
+                  width: parent.width
+                  colors: [ "#eeeeec", "#d3d7cf", "#dabdb6", "#fce94f", "#edd400", "#c4a000",
+                      "#8ae234", "#73d216", "#4e9a06", "#fcaf3e", "#f57900", "#ce5c00",
+                      "#e9b96e", "#c17d11", "#8f5902", "#729fcf", "#3465a4", "#204a87",
+                      "#ad7fa8", "#75507b", "#5c3566", "#888a85", "#555753", "#2e3436",
+                      "#ef2929", "#cc0000", "#a40000" ]
+              }
+          }
+
+
+        }
+
+    }
+
+    Component {
+        id: bookmarkComponent
+        Item {
+            id: bookmarkDialog
             Column {
                 anchors.fill: parent
                 spacing: 10
 
-                TextArea{
-                    id: annotationText
+                TextField{
+                    id: bookmarkName
                     width: parent.width
-                    height: parent.height - parent.spacing - colorSelector.height
                 }
 
                 ColorSelector{
@@ -191,75 +185,10 @@ Page {
                         "#ef2929", "#cc0000", "#a40000" ]
                 }
             }
-
-
         }
-
-        Image{
-            id: topShadow
-            anchors.left: parent.left
-            anchors.right: parent.right
-            anchors.bottom: parent.top
-            fillMode: Image.TileHorizontally
-            source: "image://theme/meegotouch-menu-shadow-top"
-        }
-
-
-
-        states: [
-            State {
-                name: "Hidden"
-                PropertyChanges {
-                    target: bottomPane
-                    y: parent.height
-                }
-                PropertyChanges{
-                    target: bookView
-                    contentY: 0
-                    textSelectionEnabled: false
-
-                }
-
-            },
-            State {
-                name: "Visible"
-                PropertyChanges {
-                    target: bottomPane
-                    y: bottomPane.parent.height - 400
-                }
-                PropertyChanges{
-                    target: bookView
-                    contentY: -(bottomPane.parent.height - 400)
-                    textSelectionEnabled: true
-
-                }
-            }
-        ]
-
-        transitions: [
-            Transition {
-                from: "Hidden"
-                to: "Visible"
-                PropertyAnimation {
-                    target: bottomPane
-                    properties: "y"
-                    duration: 200
-                }
-            },
-            Transition {
-                from: "Visible"
-                to: "Hidden"
-                PropertyAnimation {
-                    target: bottomPane
-                    properties: "y"
-                    duration: 200
-                }
-            }
-        ]
-
-
-
     }
+
+
 
     Menu{
         id: contextMenu
@@ -297,9 +226,8 @@ Page {
         }
 
         MenuLayout{
-            MenuItem {text: "Add annotation"; onClicked: bottomPane.state = "Visible"; }
-            MenuItem {text: "Add bookmark"; onClicked: bottomPane.state = "Visible"; }
-            MenuItem {text: "Dictionary"; onClicked: bottomPane.state = "Visible"; }
+            MenuItem {text: "Add annotation"; onClicked: {popUpDialog.content = annotationComponent; popUpDialog.state = "Visible";} }
+            MenuItem {text: "Add bookmark"; onClicked: {popUpDialog.content = bookmarkComponent; popUpDialog.state = "Visible";} }
         }
     }
 

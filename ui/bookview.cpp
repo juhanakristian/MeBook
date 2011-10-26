@@ -334,7 +334,7 @@ bool BookView::sceneEventFilter(QGraphicsItem *watched, QEvent *event)
         m_acceleration = 0.0;
         m_kineticTimer.stop();
         m_tapAndHoldPoint = mouseEvent->pos();
-        m_tapAndHoldTimer.start(1000);
+        m_tapAndHoldTimer.start(500);
         m_previousPoints.clear();
     } else if(event->type() == QEvent::GraphicsSceneMouseRelease){
         QGraphicsSceneMouseEvent *mouseEvent = static_cast<QGraphicsSceneMouseEvent*>(event);
